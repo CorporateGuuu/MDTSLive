@@ -1,0 +1,5 @@
+{
+  "cache": {
+    "directories": [".next/cache", "node_modules/.cache"]
+  }
+}

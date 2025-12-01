@@ -1,0 +1,40 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f9fafb"/>
+  
+  <!-- iPad outline (landscape orientation) -->
+  <rect x="100" y="80" width="200" height="140" rx="15" fill="#1f2937" stroke="#10b981" stroke-width="2"/>
+  
+  <!-- Screen -->
+  <rect x="115" y="95" width="170" height="110" rx="8" fill="#10b981"/>
+  
+  <!-- Home button -->
+  <circle cx="200" cy="235" r="6" fill="#14b8a6"/>
+  
+  <!-- Camera -->
+  <circle cx="200" cy="70" r="3" fill="#6b7280"/>
+  
+  <!-- Parts around iPad -->
+  <!-- Battery -->
+  <rect x="50" y="120" width="30" height="20" rx="3" fill="#10b981"/>
+  <text x="65" y="150" text-anchor="middle" fill="#6b7280" font-family="Arial" font-size="9">Battery</text>
+  
+  <!-- Screen/Digitizer -->
+  <rect x="320" y="100" width="25" height="40" rx="3" fill="#14b8a6"/>
+  <text x="332" y="150" text-anchor="middle" fill="#6b7280" font-family="Arial" font-size="9">Screen</text>
+  
+  <!-- Charging Port -->
+  <rect x="190" y="250" width="20" height="6" rx="3" fill="#10b981"/>
+  <text x="200" y="270" text-anchor="middle" fill="#6b7280" font-family="Arial" font-size="9">USB-C</text>
+  
+  <!-- Home Button -->
+  <circle cx="80" cy="180" r="8" fill="#14b8a6"/>
+  <circle cx="80" cy="180" r="4" fill="#1f2937"/>
+  <text x="80" y="200" text-anchor="middle" fill="#6b7280" font-family="Arial" font-size="9">Home</text>
+  
+  <!-- Digitizer -->
+  <rect x="320" y="160" width="25" height="25" rx="3" fill="#10b981"/>
+  <text x="332" y="195" text-anchor="middle" fill="#6b7280" font-family="Arial" font-size="9">Touch</text>
+  
+  <!-- Title -->
+  <text x="200" y="290" text-anchor="middle" fill="#1f2937" font-family="Arial" font-size="16" font-weight="bold">iPad Parts</text>
+</svg>

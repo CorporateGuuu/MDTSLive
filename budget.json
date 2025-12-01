@@ -1,0 +1,68 @@
+{
+  "budgets": [
+    {
+      "path": "/*",
+      "type": "performance",
+      "name": "Performance Budget",
+      "budgets": [
+        {
+          "metric": "totalByteWeight",
+          "budget": 500000,
+          "unit": "bytes"
+        },
+        {
+          "metric": "scriptByteWeight",
+          "budget": 250000,
+          "unit": "bytes"
+        },
+        {
+          "metric": "imageByteWeight",
+          "budget": 150000,
+          "unit": "bytes"
+        },
+        {
+          "metric": "totalRequestCount",
+          "budget": 80,
+          "unit": "count"
+        },
+        {
+          "metric": "scriptRequestCount",
+          "budget": 15,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "path": "/",
+      "type": "performance",
+      "name": "Homepage Budget",
+      "budgets": [
+        {
+          "metric": "totalByteWeight",
+          "budget": 450000,
+          "unit": "bytes"
+        },
+        {
+          "metric": "lighthousePerformanceScore",
+          "budget": 90,
+          "unit": "score"
+        },
+        {
+          "metric": "lighthouseAccessibilityScore",
+          "budget": 100,
+          "unit": "score"
+        },
+        {
+          "metric": "lighthouseBestPracticesScore",
+          "budget": 95,
+          "unit": "score"
+        },
+        {
+          "metric": "lighthouseSeoScore",
+          "budget": 95,
+          "unit": "score"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f9fafb"/>
+  
+  <!-- Tool box/case -->
+  <rect x="150" y="100" width="100" height="60" rx="5" fill="#1f2937" stroke="#10b981" stroke-width="2"/>
+  <rect x="155" y="105" width="90" height="50" rx="3" fill="#10b981"/>
+  
+  <!-- Tools around the case -->
+  <!-- Screwdriver -->
+  <rect x="100" y="80" width="3" height="40" fill="#6b7280"/>
+  <rect x="95" y="75" width="13" height="8" rx="2" fill="#10b981"/>
+  <text x="101" y="135" text-anchor="middle" fill="#6b7280" font-family="Arial" font-size="9">Screwdriver</text>
+  
+  <!-- Spudger -->
+  <rect x="120" y="85" width="2" height="30" fill="#14b8a6"/>
+  <circle cx="121" cy="82" r="2" fill="#14b8a6"/>
+  <text x="121" y="125" text-anchor="middle" fill="#6b7280" font-family="Arial" font-size="9">Spudger</text>
+  
+  <!-- Multimeter -->
+  <rect x="280" y="70" width="30" height="40" rx="3" fill="#10b981"/>
+  <rect x="285" y="75" width="20" height="15" rx="1" fill="#1f2937"/>
+  <circle cx="295" cy="95" r="3" fill="#14b8a6"/>
+  <text x="295" y="120" text-anchor="middle" fill="#6b7280" font-family="Arial" font-size="9">Multimeter</text>
+  
+  <!-- Opening tools -->
+  <path d="M 80 180 L 85 190 L 90 180 Z" fill="#14b8a6"/>
+  <rect x="82" y="180" width="6" height="15" fill="#6b7280"/>
+  <text x="85" y="205" text-anchor="middle" fill="#6b7280" font-family="Arial" font-size="9">Opening</text>
+  
+  <!-- Heat gun -->
+  <rect x="300" y="180" width="25" height="15" rx="3" fill="#10b981"/>
+  <rect x="325" y="185" width="10" height="5" rx="1" fill="#6b7280"/>
+  <text x="315" y="205" text-anchor="middle" fill="#6b7280" font-family="Arial" font-size="9">Heat Gun</text>
+  
+  <!-- Anti-static mat -->
+  <rect x="130" y="200" width="140" height="3" fill="#14b8a6"/>
+  <circle cx="135" cy="201" r="2" fill="#10b981"/>
+  <text x="200" y="215" text-anchor="middle" fill="#6b7280" font-family="Arial" font-size="9">Anti-Static Mat</text>
+  
+  <!-- Precision bits in case -->
+  <circle cx="170" cy="120" r="2" fill="#1f2937"/>
+  <circle cx="180" cy="120" r="2" fill="#1f2937"/>
+  <circle cx="190" cy="120" r="2" fill="#1f2937"/>
+  <circle cx="200" cy="120" r="2" fill="#1f2937"/>
+  <circle cx="210" cy="120" r="2" fill="#1f2937"/>
+  <circle cx="220" cy="120" r="2" fill="#1f2937"/>
+  
+  <circle cx="170" cy="135" r="2" fill="#1f2937"/>
+  <circle cx="180" cy="135" r="2" fill="#1f2937"/>
+  <circle cx="190" cy="135" r="2" fill="#1f2937"/>
+  <circle cx="200" cy="135" r="2" fill="#1f2937"/>
+  <circle cx="210" cy="135" r="2" fill="#1f2937"/>
+  <circle cx="220" cy="135" r="2" fill="#1f2937"/>
+  
+  <!-- Title -->
+  <text x="200" y="280" text-anchor="middle" fill="#1f2937" font-family="Arial" font-size="16" font-weight="bold">Repair Tools</text>
+</svg>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quality Standards | Nexus Tech Hub</title>
+  <meta name="description" content="ISO-certified testing, AO7 technology, and lifetime warranty on all parts."/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root { --primary: #0066cc; --dark: #111; --light: #e3f2fd; --accent: #0066cc; }
+    body { font-family: 'Open Sans', sans-serif; margin: 0; background: #fff; color: #333; }
+    .top-bar { background: #000; color: #fff; font-size: 14px; text-align: center; padding: 10px 0; }
+    .top-bar a { color: #fff; text-decoration: none; font-weight: 600; }
+    .top-bar a:hover { text-decoration: underline; }
+    .header { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; padding: 15px 0; }
+    .logo { font-size: 28px; font-weight: 700; color: #000; }
+    .logo span { color: var(--accent); }
+    .main-nav { background: #f8f9fa; padding: 12px 0; font-size: 14px; font-weight: 600; }
+    .main-nav .nav-link { color: #333; padding: 8px 16px !important; }
+    .main-nav .nav-link:hover { color: var(--primary); }
+    .page-header { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1920x400/333/ccc?text=Quality+Standards') center/cover; color: #fff; padding: 100px 0; text-align: center; }
+    .page-header h1 { font-size: 48px; font-weight: 700; }
+    .content { padding: 60px 5%; max-width: 1200px; margin: 0 auto; line-height: 1.8; }
+    .content h2 { color: var(--primary); margin-top: 50px; margin-bottom: 20px; font-size: 32px; font-weight: 600; }
+    .content h3 { color: var(--accent); margin-top: 40px; margin-bottom: 15px; font-size: 24px; font-weight: 600; }
+    .quality-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 40px 0; }
+    .quality-card { background: #f8f9fa; padding: 30px; border-radius: 10px; text-align: center; border: 1px solid #e9ecef; }
+    .quality-card i { font-size: 48px; color: var(--primary); margin-bottom: 20px; }
+    .quality-card h4 { color: var(--primary); margin-bottom: 15px; font-size: 20px; font-weight: 600; }
+    .iso-badges { display: flex; justify-content: center; gap: 20px; margin: 40px 0; }
+    .iso-badge { background: #fff; border: 2px solid var(--primary); border-radius: 8px; padding: 20px; text-align: center; }
+    .iso-badge h5 { color: var(--primary); margin-bottom: 10px; font-size: 18px; }
+    .warranty-highlight { background: linear-gradient(135deg, var(--primary), var(--accent)); color: #fff; padding: 40px; border-radius: 15px; text-align: center; margin: 40px 0; }
+    .warranty-highlight h3 { margin-bottom: 20px; font-size: 28px; }
+    .warranty-highlight .highlight-text { font-size: 18px; font-weight: 600; }
+    .testing-protocol { background: #f8f9fa; padding: 40px; border-radius: 10px; margin: 40px 0; }
+    .protocol-step { display: flex; align-items: center; margin-bottom: 20px; }
+    .protocol-step .step-number { background: var(--primary); color: #fff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-right: 20px; flex-shrink: 0; }
+    .protocol-step h5 { color: var(--primary); margin-bottom: 5px; font-size: 18px; }
+    .footer { background: var(--dark); color: #ccc; padding: 60px 5% 20px; font-size: 14px; }
+    .footer h5 { color: #fff; margin-bottom: 20px; }
+    .footer a { color: #ccc; text-decoration: none; display: block; margin-bottom: 8px; }
+    .footer a:hover { color: #fff; }
+    .footer-bottom { border-top: 1px solid #333; padding-top: 20px; margin-top: 40px; font-size: 12px; color: #999; text-align: center; }
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 36px; }
+      .quality-grid { grid-template-columns: 1fr; }
+      .iso-badges { flex-direction: column; align-items: center; }
+      .protocol-step { flex-direction: column; text-align: center; }
+      .protocol-step .step-number { margin-bottom: 10px; margin-right: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    Introducing the Genuine Apple Parts Program! Official Apple parts.
+    <a href="#">Learn More</a>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-2 col-6">
+          <a href="index.html" class="logo text-decoration-none">Nexus<span>T</span>ech Hub</a>
+        </div>
+        <div class="col-lg-5 col-md-6 col-12 order-lg-0 order-2 mt-3 mt-lg-0">
+          <div class="position-relative">
+            <input type="text" class="form-control rounded-pill ps-4" placeholder="What are you looking for?">
+            <button class="btn position-absolute end-0 top-50 translate-middle-y me-3"><i class="fas fa-search"></i></button>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-6 text-end">
+          <div class="d-flex justify-content-end align-items-center gap-3">
+            <a href="#" class="text-decoration-none text-muted">NT Services</a>
+            <a href="#" class="text-decoration-none text-muted">My Account</a>
+            <a href="#" class="text-decoration-none text-muted">FedEx Ground <span class="badge bg-danger rounded-pill">09:58:49</span></a>
+            <a href="#" class="btn btn-outline-success rounded-pill">Cart $0.00</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN NAV -->
+  <nav class="main-nav">
+    <div class="container">
+      <ul class="nav justify-content-center flex-wrap">
+        <li class="nav-item"><a class="nav-link" href="#">Apple</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Samsung</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Motorola</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Google</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Other Parts</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Game Console</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Accessories</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Tools & Supplies</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Refurbishing</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Board Components</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Pre-Owned Devices</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container">
+      <h1>Quality Standards</h1>
+      <p class="lead">ISO-certified testing, AO7 technology, and lifetime warranty on all parts</p>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+    <p><strong>Nexus Tech Hub</strong> maintains the highest quality standards in the mobile repair industry. Every part undergoes rigorous testing and inspection before reaching our customers.</p>
+
+    <h2>ISO Certifications</h2>
+    <p>Our facilities are certified to international standards for quality management and environmental responsibility.</p>
+
+    <div class="iso-badges">
+      <div class="iso-badge">
+        <i class="fas fa-certificate fa-3x text-primary mb-3"></i>
+        <h5>ISO 9001</h5>
+        <p>Quality Management Systems</p>
+      </div>
+      <div class="iso-badge">
+        <i class="fas fa-leaf fa-3x text-success mb-3"></i>
+        <h5>ISO 14001</h5>
+        <p>Environmental Management</p>
+      </div>
+      <div class="iso-badge">
+        <i class="fas fa-shield-alt fa-3x text-warning mb-3"></i>
+        <h5>ISO 27001</h5>
+        <p>Information Security</p>
+      </div>
+      <div class="iso-badge">
+        <i class="fas fa-hard-hat fa-3x text-danger mb-3"></i>
+        <h5>ISO 45001</h5>
+        <p>Occupational Health & Safety</p>
+      </div>
+    </div>
+
+    <h2>AO7 Testing Protocol</h2>
+    <p>Our proprietary AO7 testing protocol ensures every part meets or exceeds OEM specifications. This comprehensive testing process includes:</p>
+
+    <div class="testing-protocol">
+      <div class="protocol-step">
+        <div class="step-number">1</div>
+        <div>
+          <h5>100% Functional Testing</h5>
+          <p>Every component undergoes complete functional verification to ensure proper operation.</p>
+        </div>
+      </div>
+
+      <div class="protocol-step">
+        <div class="step-number">2</div>
+        <div>
+          <h5>Visual Inspection (40x Magnification)</h5>
+          <p>High-resolution microscopic inspection for surface defects, alignment, and quality.</p>
+        </div>
+      </div>
+
+      <div class="protocol-step">
+        <div class="step-number">3</div>
+        <div>
+          <h5>Color Accuracy & Touch Calibration</h5>
+          <p>Display panels are calibrated for perfect color reproduction and touch sensitivity.</p>
+        </div>
+      </div>
+
+      <div class="protocol-step">
+        <div class="step-number">4</div>
+        <div>
+          <h5>Water & Dust Resistance Verification</h5>
+          <p>IP-rated components undergo pressure testing to ensure water and dust resistance.</p>
+        </div>
+      </div>
+
+      <div class="protocol-step">
+        <div class="step-number">5</div>
+        <div>
+          <h5>Thermal Stress Testing</h5>
+          <p>Components are tested under extreme temperatures to ensure reliability.</p>
+        </div>
+      </div>
+
+      <div class="protocol-step">
+        <div class="step-number">6</div>
+        <div>
+          <h5>Drop & Impact Resistance</h5>
+          <p>Physical durability testing to simulate real-world usage conditions.</p>
+        </div>
+      </div>
+
+      <div class="protocol-step">
+        <div class="step-number">7</div>
+        <div>
+          <h5>Final Quality Assurance</h5>
+          <p>Comprehensive final inspection and packaging with quality assurance seal.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="warranty-highlight">
+      <h3>Lifetime Warranty Guarantee</h3>
+      <p class="highlight-text">Every part comes with our LIFETIME WARRANTY against manufacturing defects and performance issues.</p>
+      <p>No hidden fees • No time limits • No catch. If a part fails due to a defect, we'll replace it free of charge.</p>
+    </div>
+
+    <h2>Quality Assurance Features</h2>
+
+    <div class="quality-grid">
+      <div class="quality-card">
+        <i class="fas fa-microchip"></i>
+        <h4>OEM-Grade Components</h4>
+        <p>All parts are sourced directly from original equipment manufacturers or meet OEM specifications.</p>
+      </div>
+
+      <div class="quality-card">
+        <i class="fas fa-tools"></i>
+        <h4>Professional Installation</h4>
+        <p>Designed for easy installation by certified technicians using professional-grade tools.</p>
+      </div>
+
+      <div class="quality-card">
+        <i class="fas fa-shipping-fast"></i>
+        <h4>Fast Shipping</h4>
+        <p>Same-day shipping on orders placed before 8 PM EST from our USA warehouse.</p>
+      </div>
+
+      <div class="quality-card">
+        <i class="fas fa-headset"></i>
+        <h4>Expert Support</h4>
+        <p>Dedicated technical support team available to assist with any repair questions.</p>
+      </div>
+
+      <div class="quality-card">
+        <i class="fas fa-recycle"></i>
+        <h4>Sustainable Practices</h4>
+        <p>Environmentally responsible sourcing and recycling programs for e-waste.</p>
+      </div>
+
+      <div class="quality-card">
+        <i class="fas fa-award"></i>
+        <h4>Industry Recognition</h4>
+        <p>Trusted by thousands of repair shops worldwide for consistent quality and reliability.</p>
+      </div>
+    </div>
+
+    <h2>Why Quality Matters</h2>
+    <p>Using substandard parts can lead to:</p>
+    <ul>
+      <li>Reduced device performance and battery life</li>
+      <li>Display color inaccuracies and touch sensitivity issues</li>
+      <li>Premature component failure</li>
+      <li>Voided manufacturer warranties</li>
+      <li>Customer dissatisfaction and returns</li>
+    </ul>
+
+    <p>At Nexus Tech Hub, we eliminate these risks by maintaining uncompromising quality standards throughout our entire process, from sourcing to shipping.</p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="logo mb-3" style="color:#fff; font-size:24px;">Nexus<span>T</span>ech Hub</div>
+          <p><strong>United Arab Emirates</strong></p>
+          <p>English | AED</p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>About</h5>
+          <a href="about.html">About Us</a>
+          <a href="blog.html">Blog</a>
+          <a href="quality-standards.html">Quality Standards</a>
+          <a href="return-policy.html">Return Policy</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Services</h5>
+          <a href="my-account.html">My Account</a>
+          <a href="lcd-buyback.html">LCD Buyback</a>
+          <a href="pre-owned-devices.html">Pre-Owned Devices</a>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Support</h5>
+          <a href="contact.html">Contact Us</a>
+          <a href="#">Live Chat</a>
+          <a href="tel:+18885558324">1-888-555-TECH</a>
+          <a href="https://wa.me/971585531029">WhatsApp</a>
+          <a href="mailto:sales@nexustechhub.com">Email</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Nexus Tech Hub. All trademarks are property of their respective owners.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,47 @@
+[build]
+  publish = ".next"
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NEXT_PRIVATE_TARGET = "server"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[[plugins]]
+  package = "netlify-plugin-cache"
+  [plugins.inputs]
+    paths = [
+      "node_modules/.cache",
+      ".next/cache"
+    ]
+
+[build.processing]
+  skip_processing = false
+[build.processing.css]
+  bundle = true
+  minify = true
+[build.processing.js]
+  bundle = true
+  minify = true
+[build.processing.html]
+  pretty_urls = true
+
+[build.secrets_scan]
+  secrets_scan_enabled = true
+  omit_keys = [
+    "NEXT_PUBLIC_SUPABASE_URL",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+    "SUPABASE_SERVICE_ROLE_KEY"
+  ]
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/_next/static/*"
+  to = "/static/:splat"
+  status = 200

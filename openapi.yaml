@@ -1,0 +1,861 @@
+openapi: 3.1.0
+info:
+  title: Nexus Tech Hub API
+  description: E-commerce API for Nexus Tech Hub - Product catalog, authentication, and shopping cart management
+  version: 1.0.0
+  contact:
+    name: Nexus Tech Hub Support
+    email: support@nexustechhub.com
+
+servers:
+  - url: http://localhost:3000
+    description: Development server
+  - url: https://api.nexustechhub.com
+    description: Production server
+
+security:
+  - BearerAuth: []
+
+paths:
+  /auth/login:
+    post:
+      summary: User login
+      description: Authenticate user with email and password
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - email
+                - password
+              properties:
+                email:
+                  type: string
+                  format: email
+                  example: user@example.com
+                password:
+                  type: string
+                  format: password
+                  minLength: 6
+                  example: password123
+      responses:
+        '200':
+          description: Login successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  user:
+                    $ref: '#/components/schemas/User'
+                  session:
+                    type: object
+                    properties:
+                      expires_at:
+                        type: integer
+                        example: 1638360000
+                      expires_in:
+                        type: integer
+                        example: 3600
+        '400':
+          $ref: '#/components/responses/ValidationError'
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+        '500':
+          $ref: '#/components/responses/InternalError'
+
+  /auth/register:
+    post:
+      summary: User registration
+      description: Register a new user account
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - email
+                - password
+                - fullName
+              properties:
+                email:
+                  type: string
+                  format: email
+                  example: user@example.com
+                password:
+                  type: string
+                  format: password
+                  minLength: 6
+                  example: password123
+                fullName:
+                  type: string
+                  minLength: 2
+                  example: John Doe
+      responses:
+        '200':
+          description: Registration successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  user:
+                    $ref: '#/components/schemas/User'
+                  message:
+                    type: string
+                    example: Registration successful. Please check your email to confirm your account.
+        '400':
+          $ref: '#/components/responses/ValidationError'
+        '500':
+          $ref: '#/components/responses/InternalError'
+
+  /products:
+    get:
+      summary: Get products
+      description: Retrieve a paginated list of products with optional filtering
+      tags:
+        - Products
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+          description: Page number
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 20
+          description: Number of items per page
+        - name: category
+          in: query
+          schema:
+            type: string
+          description: Filter by category slug
+        - name: brand
+          in: query
+          schema:
+            type: string
+          description: Filter by brand slug
+        - name: search
+          in: query
+          schema:
+            type: string
+          description: Search in product names
+        - name: min_price
+          in: query
+          schema:
+            type: number
+            minimum: 0
+          description: Minimum price filter
+        - name: max_price
+          in: query
+          schema:
+            type: number
+            minimum: 0
+          description: Maximum price filter
+        - name: in_stock
+          in: query
+          schema:
+            type: boolean
+          description: Filter only in-stock products
+      responses:
+        '200':
+          description: Products retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  products:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Product'
+                  pagination:
+                    type: object
+                    properties:
+                      page:
+                        type: integer
+                        example: 1
+                      limit:
+                        type: integer
+                        example: 20
+                      total:
+                        type: integer
+                        example: 150
+                      totalPages:
+                        type: integer
+                        example: 8
+                      hasNext:
+                        type: boolean
+                        example: true
+                      hasPrev:
+                        type: boolean
+                        example: false
+        '500':
+          $ref: '#/components/responses/InternalError'
+      security: []  # Public endpoint
+
+    post:
+      summary: Create product
+      description: Create a new product (Admin only)
+      tags:
+        - Products
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required:
+                - name
+                - price
+                - slug
+              properties:
+                name:
+                  type: string
+                  example: iPhone 15 Pro
+                slug:
+                  type: string
+                  example: iphone-15-pro
+                description:
+                  type: string
+                  example: Latest iPhone with advanced features
+                price:
+                  type: number
+                  format: float
+                  example: 999.99
+                discount_percentage:
+                  type: number
+                  format: float
+                  minimum: 0
+                  maximum: 100
+                  example: 10.0
+                stock_quantity:
+                  type: integer
+                  minimum: 0
+                  example: 50
+                category_id:
+                  type: string
+                  format: uuid
+                  example: 123e4567-e89b-12d3-a456-426614174000
+                brand_id:
+                  type: string
+                  format: uuid
+                  example: 123e4567-e89b-12d3-a456-426614174001
+                is_active:
+                  type: boolean
+                  example: true
+                imageFile:
+                  type: string
+                  format: binary
+                  description: Product image file (max 5MB, JPG/PNG/WebP)
+      responses:
+        '201':
+          description: Product created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        '400':
+          $ref: '#/components/responses/ValidationError'
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+        '409':
+          description: Conflict - slug already exists
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Product with this slug already exists
+        '500':
+          $ref: '#/components/responses/InternalError'
+
+  /products/{id}:
+    get:
+      summary: Get product by ID
+      description: Retrieve a single product with full details
+      tags:
+        - Products
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: Product ID
+      responses:
+        '200':
+          description: Product retrieved successfully
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/Product'
+                  - type: object
+                    properties:
+                      reviews:
+                        type: object
+                        properties:
+                          count:
+                            type: integer
+                            example: 25
+                          averageRating:
+                            type: number
+                            format: float
+                            example: 4.2
+        '404':
+          description: Product not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Product not found
+        '500':
+          $ref: '#/components/responses/InternalError'
+      security: []  # Public endpoint
+
+    put:
+      summary: Update product
+      description: Update an existing product (Admin only)
+      tags:
+        - Products
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: Product ID
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: iPhone 15 Pro Max
+                slug:
+                  type: string
+                  example: iphone-15-pro-max
+                description:
+                  type: string
+                  example: Updated iPhone description
+                price:
+                  type: number
+                  format: float
+                  example: 1199.99
+                discount_percentage:
+                  type: number
+                  format: float
+                  minimum: 0
+                  maximum: 100
+                  example: 5.0
+                stock_quantity:
+                  type: integer
+                  minimum: 0
+                  example: 30
+                category_id:
+                  type: string
+                  format: uuid
+                brand_id:
+                  type: string
+                  format: uuid
+                is_active:
+                  type: boolean
+                  example: true
+                imageFile:
+                  type: string
+                  format: binary
+                  description: New product image file (max 5MB, JPG/PNG/WebP)
+      responses:
+        '200':
+          description: Product updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        '400':
+          $ref: '#/components/responses/ValidationError'
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+        '404':
+          description: Product not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Product not found
+        '409':
+          description: Conflict - slug already exists
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Product with this slug already exists
+        '500':
+          $ref: '#/components/responses/InternalError'
+
+    delete:
+      summary: Delete product
+      description: Soft delete a product (Admin only)
+      tags:
+        - Products
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: Product ID
+      responses:
+        '200':
+          description: Product deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Product deleted successfully
+                  id:
+                    type: string
+                    format: uuid
+                    example: 123e4567-e89b-12d3-a456-426614174000
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+        '404':
+          description: Product not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Product not found
+        '500':
+          $ref: '#/components/responses/InternalError'
+
+  /cart:
+    get:
+      summary: Get cart items
+      description: Retrieve user's shopping cart items
+      tags:
+        - Cart
+      responses:
+        '200':
+          description: Cart retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/CartItem'
+                  subtotal:
+                    type: number
+                    format: float
+                    example: 299.97
+                  itemCount:
+                    type: integer
+                    example: 3
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+        '500':
+          $ref: '#/components/responses/InternalError'
+
+    post:
+      summary: Add item to cart
+      description: Add a product to the user's shopping cart
+      tags:
+        - Cart
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - productId
+                - quantity
+              properties:
+                productId:
+                  type: string
+                  format: uuid
+                  example: 123e4567-e89b-12d3-a456-426614174000
+                quantity:
+                  type: integer
+                  minimum: 1
+                  example: 2
+      responses:
+        '200':
+          description: Item added to cart successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CartItem'
+        '400':
+          $ref: '#/components/responses/ValidationError'
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+        '404':
+          description: Product not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Product not found
+        '500':
+          $ref: '#/components/responses/InternalError'
+
+    delete:
+      summary: Clear cart
+      description: Remove all items from user's shopping cart
+      tags:
+        - Cart
+      responses:
+        '200':
+          description: Cart cleared successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Cart cleared successfully
+                  items:
+                    type: array
+                    items: {}
+                    example: []
+                  subtotal:
+                    type: number
+                    format: float
+                    example: 0
+                  itemCount:
+                    type: integer
+                    example: 0
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+        '500':
+          $ref: '#/components/responses/InternalError'
+
+  /categories:
+    get:
+      summary: Get categories
+      description: Retrieve all product categories with product counts
+      tags:
+        - Categories
+      responses:
+        '200':
+          description: Categories retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  categories:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          format: uuid
+                          example: 123e4567-e89b-12d3-a456-426614174000
+                        name:
+                          type: string
+                          example: Smartphones
+                        slug:
+                          type: string
+                          example: smartphones
+                        image:
+                          type: string
+                          format: uri
+                          nullable: true
+                          example: https://example.com/category-image.jpg
+                        product_count:
+                          type: integer
+                          example: 25
+        '500':
+          $ref: '#/components/responses/InternalError'
+      security: []  # Public endpoint
+
+  /brands:
+    get:
+      summary: Get brands
+      description: Retrieve all product brands with product counts
+      tags:
+        - Brands
+      responses:
+        '200':
+          description: Brands retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  brands:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          format: uuid
+                          example: 123e4567-e89b-12d3-a456-426614174000
+                        name:
+                          type: string
+                          example: Apple
+                        logo_url:
+                          type: string
+                          format: uri
+                          nullable: true
+                          example: https://example.com/brand-logo.png
+                        product_count:
+                          type: integer
+                          example: 15
+        '500':
+          $ref: '#/components/responses/InternalError'
+      security: []  # Public endpoint
+
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: 123e4567-e89b-12d3-a456-426614174000
+        name:
+          type: string
+          example: iPhone 15 Pro
+        slug:
+          type: string
+          example: iphone-15-pro
+        description:
+          type: string
+          nullable: true
+          example: Latest iPhone with advanced camera features
+        price:
+          type: number
+          format: float
+          example: 999.99
+        discount_percentage:
+          type: number
+          format: float
+          minimum: 0
+          maximum: 100
+          example: 10.0
+        stock_quantity:
+          type: integer
+          minimum: 0
+          example: 50
+        category_id:
+          type: string
+          format: uuid
+          nullable: true
+          example: 123e4567-e89b-12d3-a456-426614174001
+        brand_id:
+          type: string
+          format: uuid
+          nullable: true
+          example: 123e4567-e89b-12d3-a456-426614174002
+        image_url:
+          type: string
+          format: uri
+          nullable: true
+          example: https://example.com/product-image.jpg
+        is_active:
+          type: boolean
+          example: true
+        created_at:
+          type: string
+          format: date-time
+          example: '2024-01-15T10:30:00Z'
+        updated_at:
+          type: string
+          format: date-time
+          example: '2024-01-15T10:30:00Z'
+        categories:
+          type: object
+          nullable: true
+          properties:
+            id:
+              type: string
+              format: uuid
+            name:
+              type: string
+            slug:
+              type: string
+        brands:
+          type: object
+          nullable: true
+          properties:
+            id:
+              type: string
+              format: uuid
+            name:
+              type: string
+            slug:
+              type: string
+
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: 123e4567-e89b-12d3-a456-426614174000
+        email:
+          type: string
+          format: email
+          example: user@example.com
+        role:
+          type: string
+          enum: [pending, user, admin]
+          example: user
+        created_at:
+          type: string
+          format: date-time
+          example: '2024-01-15T10:30:00Z'
+
+    CartItem:
+      type: object
+      properties:
+        productId:
+          type: string
+          format: uuid
+          example: 123e4567-e89b-12d3-a456-426614174000
+        name:
+          type: string
+          example: iPhone 15 Pro
+        price:
+          type: number
+          format: float
+          example: 999.99
+        discountPercentage:
+          type: number
+          format: float
+          example: 10.0
+        discountedPrice:
+          type: number
+          format: float
+          example: 899.99
+        quantity:
+          type: integer
+          minimum: 1
+          example: 2
+        image:
+          type: string
+          format: uri
+          nullable: true
+          example: https://example.com/product-image.jpg
+        total:
+          type: number
+          format: float
+          example: 1799.98
+
+  responses:
+    ValidationError:
+      description: Validation error
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                example: Validation failed
+              details:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    code:
+                      type: string
+                      example: invalid_type
+                    message:
+                      type: string
+                      example: Required
+                    path:
+                      type: array
+                      items:
+                        type: string
+                      example: ["email"]
+
+    UnauthorizedError:
+      description: Authentication required
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                example: No authentication token provided
+
+    InternalError:
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                example: Internal server error
+
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: JWT token from Supabase authentication (sent in HttpOnly cookie)
+
+tags:
+  - name: Authentication
+    description: User authentication and registration
+  - name: Products
+    description: Product management (CRUD operations)
+  - name: Cart
+    description: Shopping cart operations
+  - name: Categories
+    description: Product categories
+  - name: Brands
+    description: Product brands

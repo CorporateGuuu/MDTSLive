@@ -1,0 +1,71 @@
+<div class="card">
+  <div class="card-header d-flex justify-content-between align-items-center">
+    <span>Napboxes Management</span>
+    <a href="/geographic/napboxes/add" class="btn btn-primary btn-sm">
+      <i class="fas fa-plus"></i> Add Napbox
+    </a>
+  </div>
+  <div class="card-body">
+    <div class="table-container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Code</th>
+            <th>Sector</th>
+            <th>Parroquia</th>
+            <th>Municipio</th>
+            <th>Ciudad</th>
+            <th>Estado</th>
+            <th>Capacity</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% napboxes.forEach(napbox => { %>
+            <tr>
+              <td><%= napbox.id %></td>
+              <td><%= napbox.name %></td>
+              <td><%= napbox.code %></td>
+              <td><%= napbox.sector_name %></td>
+              <td><%= napbox.parroquia_name %></td>
+              <td><%= napbox.municipio_name %></td>
+              <td><%= napbox.ciudad_name %></td>
+              <td><%= napbox.estado_name %></td>
+              <td><%= napbox.capacity %></td>
+              <td>
+                <span class="badge badge-<%= napbox.status === 'active' ? 'active' : napbox.status === 'maintenance' ? 'maintenance' : 'inactive' %>">
+                  <%= napbox.status %>
+                </span>
+              </td>
+              <td>
+                <a href="/geographic/napboxes/edit/<%= napbox.id %>" class="btn btn-warning btn-sm">
+                  <i class="fas fa-edit"></i> Edit
+                </a>
+                <button onclick="openModal('/geographic/napboxes/delete/<%= napbox.id %>')" class="btn btn-danger btn-sm">
+                  <i class="fas fa-trash"></i> Delete
+                </button>
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+
+    <% if (napboxes.length === 0) { %>
+      <div class="text-center mt-4">
+        <p class="text-muted">No napboxes found. <a href="/geographic/napboxes/add">Add the first one</a>.</p>
+      </div>
+    <% } %>
+  </div>
+</div>
+
+<script>
+// Add any client-side functionality here
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize any interactive elements
+  console.log('Napboxes page loaded');
+});
+</script>

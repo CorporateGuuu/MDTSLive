@@ -1,0 +1,19 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e40af;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="#f8fafc"/>
+  <rect x="50" y="80" width="300" height="600" rx="40" ry="40" fill="#1f2937" stroke="#374151" stroke-width="4"/>
+  <rect x="70" y="120" width="260" height="480" rx="20" ry="20" fill="url(#screenGrad)"/>
+  <rect x="70" y="120" width="260" height="480" rx="20" ry="20" fill="none" stroke="#6b7280" stroke-width="2"/>
+  <circle cx="200" cy="200" r="60" fill="#ffffff" opacity="0.9"/>
+  <circle cx="200" cy="200" r="40" fill="#3b82f6"/>
+  <circle cx="200" cy="200" r="20" fill="#ffffff"/>
+  <rect x="170" y="100" width="60" height="30" rx="15" ry="15" fill="#1f2937"/>
+  <rect x="180" y="570" width="40" height="5" rx="2.5" ry="2.5" fill="#ffffff" opacity="0.8"/>
+  <text x="200" y="680" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1f2937">iPhone 15 Pro Max Screen</text>
+  <text x="200" y="700" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">OLED Display Assembly</text>
+</svg>

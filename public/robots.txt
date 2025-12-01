@@ -1,0 +1,14 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /auth/
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /unauthorized
+
+# Host
+Host: https://nexustechhub.com
+
+# Sitemaps
+Sitemap: https://nexustechhub.com/sitemap.xml

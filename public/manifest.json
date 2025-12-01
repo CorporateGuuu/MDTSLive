@@ -1,0 +1,70 @@
+{
+  "name": "Nexus Tech Hub - Professional Mobile Repair Parts UAE",
+  "short_name": "Nexus Tech Hub",
+  "description": "Professional mobile device repair parts and services in UAE. Specializing in iPhone, Samsung, and iPad replacement parts with quality guarantee. Located in Ras Al Khaimah.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#10b981",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-192x192.svg",
+      "sizes": "72x72 96x96 128x128 144x144 152x152 192x192 384x384 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "orientation": "portrait",
+  "splash_pages": null,
+  "scope": "/",
+  "shortcuts": [
+    {
+      "name": "iPhone Parts",
+      "short_name": "iPhone",
+      "description": "Browse iPhone replacement parts and accessories",
+      "url": "/iphone-parts",
+      "icons": [
+        {
+          "src": "/images/categories/iphone-parts-hero.svg",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Samsung Parts",
+      "short_name": "Samsung",
+      "description": "Browse Samsung replacement parts and accessories",
+      "url": "/samsung-parts",
+      "icons": [
+        {
+          "src": "/images/categories/samsung-parts-hero.svg",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Get in touch with Nexus Tech Hub support team",
+      "url": "/contact",
+      "icons": [
+        {
+          "src": "/images/nexus-logo.svg",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

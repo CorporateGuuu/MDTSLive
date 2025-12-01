@@ -1,0 +1,111 @@
+# Netlify ignore file for Nexus TechHub
+# Exclude Python scripts and development files from deployment
+
+# Python files and scripts
+Scripts/*.py
+scrapers/
+*.py
+*.pyc
+__pycache__/
+.python-version
+
+# Development and testing files
+__tests__/
+coverage/
+cypress/
+tests/
+*.test.js
+*.spec.js
+test-*.js
+*.test.ts
+*.spec.ts
+
+# Documentation and development files
+README.md
+DEVELOPMENT_STATUS.md
+CODE_QUALITY_AUDIT_REPORT.md
+GOOGLE_OAUTH_SETUP.md
+INTEGRATION.md
+INTEGRATIONS_SETUP.md
+SUPABASE_SETUP.md
+*.rtf
+*.md
+
+# Database and migration files
+database/
+migrations/
+mock_db/
+*.sql
+
+# Build artifacts and logs
+.next/
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+*.log
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Environment files (keep .env.example)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Temporary files
+tmp/
+temp/
+uploads/
+output/
+
+# Legacy and backup files
+*_backup
+*_old
+*.bak
+*.backup
+
+# Website content and assets not needed for build
+"Website Content"/
+Logos/
+dl/
+
+# Third-party projects
+nextjs-subscription-payments-main/
+realtime-chat-supabase-react-master/
+svelte-kanban-main/
+
+# Analysis and scraping tools
+analyze_*.py
+*_scraper.py
+*.csv
+data/
+
+# Build configuration backups
+netlify copy.toml
+netlify-build copy.sh
+middleware 2.js
+
+# Package manager files (keep package.json and package-lock.json)
+yarn.lock
+pnpm-lock.yaml
+
+# Cloudflare Workers
+workers-site/
+wrangler.toml

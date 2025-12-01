@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog | Nexus Tech Hub</title>
+  <meta name="description" content="Latest repair tips, industry news, and product updates from Nexus Tech Hub."/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root { --primary: #0066cc; --dark: #111; --light: #e3f2fd; --accent: #0066cc; }
+    body { font-family: 'Open Sans', sans-serif; margin: 0; background: #fff; color: #333; }
+    .top-bar { background: #000; color: #fff; font-size: 14px; text-align: center; padding: 10px 0; }
+    .top-bar a { color: #fff; text-decoration: none; font-weight: 600; }
+    .top-bar a:hover { text-decoration: underline; }
+    .header { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; padding: 15px 0; }
+    .logo { font-size: 28px; font-weight: 700; color: #000; }
+    .logo span { color: var(--accent); }
+    .main-nav { background: #f8f9fa; padding: 12px 0; font-size: 14px; font-weight: 600; }
+    .main-nav .nav-link { color: #333; padding: 8px 16px !important; }
+    .main-nav .nav-link:hover { color: var(--primary); }
+    .page-header { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1920x400/333/ccc?text=Blog') center/cover; color: #fff; padding: 100px 0; text-align: center; }
+    .page-header h1 { font-size: 48px; font-weight: 700; }
+    .content { padding: 60px 5%; max-width: 1200px; margin: 0 auto; }
+    .blog-card { border: none; box-shadow: 0 2px 15px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; margin-bottom: 30px; }
+    .blog-card:hover { transform: translateY(-5px); box-shadow: 0 5px 25px rgba(0,0,0,0.15); }
+    .blog-card img { height: 250px; object-fit: cover; }
+    .blog-card .card-title { color: var(--primary); font-weight: 600; margin-bottom: 10px; }
+    .blog-card .card-title:hover { color: var(--accent); }
+    .blog-meta { color: #666; font-size: 14px; margin-bottom: 15px; }
+    .blog-excerpt { color: #555; line-height: 1.6; margin-bottom: 20px; }
+    .btn-outline-primary { border-color: var(--primary); color: var(--primary); }
+    .btn-outline-primary:hover { background: var(--primary); border-color: var(--primary); }
+    .footer { background: var(--dark); color: #ccc; padding: 60px 5% 20px; font-size: 14px; }
+    .footer h5 { color: #fff; margin-bottom: 20px; }
+    .footer a { color: #ccc; text-decoration: none; display: block; margin-bottom: 8px; }
+    .footer a:hover { color: #fff; }
+    .footer-bottom { border-top: 1px solid #333; padding-top: 20px; margin-top: 40px; font-size: 12px; color: #999; text-align: center; }
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 36px; }
+      .blog-card img { height: 200px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    Introducing the Genuine Apple Parts Program! Official Apple parts.
+    <a href="#">Learn More</a>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-2 col-6">
+          <a href="index.html" class="logo text-decoration-none">Nexus<span>T</span>ech Hub</a>
+        </div>
+        <div class="col-lg-5 col-md-6 col-12 order-lg-0 order-2 mt-3 mt-lg-0">
+          <div class="position-relative">
+            <input type="text" class="form-control rounded-pill ps-4" placeholder="What are you looking for?">
+            <button class="btn position-absolute end-0 top-50 translate-middle-y me-3"><i class="fas fa-search"></i></button>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-6 text-end">
+          <div class="d-flex justify-content-end align-items-center gap-3">
+            <a href="#" class="text-decoration-none text-muted">NT Services</a>
+            <a href="#" class="text-decoration-none text-muted">My Account</a>
+            <a href="#" class="text-decoration-none text-muted">FedEx Ground <span class="badge bg-danger rounded-pill">09:58:49</span></a>
+            <a href="#" class="btn btn-outline-success rounded-pill">Cart $0.00</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN NAV -->
+  <nav class="main-nav">
+    <div class="container">
+      <ul class="nav justify-content-center flex-wrap">
+        <li class="nav-item"><a class="nav-link" href="#">Apple</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Samsung</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Motorola</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Google</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Other Parts</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Game Console</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Accessories</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Tools & Supplies</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Refurbishing</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Board Components</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Pre-Owned Devices</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container">
+      <h1>Blog</h1>
+      <p class="lead">Latest repair tips, industry news, and product updates</p>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+    <div class="row">
+      <!-- Blog Post 1 -->
+      <div class="col-lg-6 mb-4">
+        <div class="card blog-card">
+          <img src="https://via.placeholder.com/600x400/0066cc/ffffff?text=iPhone+16+Repair+Guide" class="card-img-top" alt="iPhone 16 Repair Guide">
+          <div class="card-body">
+            <h5 class="card-title">iPhone 16 Screen Replacement Guide (2025)</h5>
+            <p class="blog-meta">November 1, 2025 • Repair Guides</p>
+            <p class="blog-excerpt">Step-by-step guide for replacing iPhone 16 screens using AO7 tools and Genuine Apple parts. Learn the proper techniques to avoid common mistakes and ensure perfect alignment.</p>
+            <a href="#" class="btn btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Post 2 -->
+      <div class="col-lg-6 mb-4">
+        <div class="card blog-card">
+          <img src="https://via.placeholder.com/600x400/28a745/ffffff?text=Samsung+S24+Ultra+Battery" class="card-img-top" alt="Samsung S24 Ultra Battery Replacement">
+          <div class="card-body">
+            <h5 class="card-title">Samsung Galaxy S24 Ultra Battery Replacement</h5>
+            <p class="blog-meta">October 28, 2025 • Tutorials</p>
+            <p class="blog-excerpt">Complete walkthrough for replacing the S24 Ultra battery. Includes safety precautions, tool requirements, and tips for maintaining battery health post-repair.</p>
+            <a href="#" class="btn btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Post 3 -->
+      <div class="col-lg-6 mb-4">
+        <div class="card blog-card">
+          <img src="https://via.placeholder.com/600x400/dc3545/ffffff?text=Industry+News" class="card-img-top" alt="Industry News">
+          <div class="card-body">
+            <h5 class="card-title">2025 Mobile Repair Industry Trends</h5>
+            <p class="blog-meta">October 25, 2025 • Industry News</p>
+            <p class="blog-excerpt">Analysis of emerging trends in mobile repair: AI diagnostics, sustainable parts, and the rise of foldable device repairs. What repair shops need to know for 2025.</p>
+            <a href="#" class="btn btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Post 4 -->
+      <div class="col-lg-6 mb-4">
+        <div class="card blog-card">
+          <img src="https://via.placeholder.com/600x400/fd7e14/ffffff?text=Tool+Review" class="card-img-top" alt="AO7 Tool Review">
+          <div class="card-body">
+            <h5 class="card-title">AO7 Professional Repair Toolkit Review</h5>
+            <p class="blog-meta">October 20, 2025 • Product Reviews</p>
+            <p class="blog-excerpt">In-depth review of the AO7 professional repair toolkit. Performance testing, durability assessment, and comparison with other premium tool sets in the market.</p>
+            <a href="#" class="btn btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Post 5 -->
+      <div class="col-lg-6 mb-4">
+        <div class="card blog-card">
+          <img src="https://via.placeholder.com/600x400/6f42c1/ffffff?text=Water+Damage" class="card-img-top" alt="Water Damage Repair">
+          <div class="card-body">
+            <h5 class="card-title">Advanced Water Damage Recovery Techniques</h5>
+            <p class="blog-meta">October 15, 2025 • Advanced Repairs</p>
+            <p class="blog-excerpt">Professional techniques for water damage recovery. When to attempt repairs, proper cleaning procedures, and indicators that a device should be considered beyond repair.</p>
+            <a href="#" class="btn btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Post 6 -->
+      <div class="col-lg-6 mb-4">
+        <div class="card blog-card">
+          <img src="https://via.placeholder.com/600x400/17a2b8/ffffff?text=Genuine+Parts" class="card-img-top" alt="Genuine Apple Parts">
+          <div class="card-body">
+            <h5 class="card-title">Why Genuine Apple Parts Matter</h5>
+            <p class="blog-meta">October 10, 2025 • Parts & Quality</p>
+            <p class="blog-excerpt">The importance of using genuine Apple parts for repairs. Performance differences, warranty implications, and long-term reliability compared to aftermarket alternatives.</p>
+            <a href="#" class="btn btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Load More Button -->
+    <div class="text-center mt-5">
+      <button class="btn btn-primary px-4 py-2">Load More Articles</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="logo mb-3" style="color:#fff; font-size:24px;">Nexus<span>T</span>ech Hub</div>
+          <p><strong>United Arab Emirates</strong></p>
+          <p>English | AED</p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>About</h5>
+          <a href="about.html">About Us</a>
+          <a href="blog.html">Blog</a>
+          <a href="quality-standards.html">Quality Standards</a>
+          <a href="return-policy.html">Return Policy</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Services</h5>
+          <a href="my-account.html">My Account</a>
+          <a href="lcd-buyback.html">LCD Buyback</a>
+          <a href="pre-owned-devices.html">Pre-Owned Devices</a>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Support</h5>
+          <a href="contact.html">Contact Us</a>
+          <a href="#">Live Chat</a>
+          <a href="tel:+18885558324">1-888-555-TECH</a>
+          <a href="https://wa.me/971585531029">WhatsApp</a>
+          <a href="mailto:sales@nexustechhub.com">Email</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Nexus Tech Hub. All trademarks are property of their respective owners.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

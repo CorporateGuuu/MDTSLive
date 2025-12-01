@@ -1,0 +1,28 @@
+# netlify.toml
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NEXT_PRIVATE_TARGET = "server"
+
+# THIS IS THE MAGIC → Next.js + Node modules caching
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build.cache]
+  # Cache .next (Next.js build output)
+  paths = [
+    ".next/cache",
+    "node_modules/.cache"
+  ]
+
+# Optional but recommended: cache node_modules too (huge speedup)
+[[plugins]]
+  package = "netlify-plugin-cache"
+  [plugins.inputs]
+    paths = [
+      "node_modules/.cache",
+      ".next/cache"
+    ]
