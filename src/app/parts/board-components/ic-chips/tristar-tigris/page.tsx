@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Tristar & Tigris IC - iPhone 6 to 15 Pro Max | Nexus Tech Hub',
+  title: 'Tristar & Tigris IC - iPhone 6 to 15 Pro Max | Midas Technical Solutions',
   description: 'Genuine pulled Tristar (1610A3, 1612A1, 1614A1) and Tigris ICs. Fixes no charge, no power, USB issues.',
 };
 

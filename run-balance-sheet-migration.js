@@ -3,7 +3,7 @@
 /**
  * Balance Sheet Migration Runner
  *
- * This script runs the balance sheet database migration for the Nexus Tech Hub project.
+ * This script runs the balance sheet database migration for the Midas Technical Solutions project.
  * It sets up the balance_sheet table with proper RLS policies and sample data.
  */
 

@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Forward OCA Pro - 16" Vacuum Laminator + Autoclave Combo | Nexus Tech Hub',
+  title: 'Forward OCA Pro - 16" Vacuum Laminator + Autoclave Combo | Midas Technical Solutions',
   description: 'All-in-one OCA lamination machine with built-in defoaming. Supports up to iPhone 15 Pro Max & iPad Pro. 0 bubbles guaranteed.',
 };
 

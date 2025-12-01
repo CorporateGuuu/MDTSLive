@@ -1,6 +1,6 @@
 # FedEx Integration
 
-This document describes the FedEx API integration for real-time shipment tracking in the Nexus Tech Hub application.
+This document describes the FedEx API integration for real-time shipment tracking in the Midas Technical Solutions application.
 
 ## Overview
 

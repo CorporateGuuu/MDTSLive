@@ -2,7 +2,7 @@ import { createBrowserClient } from '@supabase/auth-helpers-nextjs';
 import type { Database } from '../types/supabase';
 
 // =============================================================================
-// Nexus Tech Hub - Supabase Client Configuration (Next.js Auth Helpers)
+// Midas Technical Solutions - Supabase Client Configuration (Next.js Auth Helpers)
 // =============================================================================
 
 // -----------------------------------------------------------------------------

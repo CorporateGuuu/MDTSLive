@@ -8,7 +8,7 @@ const chips = [
 ];
 
 export const metadata = {
-  title: 'IC Chips - Tristar, Tigris, Charging IC, Audio IC | Nexus Tech Hub',
+  title: 'IC Chips - Tristar, Tigris, Charging IC, Audio IC | Midas Technical Solutions',
   description: 'OEM-quality board-level ICs. 100% tested. Same-day shipping.',
 };
 

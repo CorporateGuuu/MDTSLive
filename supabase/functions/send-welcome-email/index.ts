@@ -28,20 +28,20 @@ serve(async (req) => {
 
     // Send welcome email
     const { data, error } = await resend.emails.send({
-      from: 'Nexus Tech Hub <welcome@nexustechhub.com>',
+      from: 'Midas Technical Solutions <welcome@nexustechhub.com>',
       to: [email],
-      subject: 'Welcome to Nexus Tech Hub - Your Wholesale Account is Ready!',
+      subject: 'Welcome to Midas Technical Solutions - Your Wholesale Account is Ready!',
       html: `
         <!DOCTYPE html>
         <html>
           <head>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Welcome to Nexus Tech Hub</title>
+            <title>Welcome to Midas Technical Solutions</title>
           </head>
           <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
             <div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); padding: 40px 30px; text-align: center; border-radius: 10px 10px 0 0;">
-              <h1 style="color: white; margin: 0; font-size: 28px; font-weight: bold;">Welcome to Nexus Tech Hub</h1>
+              <h1 style="color: white; margin: 0; font-size: 28px; font-weight: bold;">Welcome to Midas Technical Solutions</h1>
               <p style="color: #cbd5e1; margin: 10px 0 0 0; font-size: 16px;">Your wholesale account is now active!</p>
             </div>
 
@@ -49,7 +49,7 @@ serve(async (req) => {
               <h2 style="color: #0f172a; margin-top: 0;">Hello ${name || 'Valued Customer'}!</h2>
 
               <p style="font-size: 16px; margin-bottom: 20px;">
-                Thank you for joining Nexus Tech Hub. Your ${role === 'wholesale' ? 'wholesale' : 'customer'} account has been successfully created and is ready to use.
+                Thank you for joining Midas Technical Solutions. Your ${role === 'wholesale' ? 'wholesale' : 'customer'} account has been successfully created and is ready to use.
               </p>
 
               <div style="background: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
@@ -76,7 +76,7 @@ serve(async (req) => {
               <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 30px 0;">
 
               <p style="font-size: 12px; color: #94a3b8; text-align: center;">
-                Nexus Tech Hub - Official Apple, Samsung & Google Parts<br>
+                Midas Technical Solutions - Official Apple, Samsung & Google Parts<br>
                 Lifetime Warranty • Fast Shipping • Wholesale Pricing
               </p>
             </div>

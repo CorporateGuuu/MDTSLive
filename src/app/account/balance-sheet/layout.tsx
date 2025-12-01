@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Balance Sheet - Account | Nexus Tech Hub',
+  title: 'Balance Sheet - Account | Midas Technical Solutions',
   description: 'View your account balance sheet with transaction history, debits, credits, and current balance.',
 };
 

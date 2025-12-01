@@ -38,7 +38,7 @@ const pixel7aParts = [
 ];
 
 export const metadata = {
-  title: 'Pixel 7a Parts - 6.1" OLED Screen, Battery, Camera | Nexus Tech Hub',
+  title: 'Pixel 7a Parts - 6.1" OLED Screen, Battery, Camera | Midas Technical Solutions',
   description: 'Genuine Google Pixel 7a parts and components. OLED display, battery, camera module, motherboard. Tensor G2 chipset.',
 };
 

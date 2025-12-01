@@ -157,7 +157,7 @@ export default function EditProfilePage() {
   const enable2FA = async () => {
     const { data, error } = await supabase.auth.mfa.enroll({
       factorType: 'totp',
-      issuer: 'Nexus Tech Hub',
+      issuer: 'Midas Technical Solutions',
       friendlyName: 'Phone App (Google Authenticator, Authy, etc.)',
     });
 
@@ -360,7 +360,7 @@ export default function EditProfilePage() {
 
               <div>
                 <Label>Company</Label>
-                <Input {...register('company')} placeholder="Nexus Tech Hub LLC" />
+                <Input {...register('company')} placeholder="Midas Technical Solutions LLC" />
               </div>
             </CardContent>
           </Card>

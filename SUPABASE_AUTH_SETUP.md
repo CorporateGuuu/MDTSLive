@@ -1,6 +1,6 @@
 # Supabase Authentication Setup Guide
 
-This guide provides step-by-step instructions to configure Supabase authentication for the Nexus Tech Hub application, including Google OAuth and custom email templates.
+This guide provides step-by-step instructions to configure Supabase authentication for the Midas Technical Solutions application, including Google OAuth and custom email templates.
 
 ## Prerequisites
 
@@ -42,14 +42,14 @@ Navigate to **Supabase Dashboard → Authentication → Email Templates**
 
 **Subject:**
 ```
-Reset Your Nexus Tech Hub Password
+Reset Your Midas Technical Solutions Password
 ```
 
 **Message (Plain Text):**
 ```
 Hi there,
 
-You requested a password reset for your Nexus Tech Hub account.
+You requested a password reset for your Midas Technical Solutions account.
 
 Click the link below to reset your password:
 {{ .ConfirmationURL }}
@@ -57,7 +57,7 @@ Click the link below to reset your password:
 If you didn't request this password reset, you can safely ignore this email.
 
 Best regards,
-Nexus Tech Hub Team
+Midas Technical Solutions Team
 ```
 
 **Message (HTML):**
@@ -87,14 +87,14 @@ Nexus Tech Hub Team
 <body>
   <div class="container">
     <div class="header">
-      <h1>Nexus Tech Hub</h1>
+      <h1>Midas Technical Solutions</h1>
       <p>Password Reset Request</p>
     </div>
 
     <div class="content">
       <h2>Reset Your Password</h2>
       <p>Hi there,</p>
-      <p>You requested a password reset for your Nexus Tech Hub account.</p>
+      <p>You requested a password reset for your Midas Technical Solutions account.</p>
       <p>Click the button below to reset your password:</p>
 
       <a href="{{ .ConfirmationURL }}" class="button">Reset Password</a>
@@ -107,7 +107,7 @@ Nexus Tech Hub Team
     </div>
 
     <div class="footer">
-      <p>Best regards,<br>Nexus Tech Hub Team</p>
+      <p>Best regards,<br>Midas Technical Solutions Team</p>
       <p>This email was sent to {{ .Email }}. If you have any questions, contact our support team.</p>
     </div>
   </div>

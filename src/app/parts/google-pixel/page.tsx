@@ -40,7 +40,7 @@ const pixelCategories = [
 ];
 
 export const metadata = {
-  title: 'Google Pixel Parts - 9 Pro XL, 9 Pro, 8 Pro, 7a | Nexus Tech Hub',
+  title: 'Google Pixel Parts - 9 Pro XL, 9 Pro, 8 Pro, 7a | Midas Technical Solutions',
   description: 'Genuine Google Pixel parts and components. LCD screens, batteries, motherboards, cameras. Pixel 9 Pro XL, 9 Pro, 8 Pro, 7a series.',
 };
 

@@ -253,9 +253,9 @@ export default function TaxFormsPage() {
 
                 {/* Explanatory Text */}
                 <div className="bg-white rounded-xl shadow p-6 mb-8 space-y-4">
-                  <p>In order to comply with state and local sales tax requirements, Nexus Tech Hub must retain a copy of your resale certificate. If not retained, sales tax will be collected on the sale. If the buyer fails to provide a resale certificate or send it to Nexus Tech Hub, the buyer shall pay any sales tax due on the purchase. The buyer shall be responsible for obtaining a resale certificate from the state that provides the buyer with an exemption from the sales tax.</p>
+                  <p>In order to comply with state and local sales tax requirements, Midas Technical Solutions must retain a copy of your resale certificate. If not retained, sales tax will be collected on the sale. If the buyer fails to provide a resale certificate or send it to Midas Technical Solutions, the buyer shall pay any sales tax due on the purchase. The buyer shall be responsible for obtaining a resale certificate from the state that provides the buyer with an exemption from the sales tax.</p>
                   <p>Resale Certificate - This form is for those who have a business or institution. Tax Exempt Certificate - This form is for those who have a government agency or institution.</p>
-                  <p>Nexus Tech Hub collects tax in the states below. If not listed, we will not collect on your behalf.</p>
+                  <p>Midas Technical Solutions collects tax in the states below. If not listed, we will not collect on your behalf.</p>
                 </div>
 
                 {/* States Table */}

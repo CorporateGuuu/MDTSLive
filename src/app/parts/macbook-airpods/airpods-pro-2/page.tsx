@@ -3,7 +3,7 @@ import Breadcrumb from '../../../../components/Breadcrumb';
 import { getProductsByModel } from '../../../../lib/supabase';
 
 export const metadata = {
-  title: 'AirPods Pro (2nd Gen) Parts - Batteries, Cases, Drivers | Nexus Tech Hub',
+  title: 'AirPods Pro (2nd Gen) Parts - Batteries, Cases, Drivers | Midas Technical Solutions',
   description: 'Premium replacement parts for AirPods Pro 2nd generation. Batteries, charging cases, drivers, sensors.',
 };
 

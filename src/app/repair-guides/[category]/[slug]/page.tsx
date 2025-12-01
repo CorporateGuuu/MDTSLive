@@ -1,6 +1,6 @@
 import { Youtube } from 'lucide-react';
 
-export const metadata = { title: 'iPhone 15 Pro Max Screen Replacement Guide | Nexus Tech Hub' };
+export const metadata = { title: 'iPhone 15 Pro Max Screen Replacement Guide | Midas Technical Solutions' };
 
 export default function GuidePage() {
   return (

@@ -3,7 +3,7 @@ import Breadcrumb from '../../../../components/Breadcrumb';
 import { getProductsByModel } from '../../../../lib/supabase';
 
 export const metadata = {
-  title: 'MacBook Pro Parts - M3/M4 Chips, Displays, Batteries | Nexus Tech Hub',
+  title: 'MacBook Pro Parts - M3/M4 Chips, Displays, Batteries | Midas Technical Solutions',
   description: 'Premium replacement parts for MacBook Pro. Liquid Retina XDR displays, M3/M4 chips, batteries, keyboards.',
 };
 

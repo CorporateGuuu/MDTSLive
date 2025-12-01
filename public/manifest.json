@@ -1,6 +1,6 @@
 {
-  "name": "Nexus Tech Hub - Professional Mobile Repair Parts UAE",
-  "short_name": "Nexus Tech Hub",
+  "name": "Midas Technical Solutions - Professional Mobile Repair Parts UAE",
+  "short_name": "Midas Technical Solutions",
   "description": "Professional mobile device repair parts and services in UAE. Specializing in iPhone, Samsung, and iPad replacement parts with quality guarantee. Located in Ras Al Khaimah.",
   "start_url": "/",
   "display": "standalone",
@@ -57,7 +57,7 @@
     {
       "name": "Contact Us",
       "short_name": "Contact",
-      "description": "Get in touch with Nexus Tech Hub support team",
+      "description": "Get in touch with Midas Technical Solutions support team",
       "url": "/contact",
       "icons": [
         {

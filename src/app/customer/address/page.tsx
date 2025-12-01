@@ -55,7 +55,7 @@ export default function AddressBookPage() {
       {/* Header – reuse your existing one */}
       <header className="bg-white shadow-sm px-6 py-4 flex justify-between items-center">
         <div className="flex items-center gap-8">
-          <h1 className="text-2xl font-bold text-blue-600">Nexus Tech Hub</h1>
+          <h1 className="text-2xl font-bold text-blue-600">Midas Technical Solutions</h1>
           <input placeholder="What are you looking for?" className="border rounded-lg px-4 py-2 w-96" />
         </div>
         <div className="flex items-center gap-6 text-sm">

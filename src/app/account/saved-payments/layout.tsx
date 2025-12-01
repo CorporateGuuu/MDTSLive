@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Saved Payment Information - Credit Cards | Nexus Tech Hub',
+  title: 'Saved Payment Information - Credit Cards | Midas Technical Solutions',
   description: 'Manage saved payment methods for quick checkout. Add Visa, Mastercard securely.',
 };
 

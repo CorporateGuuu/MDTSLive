@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // =============================================================================
-// Nexus Tech Hub - Storage Setup Script
+// Midas Technical Solutions - Storage Setup Script
 // =============================================================================
 
 import { config } from 'dotenv';
@@ -100,7 +100,7 @@ async function checkBuckets() {
  * Run storage setup
  */
 async function setupStorage() {
-  console.log('🚀 Starting Nexus Tech Hub storage setup...\n');
+  console.log('🚀 Starting Midas Technical Solutions storage setup...\n');
 
   try {
     // Check existing buckets

@@ -3,7 +3,7 @@ import Breadcrumb from '../../../../components/Breadcrumb';
 import { getProductsByModel } from '../../../../lib/supabase';
 
 export const metadata = {
-  title: 'Apple Watch Ultra 2 Parts - Titanium Case, Action Button | Nexus Tech Hub',
+  title: 'Apple Watch Ultra 2 Parts - Titanium Case, Action Button | Midas Technical Solutions',
   description: 'Premium titanium components, action button, rugged case parts for Apple Watch Ultra 2.',
 };
 

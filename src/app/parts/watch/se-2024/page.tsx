@@ -3,7 +3,7 @@ import Breadcrumb from '../../../../components/Breadcrumb';
 import { getProductsByModel } from '../../../../lib/supabase';
 
 export const metadata = {
-  title: 'Apple Watch SE (2024) Parts - Essential Features, Crash Detection | Nexus Tech Hub',
+  title: 'Apple Watch SE (2024) Parts - Essential Features, Crash Detection | Midas Technical Solutions',
   description: 'Premium components for Apple Watch SE 2024. Essential features, crash detection, precision finding.',
 };
 

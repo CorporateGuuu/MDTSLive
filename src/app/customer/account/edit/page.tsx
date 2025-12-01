@@ -142,8 +142,8 @@ export default function EditAccountPage() {
   return (
     <>
       <Head>
-        <title>Edit Account Information - Nexus Tech Hub</title>
-        <meta name="description" content="Update your account information, manage notifications, and customize your regional settings at Nexus Tech Hub." />
+        <title>Edit Account Information - Midas Technical Solutions</title>
+        <meta name="description" content="Update your account information, manage notifications, and customize your regional settings at Midas Technical Solutions." />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -160,7 +160,7 @@ export default function EditAccountPage() {
             >
               {mobileMenuOpen ? <X size={28} /> : <MenuIcon size={28} />}
             </button>
-            <h1 className="text-3xl font-bold text-blue-600">Nexus Tech Hub</h1>
+            <h1 className="text-3xl font-bold text-blue-600">Midas Technical Solutions</h1>
             <div className="relative hidden md:block">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} aria-hidden="true" />
               <Input
@@ -431,10 +431,10 @@ export default function EditAccountPage() {
                 <Checkbox id="opt-in" className="mt-1" />
                 <div>
                   <label htmlFor="opt-in" className="font-medium cursor-pointer">
-                    Opt in to receive Mobile Text Notifications from Nexus Tech Hub
+                    Opt in to receive Mobile Text Notifications from Midas Technical Solutions
                   </label>
                   <p className="text-sm text-gray-600 mt-2">
-                    By opting in, you agree to receive text messages from Nexus Tech Hub. Message frequency varies.
+                    By opting in, you agree to receive text messages from Midas Technical Solutions. Message frequency varies.
                     Message and data rates may apply. Reply STOP to opt out or HELP for help.
                   </p>
                 </div>
@@ -479,7 +479,7 @@ export default function EditAccountPage() {
         <div className="max-w-6xl mx-auto px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <h3 className="font-bold text-lg mb-4">About Nexus Tech Hub</h3>
+              <h3 className="font-bold text-lg mb-4">About Midas Technical Solutions</h3>
               <p className="text-gray-300 text-sm">
                 Your trusted partner for premium mobile device repairs, parts, and refurbishing solutions.
               </p>
@@ -513,7 +513,7 @@ export default function EditAccountPage() {
             </div>
           </div>
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2025 Nexus Tech Hub. All rights reserved.</p>
+            <p>&copy; 2025 Midas Technical Solutions. All rights reserved.</p>
           </div>
         </div>
       </footer>

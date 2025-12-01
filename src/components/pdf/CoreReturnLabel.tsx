@@ -253,7 +253,7 @@ export const CoreReturnLabel: React.FC<CoreReturnLabelProps> = ({
 
           {/* Footer */}
           <View style={styles.footer}>
-            <Text style={styles.footerText}>Core Return - Nexus Tech Hub</Text>
+            <Text style={styles.footerText}>Core Return - Midas Technical Solutions</Text>
             <Text style={styles.footerText}>Generated: {new Date().toLocaleDateString()}</Text>
           </View>
         </View>

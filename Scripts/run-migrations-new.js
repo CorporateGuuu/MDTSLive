@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // =============================================================================
-// Nexus Tech Hub - Migration Runner (New Implementation)
+// Midas Technical Solutions - Migration Runner (New Implementation)
 // =============================================================================
 
 import { config } from 'dotenv';
@@ -254,7 +254,7 @@ async function executeMigration(migration) {
 // =============================================================================
 
 async function runMigrations() {
-  console.log('🚀 Starting Nexus Tech Hub migration runner...\n');
+  console.log('🚀 Starting Midas Technical Solutions migration runner...\n');
   console.log('🔧 Environment variables loaded:');
   console.log('   - SUPABASE_URL:', supabaseUrl ? '✅ Set' : '❌ Not set');
   console.log('   - SERVICE_KEY:', supabaseServiceKey ? '✅ Set' : '❌ Not set');
@@ -334,7 +334,7 @@ async function runMigrations() {
 
     if (failureCount === 0) {
       console.log('\n🎉 All migrations completed successfully!');
-      console.log('🚀 Your Nexus Tech Hub database schema is up to date.');
+      console.log('🚀 Your Midas Technical Solutions database schema is up to date.');
     } else {
       console.log(`\n⚠️  Migration process stopped due to ${failureCount} failure(s).`);
       console.log('🔍 Check the error messages above for details.');

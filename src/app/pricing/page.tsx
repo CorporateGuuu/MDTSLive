@@ -116,7 +116,7 @@ export default function PricingPage() {
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Choose the perfect plan for your wholesale business. All plans include
-            our core Nexus Tech Hub platform with premium support and features.
+            our core Midas Technical Solutions platform with premium support and features.
           </p>
         </div>
       </div>

@@ -8,7 +8,7 @@ const macbookAirpodsItems = [
 ];
 
 export const metadata = {
-  title: 'MacBook & AirPods Parts - Displays, Batteries, Accessories | Nexus Tech Hub',
+  title: 'MacBook & AirPods Parts - Displays, Batteries, Accessories | Midas Technical Solutions',
   description: 'Premium replacement parts for MacBook and AirPods. Screens, batteries, charging cases, accessories.',
 };
 

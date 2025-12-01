@@ -204,7 +204,7 @@ export default function OrdersPage() {
     const doc = new jsPDF();
 
     doc.setFontSize(20);
-    doc.text('Nexus Tech Hub - Order Export', 20, 30);
+    doc.text('Midas Technical Solutions - Order Export', 20, 30);
 
     doc.setFontSize(12);
     let yPosition = 50;
@@ -711,7 +711,7 @@ export default function OrdersPage() {
             <div>
               <h3 className="font-bold text-lg mb-4">About Us</h3>
               <p className="text-gray-300 text-sm">
-                Nexus Tech Hub is your trusted partner for mobile device parts and repair solutions.
+                Midas Technical Solutions is your trusted partner for mobile device parts and repair solutions.
               </p>
             </div>
             <div>
@@ -742,7 +742,7 @@ export default function OrdersPage() {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2025 Nexus Tech Hub. All rights reserved.</p>
+            <p>&copy; 2025 Midas Technical Solutions. All rights reserved.</p>
           </div>
         </div>
       </footer>

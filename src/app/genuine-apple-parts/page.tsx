@@ -30,7 +30,7 @@ export default function GenuineApplePartsPage() {
   ];
 
   const requirements = [
-    'Active Nexus Tech Hub account',
+    'Active Midas Technical Solutions account',
     'Verified business or repair operation',
     'Commitment to quality repair standards',
     'Regular core return submissions'

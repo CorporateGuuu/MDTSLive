@@ -59,7 +59,7 @@ export default function ManageDistrictManagersPage() {
       {/* Header */}
       <header className="bg-white shadow px-6 py-4 flex justify-between items-center">
         <div className="flex items-center gap-4 flex-1">
-          <h1 className="text-xl font-bold text-blue-600">Nexus Tech Hub</h1>
+          <h1 className="text-xl font-bold text-blue-600">Midas Technical Solutions</h1>
           <input placeholder="What are you looking for?" className="flex-1 border rounded px-4 py-2" />
         </div>
         <div className="flex items-center gap-4">
@@ -142,7 +142,7 @@ export default function ManageDistrictManagersPage() {
           <div><h3>Support</h3><p className="text-sm">Location • Live Chat • Phone App</p></div>
         </div>
         <div className="flex justify-center gap-4 mt-8 text-sm">VISA • PayPal • AMEX • Discover</div>
-        <p className="text-center text-gray-400 mt-4">© 2025 Nexus Tech Hub</p>
+        <p className="text-center text-gray-400 mt-4">© 2025 Midas Technical Solutions</p>
       </footer>
     </div>
   );

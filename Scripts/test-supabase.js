@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // =============================================================================
-// Nexus Tech Hub - Supabase Test Suite
+// Midas Technical Solutions - Supabase Test Suite
 // =============================================================================
 
 import { config } from 'dotenv';
@@ -340,7 +340,7 @@ async function cleanup() {
 // =============================================================================
 
 function runTests() {
-  console.log('🧪 Starting Nexus Tech Hub Supabase Test Suite...\n');
+  console.log('🧪 Starting Midas Technical Solutions Supabase Test Suite...\n');
 
   // Run tests sequentially using promises
   testConnectivity()

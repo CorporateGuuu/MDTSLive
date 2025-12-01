@@ -167,7 +167,7 @@ async function handleRegister(userData, headers) {
       headers,
       body: JSON.stringify({
         success: true,
-        message: 'Registration successful! Welcome to Nexus Tech Hub.',
+        message: 'Registration successful! Welcome to Midas Technical Solutions.',
         user: {
           id: data.user.id,
           email: data.user.email,

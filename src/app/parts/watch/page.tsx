@@ -9,7 +9,7 @@ const watchModels = [
 ];
 
 export const metadata = {
-  title: 'Apple Watch Parts - Screens, Batteries, Bands | Nexus Tech Hub',
+  title: 'Apple Watch Parts - Screens, Batteries, Bands | Midas Technical Solutions',
   description: 'Premium replacement parts for all Apple Watch models. Screens, batteries, bands, sensors. Fast USA shipping.',
 };
 

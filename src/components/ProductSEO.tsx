@@ -25,9 +25,9 @@ interface ProductSEOProps {
 }
 
 export default function ProductSEO({ product, canonicalUrl }: ProductSEOProps) {
-  const title = `${product.name} - ${product.brands?.name || 'Nexus Tech Hub'}`;
+  const title = `${product.name} - ${product.brands?.name || 'Midas Technical Solutions'}`;
   const description = product.description ||
-    `${product.name} - High quality ${product.categories?.name || 'tech parts'} from ${product.brands?.name || 'Nexus Tech Hub'}. ${product.reviews?.count ? `${product.reviews.count} reviews, ${product.reviews.averageRating} stars.` : ''}`;
+    `${product.name} - High quality ${product.categories?.name || 'tech parts'} from ${product.brands?.name || 'Midas Technical Solutions'}. ${product.reviews?.count ? `${product.reviews.count} reviews, ${product.reviews.averageRating} stars.` : ''}`;
 
   const imageUrl = product.thumbnail_url || (product.images && product.images[0]) ||
     'https://nexustechhub.com/default-product-image.jpg';
@@ -51,7 +51,7 @@ export default function ProductSEO({ product, canonicalUrl }: ProductSEOProps) {
       <meta property="og:image" content={imageUrl} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="Nexus Tech Hub" />
+      <meta property="og:site_name" content="Midas Technical Solutions" />
       <meta property="og:locale" content="en_US" />
 
       {/* Product-specific Open Graph */}
@@ -82,7 +82,7 @@ export default function ProductSEO({ product, canonicalUrl }: ProductSEOProps) {
 
       {/* Additional SEO */}
       <meta name="robots" content="index, follow" />
-      <meta name="author" content="Nexus Tech Hub" />
+      <meta name="author" content="Midas Technical Solutions" />
 
       {/* Structured Data (JSON-LD) */}
       <script
@@ -96,7 +96,7 @@ export default function ProductSEO({ product, canonicalUrl }: ProductSEOProps) {
             "image": imageUrl,
             "brand": {
               "@type": "Brand",
-              "name": product.brands?.name || "Nexus Tech Hub"
+              "name": product.brands?.name || "Midas Technical Solutions"
             },
             "category": product.categories?.name,
             "offers": {
@@ -108,7 +108,7 @@ export default function ProductSEO({ product, canonicalUrl }: ProductSEOProps) {
                 : "https://schema.org/OutOfStock",
               "seller": {
                 "@type": "Organization",
-                "name": "Nexus Tech Hub"
+                "name": "Midas Technical Solutions"
               }
             },
             "aggregateRating": product.reviews && product.reviews.count > 0 ? {

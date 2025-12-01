@@ -105,7 +105,7 @@ export default function VerifyEmailPage() {
           </CardHeader>
           <CardContent className="text-center space-y-6">
             <p className="text-sm text-gray-600">
-              Welcome to Nexus Tech Hub! You can now access all features.
+              Welcome to Midas Technical Solutions! You can now access all features.
             </p>
             <p className="text-xs text-gray-500">
               Redirecting to your dashboard...
@@ -188,7 +188,7 @@ export default function VerifyEmailPage() {
           <CardHeader className="text-center pb-4">
             <CardTitle className="text-xl font-semibold">Verify Your Account</CardTitle>
             <CardDescription>
-              Click the link in the email to activate your Nexus Tech Hub account
+              Click the link in the email to activate your Midas Technical Solutions account
             </CardDescription>
           </CardHeader>
 
@@ -198,7 +198,7 @@ export default function VerifyEmailPage() {
               <div className="text-sm text-gray-600 space-y-2">
                 <p className="font-medium">📧 Check your inbox</p>
                 <p>Look for an email from <strong>noreply@nexustechhub.com</strong></p>
-                <p className="text-xs">Subject: &ldquo;Confirm your Nexus Tech Hub account&rdquo;</p>
+                <p className="text-xs">Subject: &ldquo;Confirm your Midas Technical Solutions account&rdquo;</p>
               </div>
             </div>
 

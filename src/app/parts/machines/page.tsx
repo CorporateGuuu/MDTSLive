@@ -35,7 +35,7 @@ const machineCategories = [
 ];
 
 export const metadata = {
-  title: 'Professional Repair Machines - OCA, Lasers, Separation Equipment | Nexus Tech Hub',
+  title: 'Professional Repair Machines - OCA, Lasers, Separation Equipment | Midas Technical Solutions',
   description: 'Professional repair machines and equipment for repair shops. OCA laminators, bubble removers, laser machines, separation tools.',
 };
 

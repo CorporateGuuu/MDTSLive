@@ -56,7 +56,7 @@ export async function POST(request: Request) {
           description: description,
         }],
         application_context: {
-          brand_name: 'Nexus Tech Hub',
+          brand_name: 'Midas Technical Solutions',
           landing_page: 'BILLING',
           user_action: 'PAY_NOW',
           return_url: `${process.env.NEXT_PUBLIC_SITE_URL}/success`,

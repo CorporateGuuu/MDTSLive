@@ -10,7 +10,7 @@ const models = [
 ];
 
 export const metadata = {
-  title: 'iPhone 15 Series Parts - Screens, Batteries, Cameras | Nexus Tech Hub',
+  title: 'iPhone 15 Series Parts - Screens, Batteries, Cameras | Midas Technical Solutions',
   description: 'Wholesale OEM & high-quality aftermarket parts for iPhone 15, 15 Plus, 15 Pro, 15 Pro Max. Same-day shipping from USA.',
 };
 

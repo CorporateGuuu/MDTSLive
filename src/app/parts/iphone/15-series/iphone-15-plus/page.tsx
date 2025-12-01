@@ -3,7 +3,7 @@ import Breadcrumb from '../../../../../components/Breadcrumb';
 import { getProductsByModel } from '../../../../../lib/supabase';
 
 export const metadata = {
-  title: 'iPhone 15 Plus Parts - Large Screen, Batteries, Cameras | Nexus Tech Hub',
+  title: 'iPhone 15 Plus Parts - Large Screen, Batteries, Cameras | Midas Technical Solutions',
   description: '6.7-inch displays, premium cameras, batteries, charging ports for iPhone 15 Plus. High-quality parts.',
 };
 

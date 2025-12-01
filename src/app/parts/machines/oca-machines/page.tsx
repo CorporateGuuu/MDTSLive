@@ -8,7 +8,7 @@ const machines = [
 ];
 
 export const metadata = {
-  title: 'OCA Machines & Laminators - Forward OCA Pro, TBK-578 | Nexus Tech Hub',
+  title: 'OCA Machines & Laminators - Forward OCA Pro, TBK-578 | Midas Technical Solutions',
   description: 'Professional OCA lamination machines with vacuum, bubble-free results. Forward OCA Pro, TBK-578, mini laminators. Free training + 1-year warranty.',
 };
 

@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Accessories - Nexus Tech Hub",
+  title: "Accessories - Midas Technical Solutions",
   description: "Phone accessories, cases, chargers, cables and more",
 };
 

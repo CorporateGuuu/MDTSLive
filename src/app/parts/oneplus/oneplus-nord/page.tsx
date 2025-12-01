@@ -35,7 +35,7 @@ const onePlusNordParts = [
 ];
 
 export const metadata = {
-  title: 'OnePlus Nord Parts - 6.74" AMOLED Screen, Battery, Camera | Nexus Tech Hub',
+  title: 'OnePlus Nord Parts - 6.74" AMOLED Screen, Battery, Camera | Midas Technical Solutions',
   description: 'Genuine OnePlus Nord parts and components. AMOLED display, battery, camera module, MediaTek Dimensity motherboard.',
 };
 

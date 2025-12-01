@@ -96,7 +96,7 @@ const steps = [
 ];
 
 export const metadata = {
-  title: 'iPhone Screen Replacement Guide - Step-by-Step Tutorial | Nexus Tech Hub',
+  title: 'iPhone Screen Replacement Guide - Step-by-Step Tutorial | Midas Technical Solutions',
   description: 'Complete iPhone screen replacement tutorial for iPhone 15, 14, 13, 12 series. Professional repair guide with photos, tools, and safety precautions.',
 };
 

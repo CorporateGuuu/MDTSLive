@@ -1,7 +1,7 @@
 import ProductGrid from '../../../../components/Product/ProductGrid';
 
 export const metadata = {
-  title: 'OnePlus 13 Parts - AMOLED Display, 6000mAh Battery, 100W Charger | Nexus Tech Hub',
+  title: 'OnePlus 13 Parts - AMOLED Display, 6000mAh Battery, 100W Charger | Midas Technical Solutions',
   description: 'Original OnePlus 13 screens, batteries, cameras, charging ports. Hasselblad triple camera modules.',
 };
 

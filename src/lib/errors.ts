@@ -1,5 +1,5 @@
 // =============================================================================
-// Nexus Tech Hub - Custom Error Classes
+// Midas Technical Solutions - Custom Error Classes
 // =============================================================================
 
 export class AuthError extends Error {

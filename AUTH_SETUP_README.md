@@ -1,4 +1,4 @@
-# Nexus Tech Hub Authentication System
+# Midas Technical Solutions Authentication System
 
 ## Overview
 Complete user authentication system with login, registration, session management, and account dashboard.
@@ -262,4 +262,4 @@ For technical support or questions about the authentication system:
 
 ## License
 
-This authentication system is part of the Nexus Tech Hub website and follows the same licensing terms.
+This authentication system is part of the Midas Technical Solutions website and follows the same licensing terms.

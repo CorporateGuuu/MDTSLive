@@ -48,7 +48,7 @@ const onePlusCategories = [
 ];
 
 export const metadata = {
-  title: 'OnePlus Parts - 13, 12, 12R, Open, Nord | Nexus Tech Hub',
+  title: 'OnePlus Parts - 13, 12, 12R, Open, Nord | Midas Technical Solutions',
   description: 'Genuine OnePlus parts and components. OLED screens, batteries, cameras, motherboards. 13, 12, 12R, Open, Nord series.',
 };
 

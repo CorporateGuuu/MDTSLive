@@ -38,7 +38,7 @@ const pixel8ProParts = [
 ];
 
 export const metadata = {
-  title: 'Pixel 8 Pro Parts - 6.7" OLED Screen, Battery, Camera | Nexus Tech Hub',
+  title: 'Pixel 8 Pro Parts - 6.7" OLED Screen, Battery, Camera | Midas Technical Solutions',
   description: 'Genuine Google Pixel 8 Pro parts and components. OLED display, battery, camera module, motherboard. Tensor G3 chipset.',
 };
 

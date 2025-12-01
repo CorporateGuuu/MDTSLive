@@ -29,7 +29,7 @@ const galaxySModels = [
 ];
 
 export const metadata = {
-  title: 'Galaxy S Series Parts - S24 Ultra, S24+, S23 Ultra | Nexus Tech Hub',
+  title: 'Galaxy S Series Parts - S24 Ultra, S24+, S23 Ultra | Midas Technical Solutions',
   description: 'Genuine Samsung Galaxy S series parts and components. LCD screens, batteries, motherboards, cameras for S24 Ultra, S24+, S23 Ultra.',
 };
 

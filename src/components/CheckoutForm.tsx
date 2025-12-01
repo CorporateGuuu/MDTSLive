@@ -22,7 +22,7 @@ export default function CheckoutForm() {
         country: 'US',
         currency: 'usd',
         total: {
-          label: 'Nexus Tech Hub Order',
+          label: 'Midas Technical Solutions Order',
           amount: Math.round(items.reduce((sum, i) => sum + (i.price * i.qty), 0) * 100),
         },
         displayItems: items.map(i => ({

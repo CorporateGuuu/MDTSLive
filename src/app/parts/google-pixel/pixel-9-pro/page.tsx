@@ -38,7 +38,7 @@ const pixel9ProParts = [
 ];
 
 export const metadata = {
-  title: 'Pixel 9 Pro Parts - 6.3" OLED Screen, Battery, Camera | Nexus Tech Hub',
+  title: 'Pixel 9 Pro Parts - 6.3" OLED Screen, Battery, Camera | Midas Technical Solutions',
   description: 'Genuine Google Pixel 9 Pro parts and components. OLED display, battery, camera module, motherboard. Tensor G4 chipset.',
 };
 

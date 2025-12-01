@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Marketing Materials - Genuine Apple Parts Program | Nexus Tech Hub',
+  title: 'Marketing Materials - Genuine Apple Parts Program | Midas Technical Solutions',
   description: 'Download official Apple GAPP marketing banners, posters, and displays for your repair shop.',
 };
 

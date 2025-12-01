@@ -1,7 +1,7 @@
 import ProductGrid from '../../../../components/Product/ProductGrid';
 
 export const metadata = {
-  title: 'Google Pixel 9 Pro XL Parts - OLED Screens, Batteries, Cameras | Nexus Tech Hub',
+  title: 'Google Pixel 9 Pro XL Parts - OLED Screens, Batteries, Cameras | Midas Technical Solutions',
   description: 'Original Google service pack displays, Tensor batteries, rear cameras. Same-day USA shipping.',
 };
 

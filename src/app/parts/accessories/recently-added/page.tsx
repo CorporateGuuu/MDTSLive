@@ -2,7 +2,7 @@ import ProductGrid from '../../../../components/Product/ProductGrid';
 import { getRecentProducts } from '../../../../lib/supabase/products';
 
 export const metadata = {
-  title: 'Recently Added Products - New Arrivals | Nexus Tech Hub',
+  title: 'Recently Added Products - New Arrivals | Midas Technical Solutions',
   description: 'Latest chargers, cases, cables, Casper tempered glass, AmpSentrix batteries, OEM accessories and more added daily.',
 };
 

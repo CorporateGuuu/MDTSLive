@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // =============================================================================
-// Nexus Tech Hub - Products API Routes Test
+// Midas Technical Solutions - Products API Routes Test
 // =============================================================================
 
 import { execSync } from 'child_process';

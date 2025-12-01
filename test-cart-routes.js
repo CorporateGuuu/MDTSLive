@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // =============================================================================
-// Nexus Tech Hub - Cart API Routes Test
+// Midas Technical Solutions - Cart API Routes Test
 // =============================================================================
 
 import { execSync } from 'child_process';

@@ -2,7 +2,7 @@ import { createClient } from '@supabase/supabase-js';
 import type { Database } from '../../types/supabase';
 
 // =============================================================================
-// Nexus Tech Hub - Supabase Server Client
+// Midas Technical Solutions - Supabase Server Client
 // =============================================================================
 
 // Environment variables validation

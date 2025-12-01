@@ -3,7 +3,7 @@ import Breadcrumb from '../../../../components/Breadcrumb';
 import { getProductsByModel } from '../../../../lib/supabase';
 
 export const metadata = {
-  title: 'iPad Air 11" Parts - M2 Chip, Liquid Retina | Nexus Tech Hub',
+  title: 'iPad Air 11" Parts - M2 Chip, Liquid Retina | Midas Technical Solutions',
   description: 'Premium Liquid Retina display, M2 chip components, cameras, batteries for iPad Air 11-inch.',
 };
 

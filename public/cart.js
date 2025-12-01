@@ -1,4 +1,4 @@
-// Cart System for Nexus Tech Hub
+// Cart System for Midas Technical Solutions
 class CartManager {
     constructor() {
         this.cart = this.loadCart();

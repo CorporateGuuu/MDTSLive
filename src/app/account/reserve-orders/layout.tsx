@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Reserve Orders - Manage Holds | Nexus Tech Hub',
+  title: 'Reserve Orders - Manage Holds | Midas Technical Solutions',
   description: 'View and manage your reserved orders with easy ship/cancel options.',
 };
 

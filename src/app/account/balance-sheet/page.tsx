@@ -163,14 +163,14 @@ export default function BalanceSheetPage() {
   return (
     <>
       <Head>
-        <title>My Balance Sheet - Transaction Ledger | Nexus Tech Hub</title>
+        <title>My Balance Sheet - Transaction Ledger | Midas Technical Solutions</title>
         <meta name="description" content="View debit/credit transactions and balance sheet from 10/28/2025 to 11/28/2025. Export PDF/CSV." />
       </Head>
       <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-white shadow-sm px-6 py-4 flex justify-between items-center">
         <div className="flex items-center gap-4">
-          <h1 className="text-2xl font-bold text-blue-600">Nexus Tech Hub</h1>
+          <h1 className="text-2xl font-bold text-blue-600">Midas Technical Solutions</h1>
           <input placeholder="What are you looking for?" className="border rounded-lg px-4 py-2 w-64" />
           <select className="border rounded-lg px-3 py-2" aria-label="Product categories">
             <option>Apple/Samsung/Motorola</option>
@@ -442,7 +442,7 @@ export default function BalanceSheetPage() {
         <div className="flex justify-center gap-4 mt-8 text-sm text-gray-300">
           VISA • PayPal • AMEX • Discover
         </div>
-        <p className="text-center text-gray-400 mt-4">© 2025 Nexus Tech Hub. All rights reserved.</p>
+        <p className="text-center text-gray-400 mt-4">© 2025 Midas Technical Solutions. All rights reserved.</p>
       </footer>
       </div>
     </>

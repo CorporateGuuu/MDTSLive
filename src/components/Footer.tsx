@@ -110,7 +110,7 @@ export default function Footer() {
             ))}
           </div>
           <p className="text-sm text-gray-400">
-            © 2025 Nexus Tech Hub. All trademarks are property of their respective owners.
+            © 2025 Midas Technical Solutions. All trademarks are property of their respective owners.
           </p>
         </div>
       </div>

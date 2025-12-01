@@ -77,7 +77,7 @@ export default function MyAccountPage() {
               <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
                 <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                 <div className="flex-1">
-                  <p className="text-sm text-gray-600">Welcome to Nexus Tech Hub! Your account is now active.</p>
+                  <p className="text-sm text-gray-600">Welcome to Midas Technical Solutions! Your account is now active.</p>
                   <p className="text-xs text-gray-400">Just now</p>
                 </div>
               </div>

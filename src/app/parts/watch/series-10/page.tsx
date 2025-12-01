@@ -3,7 +3,7 @@ import Breadcrumb from '../../../../components/Breadcrumb';
 import { getProductsByModel } from '../../../../lib/supabase';
 
 export const metadata = {
-  title: 'Apple Watch Series 10 Parts - Slimmer Design, Bigger Display | Nexus Tech Hub',
+  title: 'Apple Watch Series 10 Parts - Slimmer Design, Bigger Display | Midas Technical Solutions',
   description: 'Premium components for Apple Watch Series 10. Slimmer design parts, bigger display, sensors.',
 };
 

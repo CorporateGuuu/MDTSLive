@@ -3,7 +3,7 @@ import Breadcrumb from '../../../../../components/Breadcrumb';
 import { getProductsByModel } from '../../../../../lib/supabase';
 
 export const metadata = {
-  title: 'iPhone 15 Pro Max Parts - OLED Screens, Batteries, Cameras | Nexus Tech Hub',
+  title: 'iPhone 15 Pro Max Parts - OLED Screens, Batteries, Cameras | Midas Technical Solutions',
   description: 'Incell & OLED displays, original batteries, back glass, cameras, buttons for iPhone 15 Pro Max. Grade A+ quality, tested in USA.',
 };
 

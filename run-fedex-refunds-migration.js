@@ -3,7 +3,7 @@
 /**
  * FedEx Refunds Migration Runner
  *
- * This script runs the FedEx refunds database migration for the Nexus Tech Hub project.
+ * This script runs the FedEx refunds database migration for the Midas Technical Solutions project.
  * It sets up the fedex_refunds table with proper RLS policies and sample data.
  */
 

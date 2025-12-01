@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { supabaseAdmin } from '../../../lib/supabaseClient';
 
 // =============================================================================
-// Nexus Tech Hub - Categories API Route
+// Midas Technical Solutions - Categories API Route
 // =============================================================================
 
 export async function GET(request: NextRequest) {

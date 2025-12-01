@@ -1,6 +1,6 @@
-# Nexus Tech Hub - Storage Setup Guide
+# Midas Technical Solutions - Storage Setup Guide
 
-This guide explains how to set up Supabase Storage buckets and policies for the Nexus Tech Hub application.
+This guide explains how to set up Supabase Storage buckets and policies for the Midas Technical Solutions application.
 
 ## Overview
 

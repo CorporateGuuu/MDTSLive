@@ -58,7 +58,7 @@ export async function GET() {
     return NextResponse.json({
       success: allSuccessful,
       message: allSuccessful
-        ? 'All database tests passed! Nexus Tech Hub is fully functional.'
+        ? 'All database tests passed! Midas Technical Solutions is fully functional.'
         : 'Some database tests failed. Check the details below.',
       tests,
       timestamp: new Date().toISOString(),

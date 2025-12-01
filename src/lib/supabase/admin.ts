@@ -2,7 +2,7 @@ import { createClient } from '@supabase/supabase-js';
 import type { Database } from '../../types/supabase';
 
 // =============================================================================
-// Nexus Tech Hub - Supabase Admin Client
+// Midas Technical Solutions - Supabase Admin Client
 // =============================================================================
 // This client is specifically for seeding, migrations, and admin operations
 // that require bypassing RLS policies completely.

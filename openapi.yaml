@@ -1,10 +1,10 @@
 openapi: 3.1.0
 info:
-  title: Nexus Tech Hub API
-  description: E-commerce API for Nexus Tech Hub - Product catalog, authentication, and shopping cart management
+  title: Midas Technical Solutions API
+  description: E-commerce API for Midas Technical Solutions - Product catalog, authentication, and shopping cart management
   version: 1.0.0
   contact:
-    name: Nexus Tech Hub Support
+    name: Midas Technical Solutions Support
     email: support@nexustechhub.com
 
 servers:

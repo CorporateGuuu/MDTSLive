@@ -1,7 +1,7 @@
 import ProductGrid from '../../../../components/Product/ProductGrid';
 
 export const metadata = {
-  title: 'OCA Sheets - Mitsubishi 250um OCA for iPhone, Samsung, iPad | Nexus Tech Hub',
+  title: 'OCA Sheets - Mitsubishi 250um OCA for iPhone, Samsung, iPad | Midas Technical Solutions',
   description: 'Premium Mitsubishi OCA film 250um, 200um, 175um. Bubble-free lamination. Bulk rolls available.',
 };
 

@@ -4,7 +4,7 @@ import { getUserFromCookie } from '../../../lib/auth';
 import { validateData, uploadSignedUrlSchema } from '../../../lib/validate';
 
 // =============================================================================
-// Nexus Tech Hub - Upload Signed URL API Route
+// Midas Technical Solutions - Upload Signed URL API Route
 // =============================================================================
 
 /**

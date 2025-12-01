@@ -12,7 +12,7 @@ const chargerTypes = [
 ];
 
 export const metadata = {
-  title: 'Chargers & Cables - USB-C, Lightning, Wireless | Nexus Tech Hub',
+  title: 'Chargers & Cables - USB-C, Lightning, Wireless | Midas Technical Solutions',
   description: 'Premium charging solutions including USB-C cables, Lightning cables, wall chargers, wireless chargers, and power banks.',
 };
 

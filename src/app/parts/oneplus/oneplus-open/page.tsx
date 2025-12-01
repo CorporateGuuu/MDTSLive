@@ -35,7 +35,7 @@ const onePlusOpenParts = [
 ];
 
 export const metadata = {
-  title: 'OnePlus Open Parts - Foldable Display, Dual Battery, Camera | Nexus Tech Hub',
+  title: 'OnePlus Open Parts - Foldable Display, Dual Battery, Camera | Midas Technical Solutions',
   description: 'Genuine OnePlus Open foldable parts and components. Foldable display, dual battery, Hasselblad camera system.',
 };
 

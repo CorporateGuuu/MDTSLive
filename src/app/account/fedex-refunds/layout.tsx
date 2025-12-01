@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'FedEx Shipping Refund Requests - Nexus Tech Hub',
+  title: 'FedEx Shipping Refund Requests - Midas Technical Solutions',
   description: 'Request refunds for delayed FedEx shipments with money-back guarantee claims.',
 };
 

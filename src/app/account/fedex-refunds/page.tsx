@@ -74,7 +74,7 @@ export default function FedExRefundsPage() {
       {/* Header */}
       <header className="bg-white shadow-sm px-6 py-4 flex justify-between items-center">
         <div className="flex items-center gap-8">
-          <h1 className="text-2xl font-bold text-blue-600">Nexus Tech Hub</h1>
+          <h1 className="text-2xl font-bold text-blue-600">Midas Technical Solutions</h1>
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
             <input
@@ -466,7 +466,7 @@ export default function FedExRefundsPage() {
         <div className="flex justify-center gap-4 mt-8 text-sm text-gray-400">
           VISA • PayPal • AMEX • Discover
         </div>
-        <p className="text-center text-gray-500 mt-4">© 2025 Nexus Tech Hub. All rights reserved.</p>
+        <p className="text-center text-gray-500 mt-4">© 2025 Midas Technical Solutions. All rights reserved.</p>
       </footer>
     </div>
   );

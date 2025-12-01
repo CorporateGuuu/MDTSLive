@@ -1,7 +1,7 @@
 import ProductGrid from '../../../../components/Product/ProductGrid';
 
 export const metadata = {
-  title: 'Microsoldering Tools - Hot Air Stations, Board Holders, Thermal Cameras | Nexus Tech Hub',
+  title: 'Microsoldering Tools - Hot Air Stations, Board Holders, Thermal Cameras | Midas Technical Solutions',
   description: 'Professional microsoldering equipment: Quick 861DW, JC Aixun T3A, Qianli board holders, FLIR thermal cameras. Full kits available.',
 };
 

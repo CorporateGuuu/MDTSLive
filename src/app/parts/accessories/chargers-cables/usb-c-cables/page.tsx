@@ -1,7 +1,7 @@
 import ProductGrid from '../../../../../components/Product/ProductGrid';
 
 export const metadata = {
-  title: 'USB-C Cables - Braided, 100W PD, 10ft | Nexus Tech Hub',
+  title: 'USB-C Cables - Braided, 100W PD, 10ft | Midas Technical Solutions',
   description: 'Fast charging USB-C to USB-C, USB-C to Lightning, braided nylon, MFi, Anker, Belkin, OEM quality.',
 };
 

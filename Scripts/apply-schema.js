@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // =============================================================================
-// Nexus Tech Hub - Supabase Schema Application Script
+// Midas Technical Solutions - Supabase Schema Application Script
 // =============================================================================
 
 import { config } from 'dotenv';
@@ -144,7 +144,7 @@ async function schemaExists() {
 // =============================================================================
 
 async function applySchema() {
-  console.log('🚀 Starting Supabase schema application for Nexus Tech Hub...\n');
+  console.log('🚀 Starting Supabase schema application for Midas Technical Solutions...\n');
 
   try {
     // Check if schema already exists
@@ -227,7 +227,7 @@ async function applySchema() {
 
     if (failureCount === 0) {
       console.log('\n🎉 Schema application completed successfully!');
-      console.log('🚀 Your Nexus Tech Hub database is ready.');
+      console.log('🚀 Your Midas Technical Solutions database is ready.');
     } else {
       console.log(`\n⚠️  Schema application completed with ${failureCount} errors.`);
       console.log('🔍 Check the error messages above for details.');

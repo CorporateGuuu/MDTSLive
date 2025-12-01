@@ -9,7 +9,7 @@ const lcdComponents = [
 ];
 
 export const metadata = {
-  title: 'LCD Components - OCA Sheets, Polarizers, Backlights | Nexus Tech Hub',
+  title: 'LCD Components - OCA Sheets, Polarizers, Backlights | Midas Technical Solutions',
   description: 'Complete LCD refurbishment components. Mitsubishi OCA, polarizers, backlights, touch panels. Bulk wholesale pricing.',
 };
 

@@ -99,7 +99,7 @@ export default function GlobalError({
               </div>
 
               <div className="text-xs text-gray-500 text-center pt-4 border-t">
-                Nexus Tech Hub - Professional Device Solutions
+                Midas Technical Solutions - Professional Device Solutions
               </div>
             </CardContent>
           </Card>

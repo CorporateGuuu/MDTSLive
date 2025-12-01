@@ -39,7 +39,7 @@ const professionalBrands = [
 ];
 
 export const metadata = {
-  title: 'Professional Repair Tools by Brand - iFixit, Wiha, OEM | Nexus Tech Hub',
+  title: 'Professional Repair Tools by Brand - iFixit, Wiha, OEM | Midas Technical Solutions',
   description: 'Shop professional repair tools by brand. iFixit, Wiha, WRE Pair, DotterPodX, Qianli - trusted brands for technicians.',
 };
 

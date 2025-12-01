@@ -35,7 +35,7 @@ const onePlus12Parts = [
 ];
 
 export const metadata = {
-  title: 'OnePlus 12 Parts - 6.7" AMOLED Screen, Battery, Camera | Nexus Tech Hub',
+  title: 'OnePlus 12 Parts - 6.7" AMOLED Screen, Battery, Camera | Midas Technical Solutions',
   description: 'Genuine OnePlus 12 parts and components. AMOLED display, battery, Hasselblad camera module, Snapdragon 8 Gen 3 motherboard.',
 };
 

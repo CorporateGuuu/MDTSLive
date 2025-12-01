@@ -119,7 +119,7 @@ async function sendOrderConfirmationEmail(orderData) {
         paymentMethod: 'Credit Card',
         shippingAddress: orderData.shippingAddress,
         businessInfo: {
-          name: 'Nexus Tech Hub',
+          name: 'Midas Technical Solutions',
           phone: '+971 58 553 1029',
           email: 'info@nexustechhub.ae',
           website: 'https://nexustechhub.netlify.app'

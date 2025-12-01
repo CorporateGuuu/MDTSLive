@@ -1,7 +1,7 @@
 import ProductGrid from '../../../../../components/Product/ProductGrid';
 
 export const metadata = {
-  title: 'iFixit Professional Repair Tools - Screwdrivers, Kits, Guides | Nexus Tech Hub',
+  title: 'iFixit Professional Repair Tools - Screwdrivers, Kits, Guides | Midas Technical Solutions',
   description: 'Official iFixit repair tools and kits. Professional screwdrivers, opening tools, repair guides, and complete tool kits.',
 };
 

@@ -3,7 +3,7 @@ import { supabaseAdmin } from './supabaseClient';
 import { AuthError } from './errors';
 
 // =============================================================================
-// Nexus Tech Hub - Cookie-based Authentication Utilities
+// Midas Technical Solutions - Cookie-based Authentication Utilities
 // =============================================================================
 
 /**

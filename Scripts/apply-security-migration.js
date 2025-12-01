@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // =============================================================================
-// Nexus Tech Hub - Apply Security Migration
+// Midas Technical Solutions - Apply Security Migration
 // =============================================================================
 
 import { config } from 'dotenv';

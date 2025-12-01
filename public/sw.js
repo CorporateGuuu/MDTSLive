@@ -1,4 +1,4 @@
-// Nexus Tech Hub Service Worker - Advanced PWA Features
+// Midas Technical Solutions Service Worker - Advanced PWA Features
 const CACHE_NAME = 'nexus-techhub-v1.2.0';
 const STATIC_CACHE = 'nexus-static-v1.2.0';
 const DYNAMIC_CACHE = 'nexus-dynamic-v1.2.0';
@@ -183,7 +183,7 @@ async function handlePageRequest(request) {
       <!DOCTYPE html>
       <html>
       <head>
-        <title>Nexus Tech Hub - Offline</title>
+        <title>Midas Technical Solutions - Offline</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
           body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background: #f5f5f5; }
@@ -195,7 +195,7 @@ async function handlePageRequest(request) {
       </head>
       <body>
         <div class="container">
-          <div class="logo">📱 Nexus Tech Hub</div>
+          <div class="logo">📱 Midas Technical Solutions</div>
           <h2>You're Offline</h2>
           <p class="message">Please check your internet connection and try again.</p>
           <a href="/" class="button">Try Again</a>
@@ -290,7 +290,7 @@ self.addEventListener('push', (event) => {
   console.log('📬 Service Worker: Push notification received');
   
   const options = {
-    body: 'New updates available from Nexus Tech Hub!',
+    body: 'New updates available from Midas Technical Solutions!',
     icon: '/icons/icon-192x192.svg',
     badge: '/icons/icon-192x192.svg',
     vibrate: [200, 100, 200],
@@ -310,7 +310,7 @@ self.addEventListener('push', (event) => {
   };
   
   event.waitUntil(
-    self.registration.showNotification('Nexus Tech Hub', options)
+    self.registration.showNotification('Midas Technical Solutions', options)
   );
 });
 
@@ -327,4 +327,4 @@ self.addEventListener('notificationclick', (event) => {
   }
 });
 
-console.log('🚀 Nexus Tech Hub Service Worker loaded successfully');
+console.log('🚀 Midas Technical Solutions Service Worker loaded successfully');

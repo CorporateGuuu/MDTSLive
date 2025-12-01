@@ -25,7 +25,7 @@ export default function GenuineApplePartsPage() {
       {/* Header */}
       <header className="bg-white shadow-sm px-6 py-4 flex justify-between items-center">
         <div className="flex items-center gap-4">
-          <h1 className="text-2xl font-bold text-blue-600">Nexus Tech Hub</h1>
+          <h1 className="text-2xl font-bold text-blue-600">Midas Technical Solutions</h1>
           <input placeholder="What are you looking for?" className="border rounded-lg px-4 py-2 w-64" />
         </div>
         <div className="flex items-center gap-4 text-sm">
@@ -189,7 +189,7 @@ export default function GenuineApplePartsPage() {
           <div><h3>Our Brands</h3><p className="text-sm">Apple • Google • OnePlus</p></div>
           <div><h3>Support</h3><p className="text-sm">Location • Live Chat • FAQs</p></div>
         </div>
-        <p className="text-center text-gray-400 mt-8">© 2025 Nexus Tech Hub. All rights reserved.</p>
+        <p className="text-center text-gray-400 mt-8">© 2025 Midas Technical Solutions. All rights reserved.</p>
       </footer>
     </div>
   );

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // =============================================================================
-// Nexus Tech Hub - Migration Runner
+// Midas Technical Solutions - Migration Runner
 // =============================================================================
 
 import { config } from 'dotenv';
@@ -275,11 +275,11 @@ async function executeMigration(migration) {
 // =============================================================================
 
 // Debug: Immediate output to verify script is running
-console.log('🚀 Starting Nexus Tech Hub migration runner...\n');
+console.log('🚀 Starting Midas Technical Solutions migration runner...\n');
 console.log('Debug: Script loaded successfully\n');
 
 async function runMigrations() {
-  console.log('🚀 Starting Nexus Tech Hub migration runner...\n');
+  console.log('🚀 Starting Midas Technical Solutions migration runner...\n');
 
   try {
     // Ensure migration tracking table exists
@@ -354,7 +354,7 @@ async function runMigrations() {
 
     if (failureCount === 0) {
       console.log('\n🎉 All migrations completed successfully!');
-      console.log('🚀 Your Nexus Tech Hub database schema is up to date.');
+      console.log('🚀 Your Midas Technical Solutions database schema is up to date.');
     } else {
       console.log(`\n⚠️  Migration process stopped due to ${failureCount} failure(s).`);
       console.log('🔍 Check the error messages above for details.');

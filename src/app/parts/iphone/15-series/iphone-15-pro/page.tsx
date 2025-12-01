@@ -3,7 +3,7 @@ import Breadcrumb from '../../../../../components/Breadcrumb';
 import { getProductsByModel } from '../../../../../lib/supabase';
 
 export const metadata = {
-  title: 'iPhone 15 Pro Parts - OLED Screens, Batteries, Cameras | Nexus Tech Hub',
+  title: 'iPhone 15 Pro Parts - OLED Screens, Batteries, Cameras | Midas Technical Solutions',
   description: 'Premium OLED displays, titanium frames, cameras, batteries for iPhone 15 Pro. Grade A+ quality parts.',
 };
 

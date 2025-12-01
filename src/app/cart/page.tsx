@@ -77,7 +77,7 @@ export default function ShoppingCartPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between h-16">
             <div className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-gray-900">Nexus Tech Hub</h1>
+              <h1 className="text-2xl font-bold text-gray-900">Midas Technical Solutions</h1>
             </div>
             <div className="flex-1 max-w-2xl mx-8">
               <div className="flex">

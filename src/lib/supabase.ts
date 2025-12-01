@@ -1221,7 +1221,7 @@ export const generateShippingLabelPDF = (request: LCDBuyBackRequest): void => {
         </head>
         <body>
           <div class="header">
-            <h1>Nexus Tech Hub</h1>
+            <h1>Midas Technical Solutions</h1>
             <h2>LCD BuyBack Shipping Label</h2>
           </div>
           <div class="label">

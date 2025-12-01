@@ -12,7 +12,7 @@ const protectionTypes = [
 ];
 
 export const metadata = {
-  title: 'Cases & Protection - iPhone Cases, Screen Protectors | Nexus Tech Hub',
+  title: 'Cases & Protection - iPhone Cases, Screen Protectors | Midas Technical Solutions',
   description: 'Premium phone cases, tempered glass, screen protectors, camera protection for iPhone, Samsung, and all devices.',
 };
 

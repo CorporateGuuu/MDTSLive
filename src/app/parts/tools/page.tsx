@@ -43,7 +43,7 @@ const toolCategories = [
 ];
 
 export const metadata = {
-  title: 'Professional Repair Tools - iFixit, Wiha, OEM Tools | Nexus Tech Hub',
+  title: 'Professional Repair Tools - iFixit, Wiha, OEM Tools | Midas Technical Solutions',
   description: 'Professional repair tools for technicians. iFixit, Wiha, WRE Pair tools, microsoldering equipment, testing devices, OEM service tools.',
 };
 

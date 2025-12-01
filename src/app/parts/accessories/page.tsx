@@ -36,7 +36,7 @@ const accessoryCategories = [
 ];
 
 export const metadata = {
-  title: 'Phone Accessories - Cases, Chargers, Audio, Mounts | Nexus Tech Hub',
+  title: 'Phone Accessories - Cases, Chargers, Audio, Mounts | Midas Technical Solutions',
   description: 'Premium phone accessories including cases, chargers, cables, audio gear, mounts, and gaming accessories. Fast USA shipping.',
 };
 

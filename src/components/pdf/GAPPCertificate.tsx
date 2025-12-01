@@ -138,7 +138,7 @@ export const GAPPCertificate: React.FC<GAPPCertificateProps> = ({
         {/* Certificate Body */}
         <Text style={styles.certificateBody}>
           This is to certify that the above named individual has successfully enrolled in the
-          Genuine Apple Parts Program (GAPP) with Nexus Tech Hub. This certification confirms
+          Genuine Apple Parts Program (GAPP) with Midas Technical Solutions. This certification confirms
           participation in our premium core returns program, ensuring access to genuine Apple
           parts and components for repair and refurbishment services.
         </Text>
@@ -166,7 +166,7 @@ export const GAPPCertificate: React.FC<GAPPCertificateProps> = ({
           <View style={styles.signature}>
             <View style={styles.signatureLine} />
             <Text style={styles.signatureText}>Authorized Signature</Text>
-            <Text style={styles.signatureText}>Nexus Tech Hub</Text>
+            <Text style={styles.signatureText}>Midas Technical Solutions</Text>
           </View>
           <View style={styles.signature}>
             <View style={styles.signatureLine} />

@@ -3,7 +3,7 @@ import Breadcrumb from '../../../../components/Breadcrumb';
 import { getProductsByModel } from '../../../../lib/supabase';
 
 export const metadata = {
-  title: 'iPad Pro 12.9" (6th Gen) Parts - Liquid Retina XDR, M4 Chip | Nexus Tech Hub',
+  title: 'iPad Pro 12.9" (6th Gen) Parts - Liquid Retina XDR, M4 Chip | Midas Technical Solutions',
   description: 'Premium Liquid Retina XDR display, M4 chip components, cameras, batteries for iPad Pro 12.9" 6th generation.',
 };
 

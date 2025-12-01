@@ -90,7 +90,7 @@ export async function POST(request: NextRequest) {
 //     //   body: JSON.stringify({
 //     //     from: 'orders@nexustechhub.com',
 //     //     to: session.customer_details?.email,
-//     //     subject: 'Order Confirmation - Nexus Tech Hub',
+//     //     subject: 'Order Confirmation - Midas Technical Solutions',
 //     //     html: generateOrderEmailHTML(session),
 //     //   }),
 //     // });

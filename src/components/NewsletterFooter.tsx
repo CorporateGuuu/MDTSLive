@@ -201,7 +201,7 @@ export default function NewsletterFooter() {
           <div className="row align-items-center">
             <div className="col-md-6">
               <p className="mb-0 text-white small">
-                © 2025 Nexus Tech Hub. All rights reserved.
+                © 2025 Midas Technical Solutions. All rights reserved.
               </p>
             </div>
             <div className="col-md-6 text-md-end">

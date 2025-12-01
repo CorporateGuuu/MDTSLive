@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // =============================================================================
-// Nexus Tech Hub - Security Audit Script
+// Midas Technical Solutions - Security Audit Script
 // =============================================================================
 
 import { config } from 'dotenv';
@@ -312,7 +312,7 @@ function generateReport() {
 // =============================================================================
 
 async function runSecurityAudit() {
-  console.log('🛡️  Starting Nexus Tech Hub Security Audit...\n');
+  console.log('🛡️  Starting Midas Technical Solutions Security Audit...\n');
 
   try {
     await checkEnvironmentSecurity();

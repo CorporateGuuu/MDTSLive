@@ -9,7 +9,7 @@ const ipadModels = [
 ];
 
 export const metadata = {
-  title: 'iPad Parts - Screens, Batteries, Repairs | Nexus Tech Hub',
+  title: 'iPad Parts - Screens, Batteries, Repairs | Midas Technical Solutions',
   description: 'Premium replacement parts for all iPad models. Screens, batteries, cameras, charging ports. Fast USA shipping.',
 };
 

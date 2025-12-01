@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { AuthError, ValidationError, DatabaseError, NotFoundError, ForbiddenError } from './errors';
 
 // =============================================================================
-// Nexus Tech Hub - API Response Helpers
+// Midas Technical Solutions - API Response Helpers
 // =============================================================================
 
 // CORS headers for all responses

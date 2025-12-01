@@ -1,7 +1,7 @@
 import ProductGrid from '../../../../../components/Product/ProductGrid';
 
 export const metadata = {
-  title: 'Lightning Cables - MFi Certified, 10ft, Fast Charging | Nexus Tech Hub',
+  title: 'Lightning Cables - MFi Certified, 10ft, Fast Charging | Midas Technical Solutions',
   description: 'Original Apple Lightning cables, MFi certified, fast charging, braided nylon, 3ft to 10ft lengths.',
 };
 

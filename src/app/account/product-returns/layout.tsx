@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Product Returns / RMA - Submit & Track | Nexus Tech Hub',
+  title: 'Product Returns / RMA - Submit & Track | Midas Technical Solutions',
   description: 'Submit RMA requests for defective products, track status, download labels. Return merchandise authorization for electronics and tech parts.',
 };
 

@@ -59,7 +59,7 @@ const difficultyColors = {
 };
 
 export const metadata = {
-  title: 'Professional Phone Repair Guides - iPhone, Samsung, LCD | Nexus Tech Hub',
+  title: 'Professional Phone Repair Guides - iPhone, Samsung, LCD | Midas Technical Solutions',
   description: 'Step-by-step repair tutorials for iPhone and Samsung devices. Screen replacement, battery repair, LCD refurbishing, board-level repairs. Professional technician guides.',
 };
 

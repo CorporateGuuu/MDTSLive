@@ -1,4 +1,4 @@
-// Authentication System for Nexus Tech Hub
+// Authentication System for Midas Technical Solutions
 class AuthManager {
     constructor() {
         this.currentUser = null;

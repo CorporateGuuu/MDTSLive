@@ -33,7 +33,7 @@ const samsungCategories = [
 ];
 
 export const metadata = {
-  title: 'Samsung Galaxy Parts - S24 Ultra, S23, A54, Z Fold | Nexus Tech Hub',
+  title: 'Samsung Galaxy Parts - S24 Ultra, S23, A54, Z Fold | Midas Technical Solutions',
   description: 'Genuine Samsung Galaxy parts and components. LCD screens, batteries, motherboards, cameras. S24 Ultra, S23, A54, Z Fold, Note series.',
 };
 

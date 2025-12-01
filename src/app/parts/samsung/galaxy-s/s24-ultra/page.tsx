@@ -1,7 +1,7 @@
 import ProductGrid from '../../../../../components/Product/ProductGrid';
 
 export const metadata = {
-  title: 'Samsung Galaxy S24 Ultra Parts - AMOLED Screens, Batteries, Cameras | Nexus Tech Hub',
+  title: 'Samsung Galaxy S24 Ultra Parts - AMOLED Screens, Batteries, Cameras | Midas Technical Solutions',
   description: 'Original Samsung service pack displays, batteries, back glass, cameras for S24 Ultra. Fast USA shipping.',
 };
 

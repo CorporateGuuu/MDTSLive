@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 // =============================================================================
-// Nexus Tech Hub - Zod Validation Schemas
+// Midas Technical Solutions - Zod Validation Schemas
 // =============================================================================
 
 // Auth schemas

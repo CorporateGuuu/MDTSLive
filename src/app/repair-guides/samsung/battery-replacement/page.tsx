@@ -102,7 +102,7 @@ const steps = [
 ];
 
 export const metadata = {
-  title: 'Samsung Galaxy Battery Replacement Guide - Step-by-Step Tutorial | Nexus Tech Hub',
+  title: 'Samsung Galaxy Battery Replacement Guide - Step-by-Step Tutorial | Midas Technical Solutions',
   description: 'Complete Samsung Galaxy battery replacement tutorial for S24, S23, S22, S21, Note series. Easy guide for extending device life.',
 };
 

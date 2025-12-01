@@ -1,7 +1,7 @@
 import ProductGrid from '../../../../../components/Product/ProductGrid';
 
 export const metadata = {
-  title: 'iPhone Cases - Premium Protection, All Models | Nexus Tech Hub',
+  title: 'iPhone Cases - Premium Protection, All Models | Midas Technical Solutions',
   description: 'Premium iPhone cases for all models including iPhone 15, 14, 13 series. Shockproof, slim, wallet cases.',
 };
 

@@ -109,7 +109,7 @@ export default function LoginPage() {
         <div className="text-center">
           <h1 className="text-3xl font-bold text-gray-900">Welcome Back</h1>
           <p className="text-gray-600 mt-2">
-            {isRecoveryMode ? 'Reset your password' : 'Sign in to your Nexus Tech Hub account'}
+            {isRecoveryMode ? 'Reset your password' : 'Sign in to your Midas Technical Solutions account'}
           </p>
         </div>
 

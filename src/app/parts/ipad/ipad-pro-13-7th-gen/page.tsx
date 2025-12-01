@@ -3,7 +3,7 @@ import Breadcrumb from '../../../../components/Breadcrumb';
 import { getProductsByModel } from '../../../../lib/supabase';
 
 export const metadata = {
-  title: 'iPad Pro 13" (7th Gen) Parts - Tandem OLED, M4 Chip | Nexus Tech Hub',
+  title: 'iPad Pro 13" (7th Gen) Parts - Tandem OLED, M4 Chip | Midas Technical Solutions',
   description: 'Premium Tandem OLED display, M4 chip components, cameras, batteries for iPad Pro 13" 7th generation.',
 };
 
