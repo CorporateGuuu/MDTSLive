@@ -5,7 +5,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Nexus TechHub - Premium Mobile Parts & Accessories',
+  title: 'Midas Technical Solutions - Premium Mobile Parts & Accessories',
   description: 'Your trusted source for iPhone, Samsung, Google Pixel, and gaming console parts. Professional repair tools, refurbished devices, and electronic components.',
 }
 

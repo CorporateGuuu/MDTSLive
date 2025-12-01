@@ -218,7 +218,7 @@ function PremiumFooter() {
           <div className="grid lg:grid-cols-2 gap-12 mb-16">
             <div>
               <h2 className="text-4xl font-black text-white mb-4">
-                Nexus<span className="text-sky-500">TechHub</span>
+                Midas<span className="text-sky-500">Technical Solutions</span>
               </h2>
               <p className="text-gray-500">Join 50,000+ repair shops getting exclusive deals weekly.</p>
             </div>
@@ -380,7 +380,7 @@ function PremiumFooter() {
           </div>
 
           <p className="text-center text-gray-600 text-xs mt-8">
-            © 2025 Nexus TechHub • All trademarks are property of their respective owners
+            © 2025 Midas Technical Solutions • All trademarks are property of their respective owners
           </p>
         </div>
       </footer>

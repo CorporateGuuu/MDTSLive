@@ -59,8 +59,8 @@ export default function NavBar() {
 
             {/* Logo */}
             <a href="/" className="flex items-center space-x-1 -ml-2 transform hover:scale-105 transition">
-              <span className="text-5xl font-black text-sky-500 tracking-tighter">Nexus</span>
-              <span className="text-5xl font-black text-gray-900 tracking-tighter">TechHub</span>
+              <span className="text-5xl font-black text-sky-500 tracking-tighter">Midas</span>
+              <span className="text-5xl font-black text-gray-900 tracking-tighter">Technical Solutions</span>
             </a>
 
             {/* LIVE SEARCH WITH SUGGESTIONS */}
@@ -479,7 +479,7 @@ export default function NavBar() {
           <div className="fixed right-0 top-0 h-full w-80 bg-white shadow-2xl transform transition-transform duration-300 translate-x-0">
             <div className="p-6 border-b">
               <div className="flex justify-between items-center">
-                <h2 className="text-2xl font-black text-sky-500">Nexus TechHub</h2>
+                <h2 className="text-2xl font-black text-sky-500">Midas Technical Solutions</h2>
                 <button onClick={() => setMobileMenuOpen(false)} className="p-2 hover:bg-gray-100 rounded-xl">
                   <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M6 18L18 6M6 6l12 12"/>
