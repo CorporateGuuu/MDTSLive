@@ -1,7 +1,7 @@
 <?php
 // === CONFIGURATION ===
 $to_email = "sales@nexustechhub.com"; // Your email
-$from_name = "Nexus Tech Hub Contact Form";
+$from_name = "Midas Technical Solutions Contact Form";
 $smtp_host = "smtp.gmail.com"; // e.g., Gmail, Outlook
 $smtp_user = "your-email@gmail.com";   // SMTP login
 $smtp_pass = "your-app-password";      // App password (not regular password)

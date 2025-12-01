@@ -175,7 +175,7 @@ function handleRegister($pdo) {
 
         echo json_encode([
             'success' => true,
-            'message' => 'Registration successful! Welcome to Nexus Tech Hub.',
+            'message' => 'Registration successful! Welcome to Midas Technical Solutions.',
             'user' => [
                 'id' => $userId,
                 'email' => $email,

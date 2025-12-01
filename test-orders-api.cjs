@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Nexus Tech Hub - Orders API Test Script
+ * Midas Technical Solutions - Orders API Test Script
  *
  * This script provides curl examples and automated testing for the orders API endpoints.
  *
@@ -16,7 +16,7 @@ const BASE_URL = 'http://localhost:3000';
 // Example session token (replace with actual token after login)
 const EXAMPLE_TOKEN = 'your-session-token-here';
 
-console.log('🚀 Nexus Tech Hub - Orders API Test Examples\n');
+console.log('🚀 Midas Technical Solutions - Orders API Test Examples\n');
 
 // =============================================================================
 // MANUAL CURL COMMANDS
