@@ -1,0 +1,61 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background (transparent) -->
+  
+  <!-- Centered Icon: Golden fingerprint morphing into circuit -->
+  <g transform="translate(10, 10)">
+    <!-- Outer fingerprint outline -->
+    <ellipse cx="50" cy="50" rx="45" ry="45" fill="url(#goldGradient)" stroke="url(#goldStroke)" stroke-width="2"/>
+    
+    <!-- Inner fingerprint ridges -->
+    <ellipse cx="50" cy="50" rx="35" ry="35" fill="none" stroke="url(#goldGradient)" stroke-width="1.5" opacity="0.6"/>
+    <ellipse cx="50" cy="50" rx="25" ry="25" fill="none" stroke="url(#goldGradient)" stroke-width="1.2" opacity="0.8"/>
+    <ellipse cx="50" cy="50" rx="15" ry="15" fill="none" stroke="url(#goldGradient)" stroke-width="1" opacity="0.9"/>
+    
+    <!-- Circuit pattern overlay -->
+    <g opacity="0.7">
+      <!-- Circuit lines -->
+      <rect x="25" y="35" width="15" height="1.5" fill="url(#goldGradient)"/>
+      <rect x="35" y="45" width="20" height="1.5" fill="url(#goldGradient)"/>
+      <rect x="45" y="55" width="12" height="1.5" fill="url(#goldGradient)"/>
+      
+      <!-- Circuit connections -->
+      <rect x="32" y="30" width="1.5" height="8" fill="url(#goldGradient)"/>
+      <rect x="42" y="40" width="1.5" height="12" fill="url(#goldGradient)"/>
+      <rect x="52" y="50" width="1.5" height="6" fill="url(#goldGradient)"/>
+      
+      <!-- Circuit nodes -->
+      <circle cx="34" cy="38" r="1.2" fill="url(#goldGradient)"/>
+      <circle cx="44" cy="48" r="1.2" fill="url(#goldGradient)"/>
+      <circle cx="54" cy="58" r="1.2" fill="url(#goldGradient)"/>
+    </g>
+    
+    <!-- Shine effect -->
+    <ellipse cx="35" cy="30" rx="12" ry="4" fill="white" opacity="0.4"/>
+  </g>
+  
+  <!-- Text: Midas (smaller for square format) -->
+  <text x="60" y="95" text-anchor="middle" font-family="serif" font-size="18" font-weight="bold" fill="url(#goldGradient)">
+    Midas
+  </text>
+  
+  <!-- Text: Technical Solutions (stacked) -->
+  <text x="60" y="110" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="400" fill="#001F3F">
+    Technical
+  </text>
+  <text x="60" y="118" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="400" fill="#001F3F">
+    Solutions
+  </text>
+  
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="goldStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+</svg>

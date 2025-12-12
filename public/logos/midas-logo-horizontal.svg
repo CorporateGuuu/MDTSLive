@@ -1,0 +1,57 @@
+<svg width="400" height="80" viewBox="0 0 400 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background (transparent) -->
+  
+  <!-- Icon: Golden fingerprint morphing into circuit -->
+  <g transform="translate(0, 20)">
+    <!-- Outer fingerprint outline -->
+    <ellipse cx="39" cy="25" rx="14" ry="19" fill="url(#goldGradient)" stroke="url(#goldStroke)" stroke-width="1.5"/>
+    
+    <!-- Inner fingerprint ridges -->
+    <ellipse cx="39" cy="25" rx="8" ry="13" fill="none" stroke="url(#goldGradient)" stroke-width="1" opacity="0.6"/>
+    <ellipse cx="39" cy="25" rx="4" ry="8" fill="none" stroke="url(#goldGradient)" stroke-width="0.8" opacity="0.8"/>
+    
+    <!-- Circuit pattern overlay -->
+    <g opacity="0.7">
+      <!-- Circuit lines -->
+      <rect x="30" y="20" width="6" height="1" fill="url(#goldGradient)"/>
+      <rect x="35" y="25" width="8" height="1" fill="url(#goldGradient)"/>
+      <rect x="40" y="30" width="4" height="1" fill="url(#goldGradient)"/>
+      
+      <!-- Circuit connections -->
+      <rect x="33" y="18" width="1" height="4" fill="url(#goldGradient)"/>
+      <rect x="39" y="23" width="1" height="6" fill="url(#goldGradient)"/>
+      <rect x="45" y="28" width="1" height="3" fill="url(#goldGradient)"/>
+      
+      <!-- Circuit nodes -->
+      <circle cx="34" cy="21" r="0.8" fill="url(#goldGradient)"/>
+      <circle cx="40" cy="26" r="0.8" fill="url(#goldGradient)"/>
+      <circle cx="46" cy="31" r="0.8" fill="url(#goldGradient)"/>
+    </g>
+    
+    <!-- Shine effect -->
+    <ellipse cx="35" cy="18" rx="6" ry="2" fill="white" opacity="0.4"/>
+  </g>
+  
+  <!-- Text: Midas -->
+  <text x="70" y="35" font-family="serif" font-size="32" font-weight="bold" fill="url(#goldGradient)">
+    Midas
+  </text>
+  
+  <!-- Text: Technical Solutions -->
+  <text x="70" y="60" font-family="sans-serif" font-size="14" font-weight="400" fill="#001F3F">
+    Technical Solutions
+  </text>
+  
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="goldStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+</svg>
