@@ -7,19 +7,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#0066cc",
+        primary: "#D4AF37",
+        secondary: "#001F3F",
         dark: "#111",
-        gold: {
-          50: '#fefce8',
-          100: '#fef9c3',
-          200: '#fef08a',
-          300: '#fde047',
-          400: '#facc15',
-          500: '#eab308',
-          600: '#ca8a04',
-          700: '#a16207',
-          800: '#854d0e',
-          900: '#713f12',
+        gold: "#D4AF37",
+        navy: "#001F3F",
+        brand: {
+          gold: "#D4AF37",
+          navy: "#001F3F",
+        },
+        mobilesentrix: {
+          red: "#e30613",
         },
       },
       fontFamily: {

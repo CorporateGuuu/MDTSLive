@@ -82,11 +82,11 @@ export default function Home() {
   ];
 
   const qualityFeatures = [
-    { icon: Shield, text: 'Lifetime warranty', color: 'text-red-500' },
-    { icon: Smartphone, text: 'Ready to sell', color: 'text-blue-500' },
-    { icon: Package, text: 'Retail ready', color: 'text-green-500' },
-    { icon: Wrench, text: 'Tools & supplies', color: 'text-orange-500' },
-    { icon: Star, text: 'Quality assurance', color: 'text-yellow-500' }
+    { icon: Shield, text: 'Lifetime Warranty on Parts', color: 'text-gold' },
+    { icon: Smartphone, text: 'Ready-to-Sell Devices', color: 'text-navy' },
+    { icon: Package, text: 'Premium Toolkits', color: 'text-green-500' },
+    { icon: Wrench, text: 'Expert Repair Services', color: 'text-orange-500' },
+    { icon: Star, text: 'Certified Quality Standards', color: 'text-yellow-500' }
   ];
 
   // Auto-play carousel
@@ -243,7 +243,7 @@ export default function Home() {
           <div className="flex items-center justify-between h-16">
             {/* Mobile Menu Button - First on Mobile */}
             <button
-              className="lg:hidden text-gray-700 hover:text-[#e30613] transition-colors mr-4"
+              className="lg:hidden text-gray-700 hover:text-gold transition-colors mr-4"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle mobile menu"
             >
@@ -252,7 +252,10 @@ export default function Home() {
 
             {/* Logo - Centered on Mobile, Left on Desktop */}
             <div className="flex items-center lg:flex-1">
-              <h1 className="text-xl sm:text-2xl font-bold text-[#e30613]">MobileSentrix</h1>
+              <h1 className="text-xl sm:text-2xl font-bold">
+                <span className="text-gold">Midas</span>
+                <span className="text-navy ml-2">Technical Solutions</span>
+              </h1>
             </div>
 
             {/* Desktop Search - Hidden on Mobile */}
@@ -264,11 +267,11 @@ export default function Home() {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Search parts, tools, accessories..."
-                  className="w-full pl-4 pr-12 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#e30613] focus:border-transparent transition-all duration-300"
+                  className="w-full pl-4 pr-12 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all duration-300"
                 />
                 <button
                   type="submit"
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#e30613] text-white p-2 rounded-full hover:bg-[#cc0511] transition-colors"
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gold text-white p-2 rounded-full hover:bg-opacity-90 transition-colors"
                   aria-label="Search"
                 >
                   <Search size={16} />
@@ -280,7 +283,7 @@ export default function Home() {
             <div className="hidden lg:flex items-center space-x-6">
               {/* Country Selector */}
               <div className="relative group">
-                <button className="flex items-center space-x-1 text-gray-700 hover:text-[#e30613] transition-colors">
+                <button className="flex items-center space-x-1 text-gray-700 hover:text-gold transition-colors">
                   <Flag size={20} className="text-green-600" />
                   <span className="text-sm font-medium">US</span>
                   <ChevronDown size={16} />
@@ -301,7 +304,7 @@ export default function Home() {
               </div>
 
               {/* My Account */}
-              <button className="flex items-center space-x-1 text-gray-700 hover:text-[#e30613] transition-colors" aria-label="My Account">
+              <button className="flex items-center space-x-1 text-gray-700 hover:text-gold transition-colors" aria-label="My Account">
                 <User size={20} />
                 <span className="text-sm font-medium hidden xl:inline">My Account</span>
               </button>
@@ -315,11 +318,11 @@ export default function Home() {
 
               {/* Cart */}
               <div className="relative group">
-                <button className="flex items-center space-x-2 text-gray-700 hover:text-[#e30613] transition-colors cart-icon">
+                <button className="flex items-center space-x-2 text-gray-700 hover:text-gold transition-colors cart-icon">
                   <div className="relative">
                     <ShoppingCart size={20} />
                     {cartItems.length > 0 && (
-                      <span className="absolute -top-2 -right-2 bg-[#e30613] text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold animate-pulse">
+                      <span className="absolute -top-2 -right-2 bg-gold text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold animate-pulse">
                         {cartItems.length}
                       </span>
                     )}
@@ -348,7 +351,7 @@ export default function Home() {
                         )}
                       </div>
                     )}
-                    <button className="w-full bg-[#e30613] text-white py-2 rounded-lg mt-3 hover:bg-[#cc0511] transition-colors">
+                    <button className="w-full bg-gold text-white py-2 rounded-lg mt-3 hover:bg-opacity-90 transition-colors">
                       View Cart
                     </button>
                   </div>
@@ -358,7 +361,7 @@ export default function Home() {
 
             {/* Mobile Search Button */}
             <button
-              className="lg:hidden text-gray-700 hover:text-[#e30613] transition-colors ml-4"
+              className="lg:hidden text-gray-700 hover:text-gold transition-colors ml-4"
               onClick={() => setSearchExpanded(!searchExpanded)}
               aria-label="Toggle search"
             >
@@ -376,12 +379,12 @@ export default function Home() {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Search parts, tools, accessories..."
-                  className="w-full pl-4 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#e30613] focus:border-transparent"
+                  className="w-full pl-4 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
                   autoFocus
                 />
                 <button
                   type="submit"
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#e30613] text-white p-2 rounded-lg hover:bg-[#cc0511] transition-colors"
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gold text-white p-2 rounded-lg hover:bg-opacity-90 transition-colors"
                   aria-label="Search"
                 >
                   <Search size={16} />
@@ -394,17 +397,17 @@ export default function Home() {
           <nav className="hidden lg:block bg-gray-50 border-t border-gray-200">
             <div className="flex items-center justify-center space-x-6 py-3">
               {[
-                'Apple', 'Samsung', 'Motorola', 'Google', 'Other Parts',
+                'Apple', 'Samsung', 'Motorola', 'Google', 'Midas Exclusive Parts',
                 'Game Console', 'Accessories', 'Tools & Supplies',
                 'Refurbishing', 'Board Components', 'Pre-Owned Devices'
               ].map((category) => (
                 <a
                   key={category}
                   href="#"
-                  className="text-gray-700 hover:text-[#e30613] font-medium text-sm transition-colors relative group py-2"
+                  className="text-gray-700 hover:text-gold font-medium text-sm transition-colors relative group py-2"
                 >
                   {category}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#e30613] transition-all duration-200 group-hover:w-full"></span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gold transition-all duration-200 group-hover:w-full"></span>
                 </a>
               ))}
             </div>
@@ -420,7 +423,7 @@ export default function Home() {
                     <ShoppingCart size={20} />
                     <span className="font-medium">{cartItems.length} items</span>
                   </div>
-                  <span className="font-bold text-[#e30613]">${cartTotal.toFixed(2)}</span>
+                  <span className="font-bold text-gold">${cartTotal.toFixed(2)}</span>
                 </div>
 
                 {/* Mobile Country Selector */}
@@ -430,7 +433,7 @@ export default function Home() {
                     id="mobile-country-select"
                     value={selectedCountry}
                     onChange={(e) => handleCountryChange(e.target.value)}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#e30613] focus:border-transparent"
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
                     aria-label="Select your country"
                   >
                     {['United States', 'Canada', 'United Kingdom', 'Australia', 'Germany'].map((country) => (
@@ -442,14 +445,14 @@ export default function Home() {
                 {/* Mobile Categories Grid */}
                 <div className="grid grid-cols-2 gap-3">
                   {[
-                    'Apple', 'Samsung', 'Motorola', 'Google', 'Other Parts',
+                    'Apple', 'Samsung', 'Motorola', 'Google', 'Midas Exclusive Parts',
                     'Game Console', 'Accessories', 'Tools & Supplies',
                     'Refurbishing', 'Board Components', 'Pre-Owned Devices'
                   ].map((category) => (
                     <a
                       key={category}
                       href="#"
-                      className="text-gray-700 hover:text-[#e30613] font-medium text-sm py-3 px-4 rounded-lg hover:bg-white transition-colors border border-gray-200 text-center"
+                      className="text-gray-700 hover:text-gold font-medium text-sm py-3 px-4 rounded-lg hover:bg-white transition-colors border border-gray-200 text-center"
                     >
                       {category}
                     </a>
@@ -458,9 +461,9 @@ export default function Home() {
 
                 {/* Mobile Quick Links */}
                 <div className="space-y-2 pt-4 border-t border-gray-200">
-                  <a href="#" className="block text-gray-700 hover:text-[#e30613] font-medium py-2">My Account</a>
-                  <a href="#" className="block text-gray-700 hover:text-[#e30613] font-medium py-2">Support</a>
-                  <a href="#" className="block text-gray-700 hover:text-[#e30613] font-medium py-2">Contact</a>
+                  <a href="#" className="block text-gray-700 hover:text-gold font-medium py-2">My Account</a>
+                  <a href="#" className="block text-gray-700 hover:text-gold font-medium py-2">Support</a>
+                  <a href="#" className="block text-gray-700 hover:text-gold font-medium py-2">Contact</a>
                 </div>
               </div>
             </nav>
@@ -473,9 +476,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
             {/* Top Banner */}
-            <div className="bg-[#e30613] text-white text-center py-3">
+            <div className="bg-gold text-white text-center py-3">
               <div className="flex items-center justify-center space-x-4 text-sm font-medium">
-                <span>LIMITED TIME: iFixit Tools Up to 20% OFF</span>
+                <span>LIMITED TIME: Premium Repair Tools Up to 20% OFF</span>
                 <span className="hidden sm:inline">•</span>
                 <span className="hidden sm:inline">Nov 27 - Dec 11, 2025</span>
               </div>
@@ -484,9 +487,9 @@ export default function Home() {
             {/* Logos */}
             <div className="flex justify-center items-center space-x-4 py-6 bg-gray-50 border-b border-gray-100">
               <div className="flex items-center space-x-2">
-                <span className="text-2xl font-bold text-[#e30613]">MobileSentrix</span>
+                <span className="text-2xl font-bold text-gold">Midas Technical Solutions</span>
                 <span className="text-gray-400 text-xl">+</span>
-                <span className="text-2xl font-bold text-blue-600">iFixit</span>
+                <span className="text-2xl font-bold text-navy">Premium Tools</span>
               </div>
             </div>
 
@@ -494,15 +497,15 @@ export default function Home() {
               {/* Left Side Content */}
               <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent leading-tight">
-                  iFixit tools now at
-                  <span className="block text-[#e30613]">limited-time discounts</span>
+                  Premium Repair Tools at
+                  <span className="block text-gold">Limited-Time Discounts</span>
                 </h2>
                 <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                  Professional-grade repair tools with up to 20% off.
+                  Professional-grade repair tools with up to 20% off select toolkits.
                   Limited time offer from November 27 to December 11.
                 </p>
-                <button className="bg-black hover:bg-gray-800 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-200 transform hover:scale-105 hover:shadow-lg w-fit">
-                  Shop iFixit tools at limited-time pricing →
+                <button className="bg-gold hover:bg-opacity-90 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-200 transform hover:scale-105 hover:shadow-lg w-fit">
+                  Shop Tools Now →
                 </button>
               </div>
 
@@ -537,14 +540,14 @@ export default function Home() {
                         <h3 className="text-white font-bold text-xl mb-2">{toolkit.name}</h3>
                         <div className="flex items-center space-x-3">
                           <span className="text-gray-300 line-through text-lg">${toolkit.originalPrice}</span>
-                          <span className="text-[#e30613] font-bold text-2xl">${toolkit.salePrice}</span>
-                          <span className="bg-[#e30613] text-white px-2 py-1 rounded text-xs font-bold">
+                          <span className="text-gold font-bold text-2xl">${toolkit.salePrice}</span>
+                          <span className="bg-gold text-white px-2 py-1 rounded text-xs font-bold">
                             SAVE ${(toolkit.originalPrice - toolkit.salePrice).toFixed(2)}
                           </span>
                         </div>
                         <button
                           onClick={() => addToCart(toolkit)}
-                          className="mt-4 bg-[#e30613] hover:bg-[#cc0511] text-white px-6 py-2 rounded-lg font-semibold transition-colors"
+                          className="mt-4 bg-gold hover:bg-opacity-90 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
                         >
                           Add to Cart
                         </button>
@@ -576,7 +579,7 @@ export default function Home() {
                       key={index}
                       onClick={() => setCurrentSlide(index)}
                       className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                        index === currentSlide ? 'bg-[#e30613] scale-125' : 'bg-gray-300 hover:bg-gray-400'
+                        index === currentSlide ? 'bg-gold scale-125' : 'bg-gray-300 hover:bg-gray-400'
                       }`}
                       aria-label={`Go to slide ${index + 1}`}
                     />
@@ -596,7 +599,7 @@ export default function Home() {
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                 Discover Our
-                <span className="block text-[#e30613]">Quality Standards</span>
+                <span className="block text-gold">Midas Quality Standards</span>
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
                 We maintain the highest industry standards to ensure every product meets professional repair requirements.
@@ -606,17 +609,17 @@ export default function Home() {
             {/* Right Side AQ7 Card */}
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border border-blue-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="flex items-center mb-6">
-                <div className="bg-[#e30613] text-white px-6 py-3 rounded-xl font-bold text-xl shadow-lg">
-                  AQ7 Technology
+                <div className="bg-gold text-white px-6 py-3 rounded-xl font-bold text-xl shadow-lg">
+                  MidasTech 7.0 Technology
                 </div>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 Unmatched Quality and Reliability
               </h3>
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                Our proprietary AQ7 Technology ensures top-tier materials, rigorous quality control, and reliable performance for professional repairs.
+                Our proprietary MidasTech 7.0 Technology ensures top-tier materials, rigorous quality control, and reliable performance for professional repairs.
               </p>
-              <div className="flex items-center space-x-2 text-[#e30613] font-semibold">
+              <div className="flex items-center space-x-2 text-gold font-semibold">
                 <Shield size={20} />
                 <span>Lifetime Warranty Included</span>
               </div>
@@ -630,8 +633,8 @@ export default function Home() {
                 key={index}
                 className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 group"
               >
-                <div className="bg-gray-50 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:bg-[#e30613] group-hover:bg-opacity-10 transition-colors duration-300">
-                  <feature.icon className={`w-10 h-10 ${feature.color} group-hover:text-[#e30613] transition-colors duration-300`} />
+                <div className="bg-gray-50 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:bg-gold group-hover:bg-opacity-10 transition-colors duration-300">
+                  <feature.icon className={`w-10 h-10 ${feature.color} group-hover:text-gold transition-colors duration-300`} />
                 </div>
                 <p className="text-gray-800 font-semibold text-lg leading-tight">{feature.text}</p>
               </div>
@@ -647,7 +650,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-6 gap-12">
             {/* Left Side Selectors */}
             <div className="lg:col-span-1">
-              <h3 className="text-2xl font-bold mb-6 text-[#e30613]">MobileSentrix</h3>
+              <h3 className="text-2xl font-bold mb-6 text-gold">Midas Technical Solutions</h3>
               <div className="space-y-4">
                 {/* Country Selector */}
                 <div className="relative">
@@ -687,7 +690,7 @@ export default function Home() {
                           <button
                             key={lang}
                             onClick={() => handleLanguageChange(lang)}
-                            className="w-full text-left py-1 text-sm hover:text-[#e30613] transition-colors"
+                            className="w-full text-left py-1 text-sm hover:text-gold transition-colors"
                           >
                             {lang}
                           </button>
@@ -699,7 +702,7 @@ export default function Home() {
                           <button
                             key={curr}
                             onClick={() => handleCurrencyChange(curr)}
-                            className="w-full text-left py-1 text-sm hover:text-[#e30613] transition-colors"
+                            className="w-full text-left py-1 text-sm hover:text-gold transition-colors"
                           >
                             {curr}
                           </button>
@@ -713,7 +716,7 @@ export default function Home() {
 
             {/* Footer Columns */}
             <div>
-              <h4 className="font-bold text-lg mb-6 text-[#e30613]">About</h4>
+              <h4 className="font-bold text-lg mb-6 text-gold">About</h4>
               <ul className="space-y-3">
                 {['About Us', 'Blog', 'Quality Standards', 'Return Policy', 'Careers', 'Contact'].map((item) => (
                   <li key={item}>
@@ -726,7 +729,7 @@ export default function Home() {
             </div>
 
             <div>
-              <h4 className="font-bold text-lg mb-6 text-[#e30613]">Services</h4>
+              <h4 className="font-bold text-lg mb-6 text-gold">Services</h4>
               <ul className="space-y-3">
                 {['My Account', 'LCD Buyback', 'Pre-Owned Devices', 'Shipping', 'Bulk Orders', 'Trade-In'].map((item) => (
                   <li key={item}>
@@ -739,9 +742,9 @@ export default function Home() {
             </div>
 
             <div>
-              <h4 className="font-bold text-lg mb-6 text-[#e30613]">Our Brands</h4>
+              <h4 className="font-bold text-lg mb-6 text-gold">Our Brands</h4>
               <ul className="space-y-3">
-                {['XQ7 2.0 Technology', 'AQ7 Technology', 'Ampsentrix', 'Casper', 'DisplayBase', 'ScrewBox 2.0', 'TapeBase'].map((item) => (
+                {['MidasTech 7.0 Technology', 'Premium Toolkits', 'Expert Repair Services', 'Certified Quality Standards'].map((item) => (
                   <li key={item}>
                     <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">
                       {item}
@@ -752,7 +755,7 @@ export default function Home() {
             </div>
 
             <div>
-              <h4 className="font-bold text-lg mb-6 text-[#e30613]">Support</h4>
+              <h4 className="font-bold text-lg mb-6 text-gold">Support</h4>
               <ul className="space-y-3">
                 {['Location', 'Live Chat', 'Phone', 'WhatsApp', 'Email', 'FAQs', 'Warranty'].map((item) => (
                   <li key={item}>
@@ -766,12 +769,12 @@ export default function Home() {
 
             {/* Authorized Distributors */}
             <div>
-              <h4 className="font-bold text-lg mb-6 text-[#e30613]">Authorized Distributors</h4>
+              <h4 className="font-bold text-lg mb-6 text-gold">Authorized Distributors</h4>
               <div className="space-y-3">
                 {[
                   { brand: 'Apple', color: 'bg-gray-700' },
                   { brand: 'Google', color: 'bg-blue-600' },
-                  { brand: 'OnePlus', color: 'bg-red-500' },
+                  { brand: 'Samsung', color: 'bg-blue-500' },
                   { brand: 'Motorola', color: 'bg-green-600' },
                   { brand: 'LG', color: 'bg-gray-600' }
                 ].map(({ brand, color }) => (
@@ -823,7 +826,7 @@ export default function Home() {
             {/* Copyright and Social */}
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <p className="text-gray-400 text-sm">
-                © 2025 MobileSentrix. All rights reserved. | Privacy Policy | Terms of Service
+                © 2025 Midas Technical Solutions. All rights reserved. | Privacy Policy | Terms of Service
               </p>
               <div className="flex space-x-6">
                 {[
@@ -836,7 +839,7 @@ export default function Home() {
                   <a
                     key={href}
                     href={href}
-                    className="text-gray-400 hover:text-[#e30613] transition-colors"
+                    className="text-gray-400 hover:text-gold transition-colors"
                     aria-label={`Visit our ${Icon.name} page`}
                     target="_blank"
                     rel="noopener noreferrer"
