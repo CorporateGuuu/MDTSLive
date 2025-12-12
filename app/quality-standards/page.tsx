@@ -51,7 +51,6 @@ export default function QualityStandardsPage() {
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Header */}
       <header className="bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Link
@@ -64,7 +63,6 @@ export default function QualityStandardsPage() {
         </div>
       </header>
 
-      {/* Hero Section */}
       <section className="bg-gradient-to-br from-gray-50 to-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -77,7 +75,6 @@ export default function QualityStandardsPage() {
         </div>
       </section>
 
-      {/* MidasTech 7.0 Section */}
       <section className="py-20 bg-navy text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -116,7 +113,7 @@ export default function QualityStandardsPage() {
                 <div>
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-blue-100">Defect Rate</span>
-                    <span className="text-gold font-bold">< 0.01%</span>
+                    <span className="text-gold font-bold">Less than 0.01%</span>
                   </div>
                   <div className="w-full bg-blue-900 rounded-full h-2">
                     <div className="bg-gold h-2 rounded-full" style={{ width: '99.9%' }}></div>
@@ -146,7 +143,6 @@ export default function QualityStandardsPage() {
         </div>
       </section>
 
-      {/* Standards Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -171,7 +167,6 @@ export default function QualityStandardsPage() {
         </div>
       </section>
 
-      {/* Certifications */}
       <section className="py-20 bg-gray-50 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Certifications & Compliance</h2>
@@ -190,7 +185,6 @@ export default function QualityStandardsPage() {
         </div>
       </section>
 
-      {/* Testing Process */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -226,7 +220,6 @@ export default function QualityStandardsPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-20 bg-gold bg-opacity-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Quality You Can Trust</h2>
