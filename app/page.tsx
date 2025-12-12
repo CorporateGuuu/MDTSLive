@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
+import Link from 'next/link';
 import { Search, Flag, User, ShoppingCart, Award, ChevronLeft, ChevronRight, Shield, Smartphone, Package, Wrench, Star, Instagram, Youtube, ChevronDown, Menu, X, Globe, Linkedin, Mail, Phone, Lock, Truck } from 'lucide-react';
 
 interface CartItem {
@@ -665,11 +666,16 @@ export default function Home() {
             <div>
               <h4 className="font-semibold text-lg mb-4 text-gold">Quick Links</h4>
               <ul className="space-y-2">
-                {['About Us', 'Quality Standards', 'Contact', 'Support'].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">
-                      {item}
-                    </a>
+                {[
+                  { name: 'About Us', href: '/about' },
+                  { name: 'Quality Standards', href: '/quality-standards' },
+                  { name: 'Contact', href: '/contact' },
+                  { name: 'Support', href: '/support' }
+                ].map((item) => (
+                  <li key={item.name}>
+                    <Link href={item.href} className="text-gray-300 hover:text-white transition-colors text-sm">
+                      {item.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -679,11 +685,16 @@ export default function Home() {
             <div>
               <h4 className="font-semibold text-lg mb-4 text-gold">Services</h4>
               <ul className="space-y-2">
-                {['Bulk Orders', 'Trade-In Program', 'Technical Support', 'Warranty'].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">
-                      {item}
-                    </a>
+                {[
+                  { name: 'Bulk Orders', href: '/bulk-orders' },
+                  { name: 'Trade-In Program', href: '/trade-in' },
+                  { name: 'Technical Support', href: '/technical-support' },
+                  { name: 'Warranty', href: '/warranty' }
+                ].map((item) => (
+                  <li key={item.name}>
+                    <Link href={item.href} className="text-gray-300 hover:text-white transition-colors text-sm">
+                      {item.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
