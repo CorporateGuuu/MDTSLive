@@ -63,18 +63,18 @@ function QualityStandardsSection() {
               </a>
             </div>
 
-            {/* RIGHT: AQ7 Technology – PREMIUM LOOK */}
+            {/* RIGHT: MidasGold 7.0 Technology – PREMIUM LOOK */}
             <div className="space-y-10 text-center lg:text-left">
               <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6">
-                {/* AQ7 Logo with glow */}
+                {/* MidasGold 7.0 Logo with glow */}
                 <div className="relative">
-                  <img src="https://i.imgur.com/5mK8vL2.png" alt="AQ7 Technology Logo"
+                  <img src="https://i.imgur.com/5mK8vL2.png" alt="MidasGold 7.0 Technology Logo"
                        className="w-32 h-32 lg:w-40 lg:h-40 rounded-3xl shadow-2xl animate-spin-slow" />
                   <div className="absolute inset-0 bg-cyan-400 rounded-3xl blur-3xl opacity-60 animate-pulse"></div>
                 </div>
 
                 <h3 className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-700 bg-clip-text text-transparent leading-tight">
-                  AQ7 TECHNOLOGY
+                  MidasGold 7.0 TECHNOLOGY
                 </h3>
               </div>
 
@@ -83,11 +83,11 @@ function QualityStandardsSection() {
                 Top-tier materials and rigorous quality control for reliable performance.
               </p>
 
-              {/* Hero Phone with AQ7 badge */}
+              {/* Hero Phone with MidasGold 7.0 badge */}
               <div className="relative mx-auto lg:mx-0 w-80 lg:w-96">
-                <img src="https://i.imgur.com/Q8vR9Zm.png" alt="iPhone with AQ7 badge"
+                <img src="https://i.imgur.com/Q8vR9Zm.png" alt="iPhone with MidasGold 7.0 badge"
                      className="relative z-10 drop-shadow-3xl rounded-3xl" />
-                <img src="https://i.imgur.com/X7kP3Lm.png" alt="AQ7 Badge"
+                <img src="https://i.imgur.com/X7kP3Lm.png" alt="MidasGold 7.0 Badge"
                      className="absolute bottom-8 right-8 w-24 lg:w-32 animate-bounce" />
                 <div className="absolute -inset-4 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-3xl blur-3xl opacity-50 animate-pulse"></div>
               </div>

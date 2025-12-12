@@ -175,7 +175,7 @@ export default function GenuineApplePartsPage() {
           {/* Support Text */}
           <div className="bg-white rounded-xl shadow p-6 mt-6">
             <p className="text-gray-600">
-              You can adjust these settings by contacting MobileSentrix support. Our team is available to assist you with any changes or questions regarding your account settings and services.
+              You can adjust these settings by contacting Midas Technical Solutions support. Our team is available to assist you with any changes or questions regarding your account settings and services.
             </p>
           </div>
         </main>

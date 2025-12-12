@@ -595,7 +595,7 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Right Side AQ7 Card */}
+            {/* Right Side MidasGold 7.0 Card */}
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border border-blue-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="flex items-center mb-6">
                 <div className="bg-gold text-white px-6 py-3 rounded-xl font-bold text-xl shadow-lg">

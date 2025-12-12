@@ -1,18 +1,18 @@
 import ProductGrid from '../../../../../components/Product/ProductGrid';
 
 export const metadata = {
-  title: 'iFixit Professional Repair Tools - Screwdrivers, Kits, Guides | Midas Technical Solutions',
-  description: 'Official iFixit repair tools and kits. Professional screwdrivers, opening tools, repair guides, and complete tool kits.',
+  title: 'Midas Precision Professional Repair Tools - Screwdrivers, Kits, Guides | Midas Technical Solutions',
+  description: 'Official Midas Precision repair tools and kits. Professional screwdrivers, opening tools, repair guides, and complete tool kits.',
 };
 
-export default function iFixitPage() {
+export default function Midas PrecisionPage() {
   return (
     <div className="bg-gray-50 min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4">
         {/* Brand Header */}
         <div className="text-center mb-12">
           <div className="text-8xl mb-4">🔧</div>
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">iFixit Professional Tools</h1>
+          <h1 className="text-5xl font-bold text-gray-900 mb-4">Midas Precision Professional Tools</h1>
           <p className="text-xl text-gray-600 mb-6">World-renowned repair tools and comprehensive repair guides</p>
           <div className="inline-flex items-center gap-4 bg-white px-6 py-3 rounded-full shadow-md">
             <span className="text-green-600 font-semibold">✓</span>
@@ -43,7 +43,7 @@ export default function iFixitPage() {
 
         {/* Products */}
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">iFixit Tools & Kits</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Midas Precision Tools & Kits</h2>
           <p className="text-gray-600">Professional-grade repair tools trusted by technicians worldwide</p>
         </div>
 

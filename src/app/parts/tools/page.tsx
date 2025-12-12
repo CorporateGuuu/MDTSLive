@@ -6,7 +6,7 @@ const toolCategories = [
   {
     name: 'Shop by Brand',
     slug: 'shop-by-brand',
-    description: 'Professional tools from iFixit, Wiha, WRE Pair, DotterPodX, Qianli',
+    description: 'Professional tools from Midas Precision, Wiha, WRE Pair, DotterPodX, Qianli',
     icon: '🏷️',
     featured: true
   },
@@ -43,8 +43,8 @@ const toolCategories = [
 ];
 
 export const metadata = {
-  title: 'Professional Repair Tools - iFixit, Wiha, OEM Tools | Midas Technical Solutions',
-  description: 'Professional repair tools for technicians. iFixit, Wiha, WRE Pair tools, microsoldering equipment, testing devices, OEM service tools.',
+  title: 'Professional Repair Tools - Midas Precision, Wiha, OEM Tools | Midas Technical Solutions',
+  description: 'Professional repair tools for technicians. Midas Precision, Wiha, WRE Pair tools, microsoldering equipment, testing devices, OEM service tools.',
 };
 
 export default async function ToolsPage() {
@@ -57,7 +57,7 @@ export default async function ToolsPage() {
           <Breadcrumb items={[{ label: 'Parts' }, { label: 'Tools' }]} />
 
           <h1 className="text-4xl font-bold text-gray-900 mt-4 mb-2">Professional Repair Tools</h1>
-          <p className="text-gray-600 mb-8">Premium tools for professional technicians - iFixit, Wiha, OEM equipment, microsoldering, testing devices</p>
+          <p className="text-gray-600 mb-8">Premium tools for professional technicians - Midas Precision, Wiha, OEM equipment, microsoldering, testing devices</p>
 
           {/* Category Quick Links */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">

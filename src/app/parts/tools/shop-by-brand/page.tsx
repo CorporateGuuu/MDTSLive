@@ -2,7 +2,7 @@ import Breadcrumb from '../../../../components/Breadcrumb';
 
 const professionalBrands = [
   {
-    name: 'iFixit',
+    name: 'Midas Precision',
     slug: 'ifixit',
     description: 'World-renowned repair tools and guides',
     logo: '🔧',
@@ -39,8 +39,8 @@ const professionalBrands = [
 ];
 
 export const metadata = {
-  title: 'Professional Repair Tools by Brand - iFixit, Wiha, OEM | Midas Technical Solutions',
-  description: 'Shop professional repair tools by brand. iFixit, Wiha, WRE Pair, DotterPodX, Qianli - trusted brands for technicians.',
+  title: 'Professional Repair Tools by Brand - Midas Precision, Wiha, OEM | Midas Technical Solutions',
+  description: 'Shop professional repair tools by brand. Midas Precision, Wiha, WRE Pair, DotterPodX, Qianli - trusted brands for technicians.',
 };
 
 export default function ShopByBrandPage() {
@@ -58,7 +58,7 @@ export default function ShopByBrandPage() {
             Professional Repair Tools
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-            Trusted brands for professional technicians — iFixit, Wiha, WRE Pair, DotterPodX, Qianli
+            Trusted brands for professional technicians — Midas Precision, Wiha, WRE Pair, DotterPodX, Qianli
           </p>
           <div className="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-full shadow-md">
             <span className="text-green-600 font-semibold">✓</span>

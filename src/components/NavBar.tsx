@@ -342,7 +342,7 @@ export default function NavBar() {
                         <h3 className="font-bold text-gray-900 mb-5">Shop by Brand</h3>
                         <ul className="space-y-3 text-gray-600">
                           <li><Link href="/parts/tools-&-supplies" className="hover:text-sky-600">Tools & Supplies Overview</Link></li>
-                          <li><a href="#" className="hover:text-sky-600">iFixit</a></li>
+                          <li><a href="#" className="hover:text-sky-600">Midas Precision</a></li>
                           <li><a href="#" className="hover:text-sky-600">Wiha</a></li>
                           <li><a href="#" className="hover:text-sky-600">Wrepair</a></li>
                           <li><a href="#" className="hover:text-sky-600">Dotterpodx</a></li>
