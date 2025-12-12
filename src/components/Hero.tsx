@@ -211,7 +211,7 @@ export default function Hero() {
       {/* Trust Badges */}
       <div className="container mx-auto px-4 -mt-8 relative z-10">
         <div className="bg-white rounded-xl shadow-lg p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {['100% Quality Tested', 'Fast UAE Shipping', '30-Day Returns'].map((text, i) => (
+          {['100% Quality Tested', 'Fast USA Shipping', '30-Day Returns'].map((text, i) => (
             <div key={i} className="flex items-center gap-3 justify-center md:justify-start">
               <CheckCircle className="h-8 w-8 text-green-600" />
               <span className="font-medium font-sans">{text}</span>

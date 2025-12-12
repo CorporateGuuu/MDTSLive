@@ -14,9 +14,9 @@ export async function POST(req: NextRequest) {
 
   try {
     await resend.emails.send({
-      from: 'Nexus TechHub <welcome@nexustechhub.com>',
+      from: 'Midas Technical Solutions <welcome@midastechnical.com>',
       to: email,
-      subject: 'Welcome to Nexus TechHub Wholesale',
+      subject: 'Welcome to Midas Technical Solutions Wholesale',
       html: `
         <div style="font-family: Arial, sans-serif; color: white; background: #000; padding: 40px; text-align: center;">
           <h1 style="font-size: 48px; font-weight: 900; background: linear-gradient(to right, #06b6d4, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
             Access Your Dashboard
           </a>
           <p style="margin-top: 50px; color: #555;">
-            — The Nexus TechHub Team
+            — The Midas Technical Solutions Team
           </p>
         </div>
       `,

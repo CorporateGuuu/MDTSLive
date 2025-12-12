@@ -3,8 +3,8 @@
 import { useEffect } from 'react';
 
 export default function WhatsAppButton() {
-  const phoneNumber = "971585531029";
-  const message = "Hi Nexus TechHub Team! 👋\n\nI'm interested in bulk pricing for iPhone OLED screens and pre-owned devices.\nCan you send me your latest wholesale catalog and MOQ?\n\nThanks!";
+  const phoneNumber = "18885452121";
+  const message = "Hi Midas Technical Solutions Team! 👋\n\nI'm interested in bulk pricing for iPhone OLED screens and pre-owned devices.\nCan you send me your latest wholesale catalog and MOQ?\n\nThanks!";
 
   const handleClick = () => {
     if (typeof window !== 'undefined' && (window as any).gtag) {

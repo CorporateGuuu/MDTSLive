@@ -22,7 +22,7 @@ export const useAuth = create<AuthStore>()(
       logout: () => set({ user: null }),
     }),
     {
-      name: 'nexus-auth',
+      name: 'midas-auth',
     }
   )
 );

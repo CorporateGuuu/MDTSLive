@@ -110,7 +110,7 @@ export default function HeroCarousel() {
 
   const openWhatsApp = () => {
     window.open(
-      'https://wa.me/971585531029?text=Hi%20Nexus%20Team!%20I%20want%20the%20Black%20Friday%20bulk%20deal%20before%20it%20ends!',
+      'https://wa.me/18885452121?text=Hi%20Nexus%20Team!%20I%20want%20the%20Black%20Friday%20bulk%20deal%20before%20it%20ends!',
       '_blank',
       'noopener,noreferrer'
     );

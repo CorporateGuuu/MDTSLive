@@ -60,9 +60,9 @@ export async function POST(request: NextRequest) {
       template = template.replace('{{name}}', fullName);
 
       await resend.emails.send({
-        from: 'Midas Technical Solutions <sales@nexustechhub.com>',
+        from: 'Midas Technical Solutions <sales@midastechnical.com>',
         to: userData.email,
-        subject: 'Welcome to Midas Technical Solutions – UAE\'s #1 Wholesale Parts Supplier',
+        subject: 'Welcome to Midas Technical Solutions – #1 Wholesale Parts Supplier\'s #1 Wholesale Parts Supplier',
         html: template,
       });
 

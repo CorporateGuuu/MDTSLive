@@ -16,7 +16,7 @@ export async function sendWelcomeEmail({ email, name, role }: WelcomeEmailData) 
 
     const resend = new Resend(apiKey);
     const { data, error } = await resend.emails.send({
-      from: 'Midas Technical Solutions <welcome@nexustechhub.com>',
+      from: 'Midas Technical Solutions <welcome@midastechnical.com>',
       to: [email],
       subject: 'Welcome to Midas Technical Solutions - Your Wholesale Account is Ready!',
       html: `
@@ -51,14 +51,14 @@ export async function sendWelcomeEmail({ email, name, role }: WelcomeEmailData) 
               </div>
 
               <div style="text-align: center; margin: 30px 0;">
-                <a href="${process.env.NEXT_PUBLIC_APP_URL || 'https://nexustechhub.com'}/login"
+                <a href="${process.env.NEXT_PUBLIC_APP_URL || 'https://midastechnical.com'}/login"
                    style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); color: white; padding: 12px 30px; text-decoration: none; border-radius: 6px; font-weight: bold; display: inline-block;">
                   Access Your Account
                 </a>
               </div>
 
               <p style="font-size: 14px; color: #64748b; margin-top: 30px;">
-                Questions? Contact our support team at <a href="mailto:support@nexustechhub.com" style="color: #06b6d4;">support@nexustechhub.com</a>
+                Questions? Contact our support team at <a href="mailto:support@midastechnical.com" style="color: #06b6d4;">support@midastechnical.com</a>
               </p>
 
               <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 30px 0;">

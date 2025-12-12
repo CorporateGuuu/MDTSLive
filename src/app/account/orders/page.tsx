@@ -735,8 +735,8 @@ export default function OrdersPage() {
             <div>
               <h3 className="font-bold text-lg mb-4">Contact Info</h3>
               <div className="text-sm text-gray-300 space-y-2">
-                <p>support@nexustechhub.com</p>
-                <p>1-800-NEXUS-01</p>
+                <p>support@midastechnical.com</p>
+                <p>1-800-MIDAS-01</p>
                 <p>Mon-Fri: 9AM-6PM EST</p>
               </div>
             </div>

@@ -25,11 +25,11 @@ export default function PromotionsBanners() {
                     <span>+971 50 123 4567</span>
                   </a>
                   <a
-                    href="mailto:support@nexustechhub.com"
+                    href="mailto:support@midastechnical.com"
                     className="text-decoration-none d-flex align-items-center text-primary hover:text-blue-700 transition-colors"
                   >
                     <Mail className="me-2" size={20} />
-                    <span>support@nexustechhub.com</span>
+                    <span>support@midastechnical.com</span>
                   </a>
                 </div>
               </div>

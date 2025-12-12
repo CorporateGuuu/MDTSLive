@@ -145,8 +145,8 @@ export default function NewsletterFooter() {
               <div className="mb-3">
                 <div className="d-flex align-items-center mb-2">
                   <Phone className="me-2" size={16} />
-                  <a href="tel:+971501234567" className="text-white text-decoration-none hover-primary">
-                    +971 50 123 4567
+                  <a href="tel:+1501234567" className="text-white text-decoration-none hover-primary">
+                    +1 50 123 4567
                   </a>
                 </div>
                 <div className="d-flex align-items-center mb-2">
@@ -158,7 +158,7 @@ export default function NewsletterFooter() {
                 <div className="d-flex align-items-start mb-3">
                   <MapPin className="me-2 mt-1" size={16} />
                   <span className="text-white">
-                    Dubai, UAE
+                    Dubai, USA
                   </span>
                 </div>
               </div>

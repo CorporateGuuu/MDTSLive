@@ -14,9 +14,9 @@ import Image from 'next/image';
 // Zod Schemas
 const shippingSchema = z.object({
   fullName: z.string().min(2, 'Name is required'),
-  phone: z.string().regex(/^05\d{8}$/, 'Enter valid UAE mobile (05XXXXXXXX)'),
+  phone: z.string().regex(/^[\+]?[1-9][\d]{0,15}$/, 'Enter valid US phone number'),
   email: z.string().email('Invalid email'),
-  governorate: z.string().min(1, 'Select governorate'),
+  governorate: z.string().min(1, 'Select state'),
   city: z.string().min(2, 'City is required'),
   address: z.string().min(5, 'Address is required'),
   building: z.string().optional(),
@@ -25,8 +25,8 @@ const shippingSchema = z.object({
 
 type ShippingForm = z.infer<typeof shippingSchema>;
 
-const uaeGovernorates = [
-  'Dubai', 'Abu Dhabi', 'Sharjah', 'Ajman', 'Ras Al Khaimah', 'Umm Al Quwain', 'Fujairah'
+const usStates = [
+  'California', 'Texas', 'Florida', 'New York', 'Pennsylvania', 'Illinois', 'Ohio', 'Georgia', 'North Carolina', 'Michigan'
 ];
 
 export default function CheckoutPage() {
@@ -167,7 +167,7 @@ export default function CheckoutPage() {
                       <input
                         {...register('phone')}
                         className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-red-500"
-                        placeholder="0501234567"
+                        placeholder="+1-888-545-2121"
                       />
                       {errors.phone && <p className="text-red-600 text-xs mt-1">{errors.phone.message}</p>}
                     </div>
@@ -186,13 +186,13 @@ export default function CheckoutPage() {
 
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium mb-1">Governorate</label>
+                      <label className="block text-sm font-medium mb-1">State</label>
                       <select
                         {...register('governorate')}
                         className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-red-500"
                       >
                         <option value="">Select</option>
-                        {uaeGovernorates.map((g) => (
+                        {usStates.map((g) => (
                           <option key={g} value={g}>{g}</option>
                         ))}
                       </select>
@@ -358,7 +358,7 @@ export default function CheckoutPage() {
                   <p className="font-medium mb-2">Shipping to:</p>
                   <p>{shipping.fullName}</p>
                   <p>{shipping.address}, {shipping.city}</p>
-                  <p>{shipping.governorate}, UAE</p>
+                  <p>{shipping.governorate}, USA</p>
                   <p className="mt-1">{shipping.phone}</p>
                 </div>
               )}

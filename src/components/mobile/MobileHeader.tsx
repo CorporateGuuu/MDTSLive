@@ -30,7 +30,7 @@ export default function MobileHeader() {
 
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span className="text-xl font-black text-sky-500 tracking-tight">NEXUS</span>
+            <span className="text-xl font-black text-sky-500 tracking-tight">MIDAS</span>
             <span className="text-xl font-black text-gray-900 tracking-tight ml-1">TECHHUB</span>
           </Link>
 

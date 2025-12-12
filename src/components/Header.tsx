@@ -19,7 +19,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="text-2xl font-black text-white tracking-tighter">
-          NEXUS TECHHUB
+          MIDAS TECHNICAL SOLUTIONS
         </Link>
 
         {/* Desktop Nav */}

@@ -98,7 +98,7 @@ export default function SupportTicketsPage() {
               <div>
                 <h1 className="text-2xl font-bold text-green-800">Support Tickets</h1>
                 <p className="text-green-700 mb-2">Need support? Use this page to file a support ticket and receive updates on your existing requests.</p>
-                <p className="text-green-700">For urgent matters, please contact us via <a href="tel:2025409946" className="underline">phone</a> or <a href="mailto:support@nexustechhub.com" className="underline">email</a>.</p>
+                <p className="text-green-700">For urgent matters, please contact us via <a href="tel:2025409946" className="underline">phone</a> or <a href="mailto:support@midastechnical.com" className="underline">email</a>.</p>
               </div>
             </div>
             <Dialog open={openModal} onOpenChange={setOpenModal}>

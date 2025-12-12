@@ -241,10 +241,13 @@ export default function Home() {
 
             {/* Logo - Centered on Mobile, Left on Desktop */}
             <div className="flex items-center lg:flex-1">
-              <h1 className="text-xl sm:text-2xl font-bold">
-                <span className="text-gold">Midas</span>
-                <span className="text-navy ml-2">Technical Solutions</span>
-              </h1>
+              <Link href="/" className="flex items-center">
+                <img
+                  src="/logos/midas-logo-compact.svg"
+                  alt="Midas Technical Solutions Logo"
+                  className="h-8 w-auto lg:h-10"
+                />
+              </Link>
             </div>
 
             {/* Desktop Search - Hidden on Mobile */}

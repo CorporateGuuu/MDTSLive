@@ -15,31 +15,31 @@ const schema = {
           "@type": "ListItem",
           "position": 1,
           "name": "Parts",
-          "item": "https://nexustechhub.com/parts"
+          "item": "https://midastechnical.com/parts"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Samsung",
-          "item": "https://nexustechhub.com/parts/samsung"
+          "item": "https://midastechnical.com/parts/samsung"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Galaxy S",
-          "item": "https://nexustechhub.com/parts/samsung/galaxy-s"
+          "item": "https://midastechnical.com/parts/samsung/galaxy-s"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "S24 Ultra",
-          "item": "https://nexustechhub.com/parts/samsung/galaxy-s/s24-ultra"
+          "item": "https://midastechnical.com/parts/samsung/galaxy-s/s24-ultra"
         }
       ]
     },
     {
       "@type": "Product",
-      "@id": "https://nexustechhub.com/parts/samsung/galaxy-s/s24-ultra#product",
+      "@id": "https://midastechnical.com/parts/samsung/galaxy-s/s24-ultra#product",
       "name": "Samsung Galaxy S24 Ultra Parts",
       "description": "Genuine Samsung Galaxy S24 Ultra replacement parts including displays, batteries, cameras, and components",
       "brand": {

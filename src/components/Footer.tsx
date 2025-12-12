@@ -17,7 +17,7 @@ export default function Footer() {
       { href: '#', label: 'Live Chat' },
       { href: 'tel:+18885558324', label: '1-888-555-TECH' },
       { href: 'https://wa.me/18885558324', label: 'WhatsApp' },
-      { href: 'mailto:sales@nexustechhub.com', label: 'Email' }
+      { href: 'mailto:sales@midastechnical.com', label: 'Email' }
     ]
   };
 

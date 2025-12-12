@@ -2,7 +2,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { shippingAddressSchema, UAE_GOVERNORATES, ShippingAddressForm } from '../../../utils/validationSchemas';
+import { shippingAddressSchema, USA_GOVERNORATES, ShippingAddressForm } from '../../../utils/validationSchemas';
 import { useOrder } from '../../../contexts/OrderContext';
 
 interface ShippingStepProps {
@@ -116,7 +116,7 @@ export default function ShippingStep({ onContinue, onBack }: ShippingStepProps) 
                 className={`w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${
                   errors.phone ? 'border-red-300' : 'border-gray-300'
                 }`}
-                placeholder="+971 50 123 4567"
+                placeholder="+1 50 123 4567"
               />
               {errors.phone && (
                 <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>
@@ -138,7 +138,7 @@ export default function ShippingStep({ onContinue, onBack }: ShippingStepProps) 
                 }`}
               >
                 <option value="">Select governorate</option>
-                {UAE_GOVERNORATES.map(gov => (
+                {USA_GOVERNORATES.map(gov => (
                   <option key={gov} value={gov}>{gov}</option>
                 ))}
               </select>

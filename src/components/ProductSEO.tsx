@@ -30,10 +30,10 @@ export default function ProductSEO({ product, canonicalUrl }: ProductSEOProps) {
     `${product.name} - High quality ${product.categories?.name || 'tech parts'} from ${product.brands?.name || 'Midas Technical Solutions'}. ${product.reviews?.count ? `${product.reviews.count} reviews, ${product.reviews.averageRating} stars.` : ''}`;
 
   const imageUrl = product.thumbnail_url || (product.images && product.images[0]) ||
-    'https://nexustechhub.com/default-product-image.jpg';
+    'https://midastechnical.com/default-product-image.jpg';
 
   const currentPrice = product.price * (1 - (product.discount_percentage || 0) / 100);
-  const url = canonicalUrl || `https://nexustechhub.com/products/${product.id}`;
+  const url = canonicalUrl || `https://midastechnical.com/products/${product.id}`;
 
   return (
     <Head>

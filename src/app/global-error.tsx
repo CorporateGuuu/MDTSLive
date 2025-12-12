@@ -90,7 +90,7 @@ export default function GlobalError({
                   </Button>
 
                   <Button variant="outline" asChild className="flex-1">
-                    <a href="mailto:support@nexustechhub.com">
+                    <a href="mailto:support@midastechnical.com">
                       <Mail className="w-4 h-4 mr-2" />
                       Support
                     </a>

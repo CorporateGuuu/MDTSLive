@@ -23,12 +23,12 @@ export default function PricingDisplay({ basePrice, productName }: PricingDispla
         <div className="price-with-discount">
           <div className="original-price">
             <span className="line-through text-gray-500">
-              AED {basePrice.toFixed(2)}
+              USD {basePrice.toFixed(2)}
             </span>
           </div>
           <div className="discounted-price">
             <span className="text-green-600 font-bold text-lg">
-              AED {discountedPrice.toFixed(2)}
+              USD {discountedPrice.toFixed(2)}
             </span>
             <span className="text-sm text-green-600 ml-2">
               (20% off)
