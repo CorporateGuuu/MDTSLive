@@ -19,8 +19,6 @@ export default function Home() {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [cartTotal, setCartTotal] = useState(0);
   const [selectedCountry, setSelectedCountry] = useState('United States');
-  const [selectedLanguage, setSelectedLanguage] = useState('English');
-  const [selectedCurrency, setSelectedCurrency] = useState('USD');
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -189,16 +187,6 @@ export default function Home() {
   const handleCountryChange = (country: string) => {
     setSelectedCountry(country);
     console.log(`Country changed to: ${country}`);
-  };
-
-  const handleLanguageChange = (language: string) => {
-    setSelectedLanguage(language);
-    console.log(`Language changed to: ${language}`);
-  };
-
-  const handleCurrencyChange = (currency: string) => {
-    setSelectedCurrency(currency);
-    console.log(`Currency changed to: ${currency}`);
   };
 
   // Loading skeleton component
@@ -645,190 +633,15 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white">
-        {/* Top Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid lg:grid-cols-6 gap-12">
-            {/* Left Side Selectors */}
-            <div className="lg:col-span-1">
-              <h3 className="text-2xl font-bold mb-6 text-gold">Midas Technical Solutions</h3>
-              <div className="space-y-4">
-                {/* Country Selector */}
-                <div className="relative">
-                  <button className="flex items-center justify-between w-full bg-gray-800 px-4 py-3 rounded-lg hover:bg-gray-700 transition-colors">
-                    <div className="flex items-center space-x-2">
-                      <Globe size={16} />
-                      <span className="text-sm">{selectedCountry}</span>
-                    </div>
-                    <ChevronDown size={16} />
-                  </button>
-                  <div className="absolute top-full mt-2 bg-gray-800 border border-gray-700 rounded-lg shadow-lg w-full opacity-0 invisible hover:opacity-100 hover:visible transition-all duration-200">
-                    <div className="py-2">
-                      {['United States', 'Canada', 'United Kingdom', 'Australia', 'Germany'].map((country) => (
-                        <button
-                          key={country}
-                          onClick={() => handleCountryChange(country)}
-                          className="w-full text-left px-4 py-2 text-sm hover:bg-gray-700 transition-colors"
-                        >
-                          {country}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Language & Currency Selector */}
-                <div className="relative">
-                  <button className="flex items-center justify-between w-full bg-gray-800 px-4 py-3 rounded-lg hover:bg-gray-700 transition-colors">
-                    <span className="text-sm">{selectedLanguage} • {selectedCurrency}</span>
-                    <ChevronDown size={16} />
-                  </button>
-                  <div className="absolute top-full mt-2 bg-gray-800 border border-gray-700 rounded-lg shadow-lg w-full">
-                    <div className="py-2">
-                      <div className="px-4 py-2 border-b border-gray-700">
-                        <p className="text-xs text-gray-400 uppercase tracking-wide mb-2">Language</p>
-                        {['English', 'Español', 'Français', 'Deutsch'].map((lang) => (
-                          <button
-                            key={lang}
-                            onClick={() => handleLanguageChange(lang)}
-                            className="w-full text-left py-1 text-sm hover:text-gold transition-colors"
-                          >
-                            {lang}
-                          </button>
-                        ))}
-                      </div>
-                      <div className="px-4 py-2">
-                        <p className="text-xs text-gray-400 uppercase tracking-wide mb-2">Currency</p>
-                        {['USD', 'CAD', 'GBP', 'EUR', 'AUD'].map((curr) => (
-                          <button
-                            key={curr}
-                            onClick={() => handleCurrencyChange(curr)}
-                            className="w-full text-left py-1 text-sm hover:text-gold transition-colors"
-                          >
-                            {curr}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Footer Columns */}
-            <div>
-              <h4 className="font-bold text-lg mb-6 text-gold">About</h4>
-              <ul className="space-y-3">
-                {['About Us', 'Blog', 'Quality Standards', 'Return Policy', 'Careers', 'Contact'].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">
-                      {item}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-lg mb-6 text-gold">Services</h4>
-              <ul className="space-y-3">
-                {['My Account', 'LCD Buyback', 'Pre-Owned Devices', 'Shipping', 'Bulk Orders', 'Trade-In'].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">
-                      {item}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-lg mb-6 text-gold">Our Brands</h4>
-              <ul className="space-y-3">
-                {['MidasTech 7.0 Technology', 'Premium Toolkits', 'Expert Repair Services', 'Certified Quality Standards'].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">
-                      {item}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-lg mb-6 text-gold">Support</h4>
-              <ul className="space-y-3">
-                {['Location', 'Live Chat', 'Phone', 'WhatsApp', 'Email', 'FAQs', 'Warranty'].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">
-                      {item}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Authorized Distributors */}
-            <div>
-              <h4 className="font-bold text-lg mb-6 text-gold">Authorized Distributors</h4>
-              <div className="space-y-3">
-                {[
-                  { brand: 'Apple', color: 'bg-gray-700' },
-                  { brand: 'Google', color: 'bg-blue-600' },
-                  { brand: 'Samsung', color: 'bg-blue-500' },
-                  { brand: 'Motorola', color: 'bg-green-600' },
-                  { brand: 'LG', color: 'bg-gray-600' }
-                ].map(({ brand, color }) => (
-                  <div key={brand} className={`${color} px-4 py-3 rounded-lg text-sm font-semibold shadow-lg`}>
-                    {brand} Authorized Distributor
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Certifications and Payment */}
-        <div className="border-t border-gray-800">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            {/* Certifications */}
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              {[
-                'ISO 9001 Certified',
-                'ISO 14001 Certified',
-                'ISO 45001 Certified',
-                'PCI DSS Compliant',
-                'RoHS Compliant'
-              ].map((cert) => (
-                <div key={cert} className="bg-gray-800 px-4 py-2 rounded-full text-xs font-semibold text-center">
-                  {cert}
-                </div>
-              ))}
-            </div>
-
-            {/* Payment Methods */}
-            <div className="flex flex-wrap justify-center gap-6 mb-8">
-              {[
-                { name: 'FedEx', icon: '🚚' },
-                { name: 'Visa', icon: '💳' },
-                { name: 'MasterCard', icon: '💳' },
-                { name: 'PayPal', icon: '🅿️' },
-                { name: 'Amazon Pay', icon: '📦' },
-                { name: 'Apple Pay', icon: '📱' },
-                { name: 'Google Pay', icon: '🎯' }
-              ].map(({ name, icon }) => (
-                <div key={name} className="flex items-center space-x-2 text-gray-300">
-                  <span className="text-lg">{icon}</span>
-                  <span className="text-sm font-medium">{name}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* Copyright and Social */}
-            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-              <p className="text-gray-400 text-sm">
-                © 2025 Midas Technical Solutions. All rights reserved. | Privacy Policy | Terms of Service
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="grid md:grid-cols-4 gap-8">
+            {/* Company Info */}
+            <div className="md:col-span-1">
+              <h3 className="text-xl font-bold mb-4 text-gold">Midas Technical Solutions</h3>
+              <p className="text-gray-400 text-sm mb-4">
+                Premium wholesale provider of mobile phone parts, repair tools, and tech solutions.
               </p>
-              <div className="flex space-x-6">
+              <div className="flex space-x-4">
                 {[
                   { Icon: Instagram, href: 'https://www.instagram.com/midastechnical/' },
                   { Icon: Linkedin, href: 'https://www.linkedin.com/company/midas-technical-solutions/?viewAsMember=true' },
@@ -842,9 +655,87 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Icon size={24} />
+                    <Icon size={20} />
                   </a>
                 ))}
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h4 className="font-semibold text-lg mb-4 text-gold">Quick Links</h4>
+              <ul className="space-y-2">
+                {['About Us', 'Quality Standards', 'Contact', 'Support'].map((item) => (
+                  <li key={item}>
+                    <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Services */}
+            <div>
+              <h4 className="font-semibold text-lg mb-4 text-gold">Services</h4>
+              <ul className="space-y-2">
+                {['Bulk Orders', 'Trade-In Program', 'Technical Support', 'Warranty'].map((item) => (
+                  <li key={item}>
+                    <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Contact & Country */}
+            <div>
+              <h4 className="font-semibold text-lg mb-4 text-gold">Contact</h4>
+              <div className="space-y-2 text-sm text-gray-300">
+                <p>Available 24/7 for support</p>
+                <p>📧 support@midastechnical.com</p>
+                <p>📞 1-888-545-2121</p>
+              </div>
+
+              {/* Country Selector */}
+              <div className="mt-4">
+                <div className="relative">
+                  <button className="flex items-center justify-between w-full bg-gray-800 px-3 py-2 rounded-lg hover:bg-gray-700 transition-colors text-sm">
+                    <div className="flex items-center space-x-2">
+                      <Globe size={14} />
+                      <span>{selectedCountry}</span>
+                    </div>
+                    <ChevronDown size={14} />
+                  </button>
+                  <div className="absolute top-full mt-1 bg-gray-800 border border-gray-700 rounded-lg shadow-lg w-full opacity-0 invisible hover:opacity-100 hover:visible transition-all duration-200">
+                    <div className="py-1">
+                      {['United States', 'Canada', 'United Kingdom', 'Australia'].map((country) => (
+                        <button
+                          key={country}
+                          onClick={() => handleCountryChange(country)}
+                          className="w-full text-left px-3 py-1 text-xs hover:bg-gray-700 transition-colors"
+                        >
+                          {country}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Section */}
+          <div className="border-t border-gray-800 mt-8 pt-6">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <p className="text-gray-400 text-sm">
+                © 2025 Midas Technical Solutions. All rights reserved. | Privacy Policy | Terms of Service
+              </p>
+              <div className="flex items-center space-x-6 text-sm text-gray-400">
+                <span>🔒 Secure SSL</span>
+                <span>🚚 Fast Shipping</span>
+                <span>⭐ Lifetime Warranty</span>
               </div>
             </div>
           </div>
