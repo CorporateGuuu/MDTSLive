@@ -694,8 +694,8 @@ export default function Home() {
               <h4 className="font-semibold text-lg mb-4 text-gold">Contact</h4>
               <div className="space-y-2 text-sm text-gray-300">
                 <p>Available 24/7 for support</p>
-                <p>📧 support@midastechnical.com</p>
-                <p>📞 1-888-545-2121</p>
+                <p>Email: support@midastechnical.com</p>
+                <p>Phone: 1-888-545-2121</p>
               </div>
 
               {/* Country Selector */}
@@ -733,9 +733,9 @@ export default function Home() {
                 © 2025 Midas Technical Solutions. All rights reserved. | Privacy Policy | Terms of Service
               </p>
               <div className="flex items-center space-x-6 text-sm text-gray-400">
-                <span>🔒 Secure SSL</span>
-                <span>🚚 Fast Shipping</span>
-                <span>⭐ Lifetime Warranty</span>
+                <span>Secure SSL</span>
+                <span>Fast Shipping</span>
+                <span>Lifetime Warranty</span>
               </div>
             </div>
           </div>
