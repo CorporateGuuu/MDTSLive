@@ -20,7 +20,9 @@ export default function RootLayout({
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="icon" type="image/svg+xml" sizes="32x32" href="/favicon-32x32.svg" />
         <link rel="icon" type="image/svg+xml" sizes="16x16" href="/favicon-16x16.svg" />
-        <link rel="apple-touch-icon" href="/favicon.svg" />
+        <link rel="icon" type="image/jpeg" sizes="960x960" href="/favicon-960x960.jpg" />
+        <link rel="icon" type="image/jpeg" href="/favicon-main.jpg" />
+        <link rel="apple-touch-icon" href="/favicon-960x960.jpg" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
