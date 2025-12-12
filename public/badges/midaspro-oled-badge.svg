@@ -1,0 +1,62 @@
+<svg width="140" height="80" viewBox="0 0 140 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Transparent background -->
+  
+  <!-- Navy background with gold border -->
+  <rect x="10" y="10" width="120" height="60" rx="30" ry="30" fill="#001F3F" stroke="url(#goldBorder)" stroke-width="3"/>
+  
+  <!-- Inner glow effect -->
+  <rect x="13" y="13" width="114" height="54" rx="27" ry="27" fill="none" stroke="url(#innerGlow)" stroke-width="1" opacity="0.5"/>
+  
+  <!-- OLED text with glow effect -->
+  <text x="70" y="35" text-anchor="middle" font-family="monospace" font-size="18" font-weight="bold" fill="url(#oledGlow)" letter-spacing="1">
+    OLED
+  </text>
+  
+  <!-- PRO text -->
+  <text x="70" y="55" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="600" fill="#FFFFFF" letter-spacing="0.5">
+    MidasPro
+  </text>
+  
+  <!-- Circuit pattern accents -->
+  <g opacity="0.3" transform="translate(20, 20)">
+    <rect x="0" y="0" width="8" height="1" fill="url(#circuitGold)"/>
+    <rect x="12" y="4" width="6" height="1" fill="url(#circuitGold)"/>
+    <circle cx="2" cy="2" r="0.5" fill="url(#circuitGold)"/>
+    <circle cx="14" cy="5" r="0.5" fill="url(#circuitGold)"/>
+  </g>
+  
+  <g opacity="0.3" transform="translate(90, 15)">
+    <rect x="0" y="0" width="8" height="1" fill="url(#circuitGold)"/>
+    <rect x="12" y="4" width="6" height="1" fill="url(#circuitGold)"/>
+    <circle cx="2" cy="2" r="0.5" fill="url(#circuitGold)"/>
+    <circle cx="14" cy="5" r="0.5" fill="url(#circuitGold)"/>
+  </g>
+  
+  <!-- Shine effect -->
+  <ellipse cx="35" cy="25" rx="20" ry="10" fill="white" opacity="0.1"/>
+  
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="goldBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#D4AF37;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="innerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#001F3F;stop-opacity:0.1" />
+    </radialGradient>
+    
+    <radialGradient id="oledGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFD700;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#D4AF37;stop-opacity:0.6" />
+    </radialGradient>
+    
+    <linearGradient id="circuitGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#D4AF37;stop-opacity:0.5" />
+    </linearGradient>
+  </defs>
+</svg>

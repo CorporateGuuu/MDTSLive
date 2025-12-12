@@ -1,0 +1,83 @@
+<svg width="130" height="70" viewBox="0 0 130 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Transparent background -->
+  
+  <!-- Battery body -->
+  <rect x="15" y="20" width="70" height="30" rx="8" ry="8" fill="url(#batteryGradient)" stroke="url(#batteryStroke)" stroke-width="2"/>
+  
+  <!-- Battery terminal -->
+  <rect x="85" y="25" width="8" height="20" rx="4" ry="4" fill="url(#terminalGradient)" stroke="url(#batteryStroke)" stroke-width="1"/>
+  
+  <!-- Battery fill level -->
+  <rect x="20" y="25" width="50" height="20" rx="4" ry="4" fill="url(#powerFill)" opacity="0.8"/>
+  
+  <!-- Lightning bolt -->
+  <g transform="translate(50, 15)">
+    <path d="M5 0 L8 5 L6 5 L10 12 L3 7 L5 7 Z" fill="url(#lightningGradient)" stroke="url(#lightningStroke)" stroke-width="1"/>
+    
+    <!-- Lightning glow effect -->
+    <path d="M5 0 L8 5 L6 5 L10 12 L3 7 L5 7 Z" fill="white" opacity="0.3" transform="scale(0.8) translate(1.25, 1.25)"/>
+  </g>
+  
+  <!-- MidasPower text -->
+  <text x="65" y="58" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="url(#textGradient)" letter-spacing="0.5">
+    MidasPower
+  </text>
+  
+  <!-- Power indicators -->
+  <g opacity="0.7">
+    <circle cx="30" cy="35" r="2" fill="url(#indicatorGradient)"/>
+    <circle cx="40" cy="35" r="2" fill="url(#indicatorGradient)"/>
+    <circle cx="50" cy="35" r="2" fill="url(#indicatorGradient)"/>
+    <circle cx="60" cy="35" r="2" fill="url(#indicatorGradient)"/>
+  </g>
+  
+  <!-- Shine effect -->
+  <ellipse cx="25" cy="15" rx="15" ry="8" fill="white" opacity="0.2"/>
+  
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="batteryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#D4AF37;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="batteryStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D4AF37;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="terminalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F5DEB3;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="powerFill" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00FF00;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#32CD32;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#228B22;stop-opacity:0.4" />
+    </radialGradient>
+    
+    <radialGradient id="lightningGradient" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#FFFF00;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+    </radialGradient>
+    
+    <linearGradient id="lightningStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D4AF37;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="indicatorGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00FF00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#32CD32;stop-opacity:0.5" />
+    </radialGradient>
+  </defs>
+</svg>
