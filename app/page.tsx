@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Search, Flag, User, ShoppingCart, Award, ChevronLeft, ChevronRight, Shield, Smartphone, Package, Wrench, Star, Instagram, Youtube, ChevronDown, Menu, X, Globe, Linkedin } from 'lucide-react';
+import { Search, Flag, User, ShoppingCart, Award, ChevronLeft, ChevronRight, Shield, Smartphone, Package, Wrench, Star, Instagram, Youtube, ChevronDown, Menu, X, Globe, Linkedin, Mail, Phone, Lock, Truck } from 'lucide-react';
 
 interface CartItem {
   id: number;
@@ -692,10 +692,16 @@ export default function Home() {
             {/* Contact & Country */}
             <div>
               <h4 className="font-semibold text-lg mb-4 text-gold">Contact</h4>
-              <div className="space-y-2 text-sm text-gray-300">
+              <div className="space-y-3 text-sm text-gray-300">
                 <p>Available 24/7 for support</p>
-                <p>Email: support@midastechnical.com</p>
-                <p>Phone: 1-888-545-2121</p>
+                <div className="flex items-center space-x-2">
+                  <Mail size={16} className="text-gold" />
+                  <span>support@midastechnical.com</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Phone size={16} className="text-gold" />
+                  <span>1-888-545-2121</span>
+                </div>
               </div>
 
               {/* Country Selector */}
@@ -733,9 +739,18 @@ export default function Home() {
                 © 2025 Midas Technical Solutions. All rights reserved. | Privacy Policy | Terms of Service
               </p>
               <div className="flex items-center space-x-6 text-sm text-gray-400">
-                <span>Secure SSL</span>
-                <span>Fast Shipping</span>
-                <span>Lifetime Warranty</span>
+                <div className="flex items-center space-x-1">
+                  <Lock size={14} className="text-gold" />
+                  <span>Secure SSL</span>
+                </div>
+                <div className="flex items-center space-x-1">
+                  <Truck size={14} className="text-gold" />
+                  <span>Fast Shipping</span>
+                </div>
+                <div className="flex items-center space-x-1">
+                  <Award size={14} className="text-gold" />
+                  <span>Lifetime Warranty</span>
+                </div>
               </div>
             </div>
           </div>
