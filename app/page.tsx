@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Search, Flag, User, ShoppingCart, Award, ChevronLeft, ChevronRight, Shield, Smartphone, Package, Wrench, Star, Facebook, Twitter, Instagram, Youtube, ChevronDown, Menu, X, Globe, Linkedin } from 'lucide-react';
+import { Search, Flag, User, ShoppingCart, Award, ChevronLeft, ChevronRight, Shield, Smartphone, Package, Wrench, Star, Instagram, Youtube, ChevronDown, Menu, X, Globe, Linkedin } from 'lucide-react';
 
 interface CartItem {
   id: number;
@@ -830,8 +830,6 @@ export default function Home() {
               </p>
               <div className="flex space-x-6">
                 {[
-                  { Icon: Facebook, href: 'https://www.facebook.com/midastechnicalsolutions' },
-                  { Icon: Twitter, href: 'https://www.twitter.com/midastechnical' },
                   { Icon: Instagram, href: 'https://www.instagram.com/midastechnical/' },
                   { Icon: Linkedin, href: 'https://www.linkedin.com/company/midas-technical-solutions/?viewAsMember=true' },
                   { Icon: Youtube, href: 'https://www.youtube.com/@midastechnicalsolutions' }
