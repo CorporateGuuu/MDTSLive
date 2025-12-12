@@ -56,20 +56,15 @@ export default function SupportPage() {
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Header */}
       <header className="bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <Link
-            href="/"
-            className="inline-flex items-center text-gold hover:text-opacity-80 transition-colors"
-          >
+          <Link href="/" className="inline-flex items-center text-gold hover:text-opacity-80 transition-colors">
             <ArrowLeft size={20} className="mr-2" />
             Back to Home
           </Link>
         </div>
       </header>
 
-      {/* Hero Section */}
       <section className="bg-gradient-to-br from-gray-50 to-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -82,7 +77,6 @@ export default function SupportPage() {
         </div>
       </section>
 
-      {/* Support Options */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -109,7 +103,6 @@ export default function SupportPage() {
             ))}
           </div>
 
-          {/* Quick Access Topics */}
           <div className="grid md:grid-cols-3 gap-8">
             {quickTopics.map((topic, index) => (
               <div key={index} className="bg-gray-50 p-8 rounded-xl hover:bg-white hover:shadow-md transition-all border border-gray-100">
@@ -118,10 +111,7 @@ export default function SupportPage() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{topic.title}</h3>
                 <p className="text-gray-600 leading-relaxed mb-6">{topic.description}</p>
-                <Link
-                  href="#"
-                  className="text-gold hover:text-opacity-80 font-semibold inline-flex items-center"
-                >
+                <Link href="#" className="text-gold hover:text-opacity-80 font-semibold inline-flex items-center">
                   Learn More →
                 </Link>
               </div>
@@ -130,7 +120,6 @@ export default function SupportPage() {
         </div>
       </section>
 
-      {/* Popular Resources */}
       <section className="py-20 bg-navy text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -160,7 +149,6 @@ export default function SupportPage() {
         </div>
       </section>
 
-      {/* Contact Support CTA */}
       <section className="py-20 bg-gold bg-opacity-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Still Need Help?</h2>
@@ -169,16 +157,10 @@ export default function SupportPage() {
             you may encounter.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-gold hover:bg-opacity-90 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
+            <Link href="/contact" className="bg-gold hover:bg-opacity-90 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
               Contact Support
             </Link>
-            <Link
-              href="#"
-              className="border border-gold text-gold hover:bg-gold hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
+            <Link href="#" className="border border-gold text-gold hover:bg-gold hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
               Schedule Consultation
             </Link>
           </div>

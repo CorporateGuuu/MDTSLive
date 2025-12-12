@@ -6,26 +6,10 @@ import Link from 'next/link';
 
 export default function TradeInPage() {
   const benefits = [
-    {
-      icon: Smartphone,
-      title: 'High Trade-In Values',
-      description: 'Get competitive rates for your used or refurbished devices.'
-    },
-    {
-      icon: DollarSign,
-      title: 'Instant Quotes',
-      description: 'Receive immediate valuations for your inventory.'
-    },
-    {
-      icon: Clock,
-      title: 'Quick Processing',
-      description: 'Fast turnaround on trade-in evaluations and payments.'
-    },
-    {
-      icon: Shield,
-      title: 'Secure Transactions',
-      description: 'Safe and transparent trade-in process with full documentation.'
-    }
+    { icon: Smartphone, title: 'High Trade-In Values', description: 'Get competitive rates for your used or refurbished devices.' },
+    { icon: DollarSign, title: 'Instant Quotes', description: 'Receive immediate valuations for your inventory.' },
+    { icon: Clock, title: 'Quick Processing', description: 'Fast turnaround on trade-in evaluations and payments.' },
+    { icon: Shield, title: 'Secure Transactions', description: 'Safe and transparent trade-in process with full documentation.' }
   ];
 
   return (

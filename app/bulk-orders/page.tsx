@@ -1,76 +1,35 @@
 'use client';
 
 import React from 'react';
-import { ArrowLeft, Package, Truck, DollarSign, Users, CheckCircle, Phone, Mail } from 'lucide-react';
+import { ArrowLeft, Package, Truck, DollarSign, Users, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 
 export default function BulkOrdersPage() {
   const benefits = [
-    {
-      icon: Package,
-      title: 'Volume Discounts',
-      description: 'Save up to 35% on bulk purchases with tiered pricing structures.'
-    },
-    {
-      icon: Truck,
-      title: 'Priority Shipping',
-      description: 'Expedited shipping and dedicated logistics for large orders.'
-    },
-    {
-      icon: DollarSign,
-      title: 'Flexible Payment Terms',
-      description: 'Net 30 terms available for qualified business customers.'
-    },
-    {
-      icon: Users,
-      title: 'Dedicated Account Manager',
-      description: 'Personal account manager to ensure smooth ordering and support.'
-    }
+    { icon: Package, title: 'Volume Discounts', description: 'Save up to 35% on bulk purchases with tiered pricing structures.' },
+    { icon: Truck, title: 'Priority Shipping', description: 'Expedited shipping and dedicated logistics for large orders.' },
+    { icon: DollarSign, title: 'Flexible Payment Terms', description: 'Net 30 terms available for qualified business customers.' },
+    { icon: Users, title: 'Dedicated Account Manager', description: 'Personal account manager to ensure smooth ordering and support.' }
   ];
 
   const pricingTiers = [
-    {
-      min: 100,
-      max: 499,
-      discount: 10,
-      shipping: 'Standard'
-    },
-    {
-      min: 500,
-      max: 999,
-      discount: 15,
-      shipping: 'Expedited'
-    },
-    {
-      min: 1000,
-      max: 4999,
-      discount: 25,
-      shipping: 'Priority'
-    },
-    {
-      min: 5000,
-      max: null,
-      discount: 35,
-      shipping: 'Dedicated Logistics'
-    }
+    { min: 100, max: 499, discount: 10, shipping: 'Standard' },
+    { min: 500, max: 999, discount: 15, shipping: 'Expedited' },
+    { min: 1000, max: 4999, discount: 25, shipping: 'Priority' },
+    { min: 5000, max: null, discount: 35, shipping: 'Dedicated Logistics' }
   ];
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Header */}
       <header className="bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <Link
-            href="/"
-            className="inline-flex items-center text-gold hover:text-opacity-80 transition-colors"
-          >
+          <Link href="/" className="inline-flex items-center text-gold hover:text-opacity-80 transition-colors">
             <ArrowLeft size={20} className="mr-2" />
             Back to Home
           </Link>
         </div>
       </header>
 
-      {/* Hero Section */}
       <section className="bg-gradient-to-br from-gray-50 to-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -83,7 +42,6 @@ export default function BulkOrdersPage() {
         </div>
       </section>
 
-      {/* Benefits Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -108,7 +66,6 @@ export default function BulkOrdersPage() {
         </div>
       </section>
 
-      {/* Pricing Tiers */}
       <section className="py-20 bg-gray-50 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -127,9 +84,7 @@ export default function BulkOrdersPage() {
                 <div className="text-lg font-semibold text-gray-900 mb-2">
                   {tier.min.toLocaleString()}{tier.max ? `-${tier.max.toLocaleString()}` : '+'} units
                 </div>
-                <div className="text-sm text-gray-600 mb-4">
-                  {tier.shipping} Shipping
-                </div>
+                <div className="text-sm text-gray-600 mb-4">{tier.shipping} Shipping</div>
                 {tier.min >= 1000 && (
                   <div className="text-xs bg-gold bg-opacity-10 text-gold px-2 py-1 rounded-full inline-block">
                     Premium Tier
@@ -141,7 +96,6 @@ export default function BulkOrdersPage() {
         </div>
       </section>
 
-      {/* How It Works */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -183,7 +137,6 @@ export default function BulkOrdersPage() {
         </div>
       </section>
 
-      {/* Contact CTA */}
       <section className="py-20 bg-navy text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Save Big?</h2>
@@ -191,20 +144,7 @@ export default function BulkOrdersPage() {
             Join hundreds of repair shops and distributors who trust Midas Technical Solutions
             for their bulk ordering needs.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <div className="flex items-center space-x-3 text-blue-100">
-              <Phone size={20} />
-              <span>1-888-545-2121</span>
-            </div>
-            <div className="flex items-center space-x-3 text-blue-100">
-              <Mail size={20} />
-              <span>bulk@midastech.com</span>
-            </div>
-          </div>
-          <Link
-            href="/contact"
-            className="bg-gold hover:bg-opacity-90 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-          >
+          <Link href="/contact" className="bg-gold hover:bg-opacity-90 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
             Request Bulk Quote
           </Link>
         </div>

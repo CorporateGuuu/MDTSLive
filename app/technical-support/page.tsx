@@ -1,26 +1,14 @@
 'use client';
 
 import React from 'react';
-import { ArrowLeft, Wrench, Users, Book, MessageCircle, Phone, Mail, Clock } from 'lucide-react';
+import { ArrowLeft, Wrench, Users, Book, MessageCircle, Phone, Mail } from 'lucide-react';
 import Link from 'next/link';
 
 export default function TechnicalSupportPage() {
   const services = [
-    {
-      icon: Wrench,
-      title: 'Repair Guidance',
-      description: 'Step-by-step technical support for complex repairs and troubleshooting.'
-    },
-    {
-      icon: Users,
-      title: 'Training Programs',
-      description: 'Comprehensive training for your technicians on advanced repair techniques.'
-    },
-    {
-      icon: Book,
-      title: 'Documentation',
-      description: 'Access to detailed repair manuals, schematics, and technical specifications.'
-    }
+    { icon: Wrench, title: 'Repair Guidance', description: 'Step-by-step technical support for complex repairs and troubleshooting.' },
+    { icon: Users, title: 'Training Programs', description: 'Comprehensive training for your technicians on advanced repair techniques.' },
+    { icon: Book, title: 'Documentation', description: 'Access to detailed repair manuals, schematics, and technical specifications.' }
   ];
 
   return (

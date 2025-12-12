@@ -22,8 +22,6 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
     alert('Thank you for your message! We will get back to you within 24 hours.');
   };
 
@@ -53,20 +51,15 @@ export default function ContactPage() {
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Header */}
       <header className="bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <Link
-            href="/"
-            className="inline-flex items-center text-gold hover:text-opacity-80 transition-colors"
-          >
+          <Link href="/" className="inline-flex items-center text-gold hover:text-opacity-80 transition-colors">
             <ArrowLeft size={20} className="mr-2" />
             Back to Home
           </Link>
         </div>
       </header>
 
-      {/* Hero Section */}
       <section className="bg-gradient-to-br from-gray-50 to-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -79,7 +72,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact Methods */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -107,7 +99,6 @@ export default function ContactPage() {
             ))}
           </div>
 
-          {/* Contact Form */}
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Send Us a Message</h2>
@@ -217,7 +208,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
       <section className="py-20 bg-gray-50 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
