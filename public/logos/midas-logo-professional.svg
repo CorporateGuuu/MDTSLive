@@ -1,0 +1,80 @@
+<svg width="600" height="200" viewBox="0 0 600 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background (transparent) -->
+  
+  <!-- Left side: Golden fingerprint → circuit → shield icon -->
+  <g transform="translate(80, 100)">
+    <!-- Outer shield shape -->
+    <path d="M-35 -45 L35 -45 L35 35 L0 45 L-35 35 Z" 
+          fill="url(#goldGradient)" 
+          stroke="url(#goldStroke)" 
+          stroke-width="2"/>
+    
+    <!-- Inner fingerprint with circuits -->
+    <ellipse cx="0" cy="-15" rx="20" ry="25" fill="none" stroke="url(#goldGradient)" stroke-width="2" opacity="0.8"/>
+    <ellipse cx="0" cy="-15" rx="15" ry="20" fill="none" stroke="url(#goldGradient)" stroke-width="1.5" opacity="0.9"/>
+    <ellipse cx="0" cy="-15" rx="10" ry="15" fill="none" stroke="url(#goldGradient)" stroke-width="1.2"/>
+    
+    <!-- Circuit pattern overlay -->
+    <g opacity="0.8" stroke="url(#goldGradient)" stroke-width="1.5" fill="none">
+      <!-- Horizontal circuit lines -->
+      <line x1="-12" y1="-20" x2="12" y2="-20"/>
+      <line x1="-15" y1="-10" x2="15" y2="-10"/>
+      <line x1="-8" y1="0" x2="8" y2="0"/>
+      
+      <!-- Vertical connections -->
+      <line x1="-6" y1="-25" x2="-6" y2="-5"/>
+      <line x1="6" y1="-25" x2="6" y2="-5"/>
+      <line x1="0" y1="-15" x2="0" y2="5"/>
+      
+      <!-- Circuit nodes -->
+      <circle cx="-12" cy="-20" r="1.5" fill="url(#goldGradient)"/>
+      <circle cx="12" cy="-20" r="1.5" fill="url(#goldGradient)"/>
+      <circle cx="-6" cy="-10" r="1.2" fill="url(#goldGradient)"/>
+      <circle cx="6" cy="-10" r="1.2" fill="url(#goldGradient)"/>
+    </g>
+    
+    <!-- Metallic shine effect -->
+    <ellipse cx="-8" cy="-25" rx="6" ry="3" fill="white" opacity="0.4"/>
+    <ellipse cx="8" cy="-15" rx="4" ry="2" fill="white" opacity="0.3"/>
+  </g>
+  
+  <!-- Right side: Company name -->
+  <g transform="translate(180, 80)">
+    <!-- MIDAS in luxury serif gold -->
+    <text x="0" y="0" font-family="serif" font-size="48" font-weight="bold" fill="url(#goldGradient)" letter-spacing="2">
+      MIDAS
+    </text>
+    
+    <!-- TECHNICAL SOLUTIONS in navy sans-serif -->
+    <text x="0" y="30" font-family="sans-serif" font-size="16" font-weight="500" fill="#001F3F" letter-spacing="1">
+      TECHNICAL SOLUTIONS
+    </text>
+  </g>
+  
+  <!-- Tagline below -->
+  <text x="300" y="160" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="400" fill="#001F3F" letter-spacing="0.5">
+    The Gold Standard in Device Repair
+  </text>
+  
+  <!-- Luxury border/frame effect -->
+  <rect x="10" y="10" width="580" height="180" rx="8" ry="8" fill="none" stroke="url(#subtleGold)" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#FF8C00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="goldStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="subtleGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:0.2" />
+    </linearGradient>
+  </defs>
+</svg>
