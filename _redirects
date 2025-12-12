@@ -1,0 +1,42 @@
+# Netlify Redirects Configuration for Midas Technical Solutions
+# SEO-friendly URL redirects and rewrites
+
+# Homepage redirects
+/ / 200
+/index.html / 301
+
+# Product category redirects (SEO-friendly URLs)
+/products/* /:splat 301
+/categories/* /:splat 301
+
+# Blog redirects
+/blog /blog/ 301
+/posts/* /blog/:splat 301
+
+# Wholesale redirects
+/wholesale /business/wholesale-application/ 301
+/bulk-order /business/wholesale-application/ 301
+
+# International redirects (if expanding)
+/uae/* /:splat 301
+/dubai/* /los-angeles/:splat 301
+/riyadh/* /new-york/:splat 301
+
+# Legacy URL redirects
+/old-url /new-url 301
+/iphone-parts /iphone-parts/ 301
+/samsung-parts /samsung-parts/ 301
+
+# API redirects
+/api/* /api/:splat 200
+
+# Admin and sensitive area redirects
+/admin/* / 401
+/checkout / 401
+/cart / 401
+
+# 404 fallback
+/* /404.html 404
+
+# SPA fallback for client-side routing (if using React/Next.js)
+/* /index.html 200

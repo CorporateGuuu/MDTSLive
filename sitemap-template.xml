@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Homepage - Highest Priority -->
+  <url>
+    <loc>https://midastechnicalsolutions.com/</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Main Category Pages -->
+  <url>
+    <loc>https://midastechnicalsolutions.com/products/</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://midastechnicalsolutions.com/categories/</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Specific Product Categories -->
+  <url>
+    <loc>https://midastechnicalsolutions.com/iphone-parts/</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://midastechnicalsolutions.com/samsung-parts/</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://midastechnicalsolutions.com/google-pixel-parts/</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Local SEO Pages - High Priority for Maps Pack -->
+  <url>
+    <loc>https://midastechnicalsolutions.com/los-angeles/</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://midastechnicalsolutions.com/los-angeles/iphone-parts-wholesale/</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://midastechnicalsolutions.com/new-york/</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://midastechnicalsolutions.com/new-york/cell-phone-parts-supplier/</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://midastechnicalsolutions.com/chicago/</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://midastechnicalsolutions.com/houston/</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Business/Wholesale Pages -->
+  <url>
+    <loc>https://midastechnicalsolutions.com/business/wholesale-application/</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog Pages -->
+  <url>
+    <loc>https://midastechnicalsolutions.com/blog/</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Sample Blog Posts (Add dynamically) -->
+  <url>
+    <loc>https://midastechnicalsolutions.com/blog/iphone-15-repair-guide/</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://midastechnicalsolutions.com/images/iphone-15-repair-guide.jpg</image:loc>
+      <image:title>iPhone 15 Repair Guide</image:title>
+      <image:caption>Complete guide to repairing iPhone 15 models</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Sample Product Pages with Images -->
+  <url>
+    <loc>https://midastechnicalsolutions.com/products/iphone-15-pro-max-screen/</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://midastechnicalsolutions.com/images/iphone-15-pro-max-screen.jpg</image:loc>
+      <image:title>iPhone 15 Pro Max Screen Replacement</image:title>
+      <image:caption>OEM quality screen for iPhone 15 Pro Max</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Support Pages -->
+  <url>
+    <loc>https://midastechnicalsolutions.com/contact/</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://midastechnicalsolutions.com/about/</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://midastechnicalsolutions.com/shipping/</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>

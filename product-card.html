@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card Component - Midas Technical Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gold': '#FFD700',
+                        'gold-dark': '#E6C200',
+                        'dark-blue': '#003087'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        .image-container {
+            position: relative;
+            overflow: hidden;
+        }
+        .image-container img {
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover .image-container img {
+            transform: scale(1.05);
+        }
+        .stock-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #10B981;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .compatibility-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #3B82F6;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .pricing-tier {
+            display: inline-block;
+            background: #F3F4F6;
+            color: #374151;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: 500;
+            margin-left: 4px;
+        }
+        .bulk-pricing {
+            background: linear-gradient(135deg, #FFD700, #E6C200);
+            color: #000;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 p-8">
+    <div class="max-w-7xl mx-auto">
+        <h1 class="text-3xl font-bold text-center mb-8 text-gray-900">Product Card Components</h1>
+
+        <!-- Grid of Product Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+            <!-- Product Card 1: Premium Screen -->
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="image-container">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDMwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjE1MCIgeT0iMTUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOWNhM2FmIiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0iQXJpYWwiPkNQVSBBc3NlbWJseTwvdGV4dD4KPHN2Zz4="
+                         alt="iPhone 15 Pro Screen" class="w-full h-48 object-cover">
+                    <div class="stock-badge">In Stock</div>
+                    <div class="compatibility-badge">iPhone</div>
+                </div>
+
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-gray-900 mb-2">iPhone 15 Pro Screen Assembly</h3>
+                    <p class="text-gray-600 text-sm mb-3">Premium OLED Display - Genuine Apple Parts - ProMotion 120Hz</p>
+
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex flex-col">
+                            <span class="text-2xl font-bold text-gold">$89.99</span>
+                            <span class="bulk-pricing">5+ @ $84.99</span>
+                        </div>
+                        <div class="flex text-yellow-400">
+                            ★★★★★
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-1 mb-4">
+                        <span class="pricing-tier">1-4 pcs</span>
+                        <span class="pricing-tier">5-19 pcs</span>
+                        <span class="pricing-tier">20+ pcs</span>
+                    </div>
+
+                    <button class="w-full bg-gold text-black py-2 px-4 rounded-lg font-semibold hover:bg-gold-dark transition duration-300 mb-2">
+                        Add to Cart
+                    </button>
+
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <span>✓ Lifetime Warranty</span>
+                        <span>✓ Ships Today</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 2: Battery -->
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="image-container">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDMwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjE1MCIgeT0iMTUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOWNhM2FmIiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0iQXJpYWwiPkJhdHRlcnkgQXNzZW1ibHk8L3RleHQ+Cjwvc3ZnPg=="
+                         alt="iPhone Battery" class="w-full h-48 object-cover">
+                    <div class="stock-badge">In Stock</div>
+                    <div class="compatibility-badge">iPhone</div>
+                </div>
+
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-gray-900 mb-2">iPhone 15 Battery Assembly</h3>
+                    <p class="text-gray-600 text-sm mb-3">High-Capacity Li-ion Battery - Genuine Apple Parts - 3.549mAh</p>
+
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex flex-col">
+                            <span class="text-2xl font-bold text-gold">$34.99</span>
+                            <span class="bulk-pricing">10+ @ $31.99</span>
+                        </div>
+                        <div class="flex text-yellow-400">
+                            ★★★★☆
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-1 mb-4">
+                        <span class="pricing-tier">1-9 pcs</span>
+                        <span class="pricing-tier">10+ pcs</span>
+                    </div>
+
+                    <button class="w-full bg-gold text-black py-2 px-4 rounded-lg font-semibold hover:bg-gold-dark transition duration-300 mb-2">
+                        Add to Cart
+                    </button>
+
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <span>✓ 1 Year Warranty</span>
+                        <span>✓ Fast Shipping</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 3: Charging Port -->
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="image-container">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDMwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjE1MCIgeT0iMTUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOWNhM2FmIiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0iQXJpYWwiPkNoYXJnaW5nIFBvcnQ8L3RleHQ+Cjwvc3ZnPg=="
+                         alt="Lightning Charging Port" class="w-full h-48 object-cover">
+                    <div class="stock-badge">In Stock</div>
+                    <div class="compatibility-badge">Lightning</div>
+                </div>
+
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-gray-900 mb-2">Lightning Charging Assembly</h3>
+                    <p class="text-gray-600 text-sm mb-3">Complete Charging Port with Flex Cable - OEM Quality</p>
+
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex flex-col">
+                            <span class="text-2xl font-bold text-gold">$19.99</span>
+                            <span class="bulk-pricing">25+ @ $17.99</span>
+                        </div>
+                        <div class="flex text-yellow-400">
+                            ★★★★★
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-1 mb-4">
+                        <span class="pricing-tier">1-24 pcs</span>
+                        <span class="pricing-tier">25+ pcs</span>
+                    </div>
+
+                    <button class="w-full bg-gold text-black py-2 px-4 rounded-lg font-semibold hover:bg-gold-dark transition duration-300 mb-2">
+                        Add to Cart
+                    </button>
+
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <span>✓ 6 Month Warranty</span>
+                        <span>✓ Bulk Available</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 4: Samsung Screen -->
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="image-container">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDMwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjE1MCIgeT0iMTUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOWNhM2FmIiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0iQXJpYWwiPlNhbXN1bmcgU2NyZWVuPC90ZXh0Pgo8L3N2Zz4="
+                         alt="Samsung Galaxy Screen" class="w-full h-48 object-cover">
+                    <div class="stock-badge">Limited Stock</div>
+                    <div class="compatibility-badge">Galaxy</div>
+                </div>
+
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-gray-900 mb-2">Galaxy S24 Ultra Screen</h3>
+                    <p class="text-gray-600 text-sm mb-3">AMOLED Display Assembly - OEM Samsung Parts - S Pen Compatible</p>
+
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex flex-col">
+                            <span class="text-2xl font-bold text-gold">$79.99</span>
+                            <span class="bulk-pricing">3+ @ $74.99</span>
+                        </div>
+                        <div class="flex text-yellow-400">
+                            ★★★★☆
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-1 mb-4">
+                        <span class="pricing-tier">1-2 pcs</span>
+                        <span class="pricing-tier">3+ pcs</span>
+                    </div>
+
+                    <button class="w-full bg-gold text-black py-2 px-4 rounded-lg font-semibold hover:bg-gold-dark transition duration-300 mb-2">
+                        Add to Cart
+                    </button>
+
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <span>✓ Lifetime Warranty</span>
+                        <span>✓ Premium Quality</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 5: Camera Assembly -->
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="image-container">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDMwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjE1MCIgeT0iMTUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOWNhM2FmIiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0iQXJpYWwiPkNhbWVyYSBNb2R1bGU8L3RleHQ+Cjwvc3ZnPg=="
+                         alt="Camera Module" class="w-full h-48 object-cover">
+                    <div class="stock-badge">In Stock</div>
+                    <div class="compatibility-badge">iPhone</div>
+                </div>
+
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-gray-900 mb-2">iPhone 15 Pro Camera Assembly</h3>
+                    <p class="text-gray-600 text-sm mb-3">Triple Camera System - 48MP Main - Genuine Apple Optics</p>
+
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex flex-col">
+                            <span class="text-2xl font-bold text-gold">$149.99</span>
+                            <span class="bulk-pricing">2+ @ $139.99</span>
+                        </div>
+                        <div class="flex text-yellow-400">
+                            ★★★★★
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-1 mb-4">
+                        <span class="pricing-tier">1 pc</span>
+                        <span class="pricing-tier">2+ pcs</span>
+                    </div>
+
+                    <button class="w-full bg-gold text-black py-2 px-4 rounded-lg font-semibold hover:bg-gold-dark transition duration-300 mb-2">
+                        Add to Cart
+                    </button>
+
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <span>✓ 1 Year Warranty</span>
+                        <span>✓ OEM Quality</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 6: Refurbished Device -->
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden border-2 border-green-200">
+                <div class="image-container">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDMwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjE1MCIgeT0iMTUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOWNhM2FmIiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0iQXJpYWwiPlJlZnVyYmlzaGVkIERldmljZTwvdGV4dD4KPHN2Zz4="
+                         alt="Refurbished iPhone" class="w-full h-48 object-cover">
+                    <div class="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                        REFURBISHED
+                    </div>
+                    <div class="stock-badge">In Stock</div>
+                    <div class="compatibility-badge">Unlocked</div>
+                </div>
+
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-gray-900 mb-2">Refurbished iPhone 14 Pro</h3>
+                    <p class="text-gray-600 text-sm mb-3">128GB - Space Black - Grade A - Full Warranty - Carrier Unlocked</p>
+
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex flex-col">
+                            <span class="text-2xl font-bold text-green-600">$449.99</span>
+                            <span class="text-xs text-gray-500 line-through">$699.99</span>
+                        </div>
+                        <div class="flex text-yellow-400">
+                            ★★★★☆
+                        </div>
+                    </div>
+
+                    <div class="bg-green-50 border border-green-200 rounded-lg p-2 mb-4">
+                        <div class="flex items-center text-green-700 text-xs">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Grade A Condition - Like New</span>
+                        </div>
+                    </div>
+
+                    <button class="w-full bg-green-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-green-700 transition duration-300 mb-2">
+                        Add to Cart
+                    </button>
+
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <span>✓ 90 Day Warranty</span>
+                        <span>✓ Free Shipping</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 7: Repair Tool Kit -->
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="image-container">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDMwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjE1MCIgeT0iMTUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOWNhM2FmIiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0iQXJpYWwiPlJlcGFpciBUb29sczwvdGV4dD4KPHN2Zz4="
+                         alt="Repair Tools" class="w-full h-48 object-cover">
+                    <div class="stock-badge">In Stock</div>
+                    <div class="compatibility-badge">Universal</div>
+                </div>
+
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-gray-900 mb-2">Professional Repair Kit</h3>
+                    <p class="text-gray-600 text-sm mb-3">Complete Tool Set - Precision Drivers - Opening Tools - Heat Gun</p>
+
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex flex-col">
+                            <span class="text-2xl font-bold text-gold">$149.99</span>
+                            <span class="bulk-pricing">5+ @ $134.99</span>
+                        </div>
+                        <div class="flex text-yellow-400">
+                            ★★★★★
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-1 mb-4">
+                        <span class="pricing-tier">1-4 kits</span>
+                        <span class="pricing-tier">5+ kits</span>
+                    </div>
+
+                    <button class="w-full bg-gold text-black py-2 px-4 rounded-lg font-semibold hover:bg-gold-dark transition duration-300 mb-2">
+                        Add to Cart
+                    </button>
+
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <span>✓ Lifetime Warranty</span>
+                        <span>✓ Professional Grade</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 8: Bulk Screen Order -->
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden border-2 border-blue-200">
+                <div class="image-container">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDMwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjE1MCIgeT0iMTUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOWNhM2FmIiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0iQXJpYWwiPkJ1bGsgU2NyZWVuczwvdGV4dD4KPHN2Zz4="
+                         alt="Bulk Screens" class="w-full h-48 object-cover">
+                    <div class="absolute top-2 left-2 bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                        BULK
+                    </div>
+                    <div class="stock-badge">In Stock</div>
+                    <div class="compatibility-badge">iPhone 15</div>
+                </div>
+
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-gray-900 mb-2">iPhone 15 Screen Assemblies</h3>
+                    <p class="text-gray-600 text-sm mb-3">Bulk Pack of 50 - OEM Quality - Wholesale Pricing - Fast Delivery</p>
+
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex flex-col">
+                            <span class="text-2xl font-bold text-blue-600">$3,499.99</span>
+                            <span class="text-sm text-blue-600">$69.99 each</span>
+                        </div>
+                        <div class="flex text-yellow-400">
+                            ★★★★★
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-2 mb-4">
+                        <div class="flex items-center text-blue-700 text-xs">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Volume Discount Applied</span>
+                        </div>
+                    </div>
+
+                    <button class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 mb-2">
+                        Request Quote
+                    </button>
+
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <span>✓ Bulk Packaging</span>
+                        <span>✓ Fast Shipping</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Usage Instructions -->
+        <div class="mt-12 bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">Product Card Component Usage</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="text-lg font-semibold mb-2 text-gray-900">Features</h3>
+                    <ul class="text-gray-700 space-y-2">
+                        <li>• Responsive design for all screen sizes</li>
+                        <li>• Hover effects and smooth animations</li>
+                        <li>• Stock status and compatibility badges</li>
+                        <li>• Tiered pricing display</li>
+                        <li>• Star ratings and customer feedback</li>
+                        <li>• Bulk pricing indicators</li>
+                        <li>• Warranty information</li>
+                        <li>• Special product type highlighting</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-2 text-gray-900">Customization Options</h3>
+                    <ul class="text-gray-700 space-y-2">
+                        <li>• Product images and descriptions</li>
+                        <li>• Pricing tiers and bulk discounts</li>
+                        <li>• Stock status and availability</li>
+                        <li>• Compatibility information</li>
+                        <li>• Special badges (Refurbished, Bulk, etc.)</li>
+                        <li>• Warranty details</li>
+                        <li>• Call-to-action button text</li>
+                        <li>• Color scheme adjustments</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

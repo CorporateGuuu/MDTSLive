@@ -1,0 +1,57 @@
+# Robots.txt for Midas Technical Solutions
+# Wholesale Cell Phone Parts Supplier
+# Allow crawling while protecting sensitive areas
+
+User-agent: *
+Allow: /
+
+# Block sensitive areas from crawling
+Disallow: /admin/
+Disallow: /api/
+Disallow: /checkout
+Disallow: /cart
+Disallow: /account/
+Disallow: /login
+Disallow: /register
+Disallow: /password-reset
+Disallow: /private/
+Disallow: /temp/
+Disallow: /staging/
+
+# Allow important SEO areas
+Allow: /sitemap.xml
+Allow: /blog/
+Allow: /products/
+Allow: /categories/
+Allow: /business/
+Allow: /los-angeles/
+Allow: /new-york/
+Allow: /chicago/
+Allow: /houston/
+
+# Crawl delay for large sites (optional)
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://midastechnicalsolutions.com/sitemap.xml
+
+# Block specific bots (optional)
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Allow Google and Bing bots full access
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Mobile crawling
+User-agent: Googlebot-Mobile
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /

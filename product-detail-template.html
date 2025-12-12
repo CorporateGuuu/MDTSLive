@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone 15 Pro Screen Replacement - Midas Technical Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gold': '#FFD700',
+                        'gold-dark': '#E6C200',
+                        'dark-blue': '#003087'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .zoom-container {
+            position: relative;
+            overflow: hidden;
+        }
+        .zoom-lens {
+            position: absolute;
+            border: 1px solid #d1d5db;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.8);
+            cursor: crosshair;
+            display: none;
+        }
+        .zoom-result {
+            position: absolute;
+            top: 0;
+            right: -420px;
+            width: 400px;
+            height: 400px;
+            border: 1px solid #d1d5db;
+            background: white;
+            display: none;
+        }
+        .product-image:hover .zoom-lens {
+            display: block;
+        }
+        .product-image:hover .zoom-result {
+            display: block;
+        }
+        .tab-active {
+            border-bottom: 2px solid #FFD700;
+            color: #000;
+        }
+        .quantity-btn {
+            background: #f3f4f6;
+            border: 1px solid #d1d5db;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .quantity-btn:hover {
+            background: #e5e7eb;
+        }
+        .pricing-tier.active {
+            background: #FFD700;
+            color: #000;
+        }
+        .accordion-header {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .desktop-layout {
+                flex-direction: column;
+            }
+            .accordion-header {
+                display: block;
+                background: #f9fafb;
+                padding: 12px;
+                border: 1px solid #e5e7eb;
+                cursor: pointer;
+                font-weight: 600;
+            }
+            .accordion-content {
+                display: none;
+                border: 1px solid #e5e7eb;
+                border-top: none;
+            }
+            .accordion-content.active {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header Placeholder -->
+    <header class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-xl font-bold text-gray-900">Midas Technical Solutions</div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#" class="text-gray-600 hover:text-gold">Home</a>
+                    <a href="#" class="text-gray-600 hover:text-gold">Products</a>
+                    <a href="#" class="text-gray-600 hover:text-gold">Wholesale</a>
+                    <a href="#" class="text-gray-600 hover:text-gold">Contact</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <button class="bg-gold text-black px-4 py-2 rounded font-semibold hover:bg-gold-dark transition">
+                        Wholesale Login
+                    </button>
+                    <div class="text-gray-600">Cart (0)</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="max-w-7xl mx-auto px-4 py-3 text-sm text-gray-600">
+        <a href="#" class="hover:text-gold">Home</a> /
+        <a href="#" class="hover:text-gold">Screens & LCDs</a> /
+        <a href="#" class="hover:text-gold">iPhone Screens</a> /
+        <span class="text-gray-900">iPhone 15 Pro Screen Replacement</span>
+    </nav>
+
+    <!-- Main Product Section -->
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        <div class="desktop-layout flex gap-8">
+            <!-- Left Side: Images -->
+            <div class="flex-1">
+                <!-- Main Image with Zoom -->
+                <div class="zoom-container product-image bg-white p-4 rounded-lg shadow-sm mb-4 relative">
+                    <img id="main-image" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDQwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjIwMCIgeT0iMjAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOWNhM2FmIiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0iQXJpYWwiPk1haW4gSW1hZ2U8L3RleHQ+Cjwvc3ZnPg=="
+                         alt="iPhone 15 Pro Screen" class="w-full h-auto max-h-96 object-contain">
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                </div>
+
+                <!-- Thumbnail Gallery -->
+                <div class="flex gap-2 overflow-x-auto">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjQwIiB5PSI0MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzlhYTNmIiBmb250LXNpemU9IjEwIiBmb250LWZhbWlseT0iQXJpYWwiPkFsdCAxPC90ZXh0Pgo8L3N2Zz4=" alt="iPhone 15 Pro Screen - Front View" class="thumbnail w-20 h-20 object-cover border-2 border-gray-200 rounded cursor-pointer hover:border-gold flex-shrink-0" onclick="changeImage(this.src)">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjQwIiB5PSI0MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzlhYTNmIiBmb250LXNpemU9IjEwIiBmb250LWZhbWlseT0iQXJpYWwiPkFsdCAyPC90ZXh0Pgo8L3N2Zz4=" alt="iPhone 15 Pro Screen - Side View" class="thumbnail w-20 h-20 object-cover border-2 border-gray-200 rounded cursor-pointer hover:border-gold flex-shrink-0" onclick="changeImage(this.src)">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjQwIiB5PSI0MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzlhYTNmIiBmb250LXNpemU9IjEwIiBmb250LWZhbWlseT0iQXJpYWwiPkFsdCAzPC90ZXh0Pgo8L3N2Zz4=" alt="iPhone 15 Pro Screen - Back View" class="thumbnail w-20 h-20 object-cover border-2 border-gray-200 rounded cursor-pointer hover:border-gold flex-shrink-0" onclick="changeImage(this.src)">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjQwIiB5PSI0MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzlhYTNmIiBmb250LXNpemU9IjEwIiBmb250LWZhbWlseT0iQXJpYWwiPkFsdCA0PC90ZXh0Pgo8L3N2Zz4=" alt="iPhone 15 Pro Screen - Detail View" class="thumbnail w-20 h-20 object-cover border-2 border-gray-200 rounded cursor-pointer hover:border-gold flex-shrink-0" onclick="changeImage(this.src)">
+                </div>
+            </div>
+
+            <!-- Right Side: Product Info -->
+            <div class="flex-1">
+                <!-- Mobile Accordion Header -->
+                <div class="accordion-header md:hidden" onclick="toggleAccordion(this)">
+                    Product Details ▼
+                </div>
+                <div class="accordion-content active md:block bg-white p-6 rounded-lg shadow-sm">
+                    <!-- Product Title -->
+                    <h1 class="text-3xl font-bold text-gray-900 mb-2">iPhone 15 Pro Screen Replacement</h1>
+                    <p class="text-gray-600 mb-4">Premium OLED Display Assembly - Genuine Apple Parts</p>
+
+                    <!-- SKU -->
+                    <p class="text-sm text-gray-500 mb-4">SKU: IP15PRO-SCRN-OLED</p>
+
+                    <!-- Compatibility -->
+                    <div class="mb-6">
+                        <h3 class="font-semibold text-gray-900 mb-2">Compatibility:</h3>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• iPhone 15 Pro (6.1")</li>
+                            <li>• iPhone 15 Pro Max (6.7")</li>
+                        </ul>
+                    </div>
+
+                    <!-- Tiered Pricing -->
+                    <div class="mb-6">
+                        <h3 class="font-semibold text-gray-900 mb-3">Wholesale Pricing:</h3>
+                        <div class="space-y-2">
+                            <div class="pricing-tier flex justify-between items-center p-3 border rounded-lg cursor-pointer hover:bg-gray-50" onclick="selectTier(0)">
+                                <span class="font-medium">1–4 pcs</span>
+                                <span class="text-gold font-bold text-lg">$89.99 each</span>
+                            </div>
+                            <div class="pricing-tier flex justify-between items-center p-3 border rounded-lg cursor-pointer hover:bg-gray-50" onclick="selectTier(1)">
+                                <span class="font-medium">5–19 pcs</span>
+                                <span class="text-gold font-bold text-lg">$84.99 each</span>
+                            </div>
+                            <div class="pricing-tier flex justify-between items-center p-3 border rounded-lg cursor-pointer hover:bg-gray-50" onclick="selectTier(2)">
+                                <span class="font-medium">20+ pcs</span>
+                                <span class="text-gold font-bold text-lg">$79.99 each</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quantity Selector -->
+                    <div class="mb-6">
+                        <label for="quantity-input" class="block text-sm font-medium text-gray-700 mb-2">Quantity:</label>
+                        <div class="flex items-center space-x-3">
+                            <button class="quantity-btn" onclick="updateQuantity(-1)" aria-label="Decrease quantity">-</button>
+                            <input type="number" id="quantity-input" value="1" min="1" class="w-20 text-center border border-gray-300 rounded px-2 py-1" aria-describedby="quantity-help">
+                            <button class="quantity-btn" onclick="updateQuantity(1)" aria-label="Increase quantity">+</button>
+                        </div>
+                        <div id="quantity-help" class="sr-only">Select the number of items to add to cart</div>
+                    </div>
+
+                    <!-- Add to Cart Button -->
+                    <button class="w-full bg-gold text-black py-4 px-6 rounded-lg font-bold text-lg hover:bg-gold-dark transition mb-4">
+                        Add to Cart - $89.99
+                    </button>
+
+                    <!-- Stock Status -->
+                    <div class="flex items-center space-x-2 text-green-600 mb-4">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="font-medium">In Stock - Ships Today</span>
+                    </div>
+
+                    <!-- Additional Info -->
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <p>✓ Lifetime Warranty Included</p>
+                        <p>✓ Free Shipping on Orders $500+</p>
+                        <p>✓ Bulk Discounts Available</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Tabs -->
+        <div class="mt-12 bg-white rounded-lg shadow-sm">
+            <div class="border-b border-gray-200">
+                <nav class="flex">
+                    <button class="tab-btn px-6 py-4 text-gray-600 hover:text-gold border-b-2 border-transparent tab-active" onclick="showTab(0)">Description</button>
+                    <button class="tab-btn px-6 py-4 text-gray-600 hover:text-gold border-b-2 border-transparent" onclick="showTab(1)">Specifications</button>
+                    <button class="tab-btn px-6 py-4 text-gray-600 hover:text-gold border-b-2 border-transparent" onclick="showTab(2)">Compatibility</button>
+                    <button class="tab-btn px-6 py-4 text-gray-600 hover:text-gold border-b-2 border-transparent" onclick="showTab(3)">Shipping Info</button>
+                    <button class="tab-btn px-6 py-4 text-gray-600 hover:text-gold border-b-2 border-transparent" onclick="showTab(4)">Reviews (24)</button>
+                </nav>
+            </div>
+
+            <div class="p-6">
+                <!-- Tab Content -->
+                <div id="tab-0" class="tab-content">
+                    <h3 class="text-xl font-bold mb-4">Product Description</h3>
+                    <p class="text-gray-700 mb-4">Premium OLED screen replacement for iPhone 15 Pro and Pro Max models. This genuine Apple display assembly includes the Super Retina XDR display with ProMotion technology, True Tone, and Haptic Touch.</p>
+                    <p class="text-gray-700 mb-4">Each screen undergoes rigorous quality testing to ensure perfect color accuracy, touch sensitivity, and compatibility with Face ID functionality. Our wholesale pricing makes it easy for repair shops to stock these premium components.</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Genuine Apple OLED Display</li>
+                        <li>ProMotion Technology (120Hz)</li>
+                        <li>Super Retina XDR Resolution</li>
+                        <li>True Tone and Haptic Touch</li>
+                        <li>Face ID Compatible</li>
+                        <li>Lifetime Warranty Coverage</li>
+                    </ul>
+                </div>
+
+                <div id="tab-1" class="tab-content hidden">
+                    <h3 class="text-xl font-bold mb-4">Technical Specifications</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-semibold mb-2">Display</h4>
+                            <ul class="text-gray-700 space-y-1">
+                                <li><strong>Technology:</strong> OLED</li>
+                                <li><strong>Size:</strong> 6.1" / 6.7"</li>
+                                <li><strong>Resolution:</strong> 2556×1179 / 2796×1290</li>
+                                <li><strong>Refresh Rate:</strong> 120Hz ProMotion</li>
+                                <li><strong>Brightness:</strong> Up to 2000 nits</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">Compatibility</h4>
+                            <ul class="text-gray-700 space-y-1">
+                                <li><strong>Models:</strong> iPhone 15 Pro/Pro Max</li>
+                                <li><strong>iOS Version:</strong> 17.0+</li>
+                                <li><strong>Face ID:</strong> Fully Compatible</li>
+                                <li><strong>Warranty:</strong> Lifetime</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tab-2" class="tab-content hidden">
+                    <h3 class="text-xl font-bold mb-4">Device Compatibility</h3>
+                    <div class="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
+                        <div class="flex items-center mb-2">
+                            <svg class="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="font-semibold text-green-800">Compatible Devices</span>
+                        </div>
+                        <ul class="text-green-700 space-y-1">
+                            <li>• iPhone 15 Pro (A17 Pro, 6.1" display)</li>
+                            <li>• iPhone 15 Pro Max (A17 Pro, 6.7" display)</li>
+                        </ul>
+                    </div>
+                    <p class="text-gray-600">This screen assembly is specifically designed for iPhone 15 Pro models only. It is not compatible with iPhone 15, 15 Plus, or any other iPhone models.</p>
+                </div>
+
+                <div id="tab-3" class="tab-content hidden">
+                    <h3 class="text-xl font-bold mb-4">Shipping Information</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-semibold mb-2">Shipping Options</h4>
+                            <ul class="text-gray-700 space-y-2">
+                                <li><strong>Standard Ground:</strong> 2-3 business days - FREE on orders $500+</li>
+                                <li><strong>Expedited:</strong> 1-2 business days - $15</li>
+                                <li><strong>Express:</strong> Next business day - $25</li>
+                                <li><strong>Same Day:</strong> Order before 2 PM EST - $35</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">Order Processing</h4>
+                            <ul class="text-gray-700 space-y-2">
+                                <li><strong>Cutoff Time:</strong> 2:00 PM EST</li>
+                                <li><strong>Processing:</strong> Same business day</li>
+                                <li><strong>Tracking:</strong> Provided via email</li>
+                                <li><strong>Insurance:</strong> Included on all orders</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tab-4" class="tab-content hidden">
+                    <h3 class="text-xl font-bold mb-4">Customer Reviews (24)</h3>
+                    <div class="space-y-6">
+                        <div class="border-b border-gray-200 pb-6">
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400 mr-2">
+                                    ★★★★★
+                                </div>
+                                <span class="font-semibold">Perfect replacement screen</span>
+                            </div>
+                            <p class="text-gray-700 mb-2">"Excellent quality OLED screen. Installed perfectly and Face ID works flawlessly. Wholesale pricing made this a great deal for my shop."</p>
+                            <p class="text-sm text-gray-500">- RepairTech Pro, 2 weeks ago</p>
+                        </div>
+                        <div class="border-b border-gray-200 pb-6">
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400 mr-2">
+                                    ★★★★★
+                                </div>
+                                <span class="font-semibold">Fast shipping, great quality</span>
+                            </div>
+                            <p class="text-gray-700 mb-2">"Ordered 10 of these screens for our busy season. Arrived quickly and all screens were genuine Apple parts. Will definitely order again."</p>
+                            <p class="text-sm text-gray-500">- MobileFix Solutions, 1 month ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Frequently Bought Together -->
+        <div class="mt-12">
+            <h2 class="text-2xl font-bold mb-6">Frequently Bought Together</h2>
+            <div class="grid md:grid-cols-4 gap-4">
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjUwIiB5PSI1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzlhYTNmIiBmb250LXNpemU9IjEyIiBmb250LWZhbWlseT0iQXJpYWwiPkFkSGVzaXZlPC90ZXh0Pgo8L3N2Zz4=" class="w-20 h-20 mx-auto mb-2" alt="Adhesive">
+                    <h4 class="font-semibold text-sm">Screen Adhesive</h4>
+                    <p class="text-gold font-bold">$4.99</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjUwIiB5PSI1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzlhYTNmIiBmb250LXNpemU9IjEyIiBmb250LWZhbWlseT0iQXJpYWwiPlN1Y3Rpb248L3RleHQ+Cjwvc3ZnPg==" class="w-20 h-20 mx-auto mb-2" alt="Suction Cup">
+                    <h4 class="font-semibold text-sm">Suction Cup</h4>
+                    <p class="text-gold font-bold">$8.99</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjUwIiB5PSI1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzlhYTNmIiBmb250LXNpemU9IjEyIiBmb250LWZhbWlseT0iQXJpYWwiPkhlYXQgR3VuPC90ZXh0Pgo8L3N2Zz4=" class="w-20 h-20 mx-auto mb-2" alt="Heat Gun">
+                    <h4 class="font-semibold text-sm">Heat Gun</h4>
+                    <p class="text-gold font-bold">$24.99</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHg9IjUwIiB5PSI1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzlhYTNmIiBmb250LXNpemU9IjEyIiBmb250LWZhbWlseT0iQXJpYWwiPk9wZW5pbmcgUGljPC90ZXh0Pgo8L3N2Zz4=" class="w-20 h-20 mx-auto mb-2" alt="Opening Pick">
+                    <h4 class="font-semibold text-sm">Opening Pick Set</h4>
+                    <p class="text-gold font-bold">$12.99</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Customers Also Viewed -->
+        <div class="mt-12">
+            <h2 class="text-2xl font-bold mb-6">Customers Also Viewed</h2>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white p-4 rounded-lg shadow-sm">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDIwMCAxNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMTUwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjEwMCIgeT0iNzUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM5YWEzYWYiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtZmFtaWx5PSJBcmlhbCI+U2Ftc3VuZyBTY3JlZW48L3RleHQ+Cjwvc3ZnPg==" class="w-full h-32 object-cover mb-3 rounded" alt="Samsung Screen">
+                    <h4 class="font-semibold text-sm mb-1">Galaxy S24 Screen</h4>
+                    <p class="text-gold font-bold">$79.99</p>
+                    <div class="flex text-yellow-400 text-sm">★★★★★</div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDIwMCAxNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMTUwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjEwMCIgeT0iNzUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM5YWEzYWYiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtZmFtaWx5PSJBcmlhbCI+QmF0dGVyeSBBc3NlbWJseTwvdGV4dD4KPHN2Zz4=" class="w-full h-32 object-cover mb-3 rounded" alt="Battery">
+                    <h4 class="font-semibold text-sm mb-1">iPhone Battery Assembly</h4>
+                    <p class="text-gold font-bold">$34.99</p>
+                    <div class="flex text-yellow-400 text-sm">★★★★★</div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDIwMCAxNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMTUwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjEwMCIgeT0iNzUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM5YWEzYWYiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtZmFtaWx5PSJBcmlhbCI+Q2hhcmdpbmcgUG9ydDwvdGV4dD4KPHN2Zz4=" class="w-full h-32 object-cover mb-3 rounded" alt="Charging Port">
+                    <h4 class="font-semibold text-sm mb-1">Lightning Port Assembly</h4>
+                    <p class="text-gold font-bold">$19.99</p>
+                    <div class="flex text-yellow-400 text-sm">★★★★★</div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDIwMCAxNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMTUwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjEwMCIgeT0iNzUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM5YWEzYWYiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtZmFtaWx5PSJBcmlhbCI+UmVwYWlyIFRvb2xzPC90ZXh0Pgo8L3N2Zz4=" class="w-full h-32 object-cover mb-3 rounded" alt="Tools">
+                    <h4 class="font-semibold text-sm mb-1">Complete Repair Kit</h4>
+                    <p class="text-gold font-bold">$149.99</p>
+                    <div class="flex text-yellow-400 text-sm">★★★★★</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <footer class="bg-gray-900 text-white mt-16">
+        <div class="max-w-7xl mx-auto px-4 py-8">
+            <div class="text-center">
+                <p>&copy; 2024 Midas Technical Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab switching functionality
+        function showTab(tabIndex) {
+            // Hide all tabs
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.add('hidden'));
+
+            // Remove active class from all tab buttons
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            tabButtons.forEach(btn => btn.classList.remove('tab-active'));
+
+            // Show selected tab
+            document.getElementById(`tab-${tabIndex}`).classList.remove('hidden');
+            tabButtons[tabIndex].classList.add('tab-active');
+        }
+
+        // Image gallery functionality
+        function changeImage(src) {
+            document.getElementById('main-image').src = src;
+        }
+
+        // Quantity selector functionality
+        function updateQuantity(change) {
+            const quantityInput = document.getElementById('quantity-input');
+            const currentValue = parseInt(quantityInput.value);
+            const newValue = Math.max(1, currentValue + change);
+            quantityInput.value = newValue;
+            updatePrice();
+        }
+
+        // Pricing tier selection
+        let selectedTier = 0;
+        const prices = [89.99, 84.99, 79.99];
+
+        function selectTier(tierIndex) {
+            selectedTier = tierIndex;
+
+            // Update visual selection
+            const tiers = document.querySelectorAll('.pricing-tier');
+            tiers.forEach((tier, index) => {
+                if (index === tierIndex) {
+                    tier.classList.add('active');
+                } else {
+                    tier.classList.remove('active');
+                }
+            });
+
+            updatePrice();
+        }
+
+        function updatePrice() {
+            const quantity = parseInt(document.getElementById('quantity-input').value);
+            const unitPrice = prices[selectedTier];
+            const totalPrice = unitPrice * quantity;
+
+            const addToCartBtn = document.querySelector('.bg-gold');
+            addToCartBtn.textContent = `Add to Cart - $${totalPrice.toFixed(2)}`;
+        }
+
+        // Mobile accordion functionality
+        function toggleAccordion(header) {
+            const content = header.nextElementSibling;
+            content.classList.toggle('active');
+            header.textContent = content.classList.contains('active') ?
+                'Product Details ▲' : 'Product Details ▼';
+        }
+
+        // Zoom functionality placeholder
+        // This would be replaced with actual zoom library implementation
+        document.addEventListener('DOMContentLoaded', function() {
+            const zoomContainer = document.querySelector('.zoom-container');
+            const zoomLens = document.querySelector('.zoom-lens');
+            const zoomResult = document.querySelector('.zoom-result');
+            const mainImage = document.getElementById('main-image');
+
+            // Placeholder for zoom functionality
+            // In production, this would use a library like elevateZoom or custom implementation
+            console.log('Zoom functionality placeholder - implement with preferred zoom library');
+        });
+
+        // Initialize first pricing tier as selected
+        document.addEventListener('DOMContentLoaded', function() {
+            selectTier(0);
+        });
+    </script>
+</body>
+</html>

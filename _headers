@@ -1,0 +1,95 @@
+# Netlify Headers Configuration for Midas Technical Solutions
+# Security, caching, and SEO optimizations
+
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+/*.html
+  Cache-Control: public, max-age=3600, s-maxage=86400
+  X-Robots-Tag: index, follow
+
+/
+  Cache-Control: public, max-age=1800, s-maxage=3600
+  X-Robots-Tag: index, follow
+
+/products/*
+  Cache-Control: public, max-age=1800, s-maxage=3600
+  X-Robots-Tag: index, follow
+
+/categories/*
+  Cache-Control: public, max-age=1800, s-maxage=3600
+  X-Robots-Tag: index, follow
+
+/blog/*
+  Cache-Control: public, max-age=1800, s-maxage=3600
+  X-Robots-Tag: index, follow
+
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/api/*
+  Cache-Control: no-cache, no-store, must-revalidate
+  X-Robots-Tag: noindex, nofollow
+
+/admin/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/checkout
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/cart
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/sitemap.xml
+  X-Robots-Tag: index, follow
+  Cache-Control: public, max-age=86400
+
+/robots.txt
+  X-Robots-Tag: index, follow
+  Cache-Control: public, max-age=86400
+
+/los-angeles/*
+  X-Robots-Tag: index, follow
+  Cache-Control: public, max-age=1800, s-maxage=3600
+
+/new-york/*
+  X-Robots-Tag: index, follow
+  Cache-Control: public, max-age=1800, s-maxage=3600
+
+/chicago/*
+  X-Robots-Tag: index, follow
+  Cache-Control: public, max-age=1800, s-maxage=3600
+
+/houston/*
+  X-Robots-Tag: index, follow
+  Cache-Control: public, max-age=1800, s-maxage=3600
+
+/business/*
+  X-Robots-Tag: index, follow
+  Cache-Control: public, max-age=1800, s-maxage=3600
+
+/404.html
+  X-Robots-Tag: noindex, follow
+  Cache-Control: public, max-age=86400
