@@ -24,6 +24,25 @@
     .page-header h1 { font-size: 48px; font-weight: 700; }
     .content { padding: 60px 5%; max-width: 1200px; margin: 0 auto; line-height: 1.8; }
     .content h2 { color: var(--primary); margin-top: 40px; }
+    .content h4 { color: var(--primary); margin-top: 30px; font-size: 18px; font-weight: 600; }
+    .timeline { position: relative; padding-left: 30px; }
+    .timeline::before { content: ''; position: absolute; left: 15px; top: 0; bottom: 0; width: 2px; background: var(--primary); }
+    .timeline-item { margin-bottom: 30px; position: relative; }
+    .timeline-item::before { content: ''; position: absolute; left: -22px; top: 8px; width: 12px; height: 12px; background: var(--primary); border-radius: 50%; }
+    .timeline-item h4 { color: var(--primary); margin-bottom: 8px; font-size: 16px; }
+    .stats-row { display: flex; justify-content: space-around; margin-top: 40px; text-align: center; }
+    .stat-item { flex: 1; padding: 20px; }
+    .stat-number { font-size: 36px; font-weight: bold; color: var(--primary); }
+    .stat-label { font-size: 14px; color: #666; margin-top: 5px; }
+    .row { display: flex; flex-wrap: wrap; margin: 0 -15px; }
+    .col-md-3, .col-md-6 { padding: 0 15px; box-sizing: border-box; }
+    .col-md-3 { flex: 0 0 25%; max-width: 25%; }
+    .col-md-6 { flex: 0 0 50%; max-width: 50%; }
+    @media (max-width: 768px) {
+      .col-md-3, .col-md-6 { flex: 0 0 100%; max-width: 100%; }
+      .stats-row { flex-direction: column; align-items: center; }
+      .stat-item { margin-bottom: 20px; }
+    }
     .footer { background: var(--dark); color: #ccc; padding: 60px 5% 20px; font-size: 14px; }
     .footer h5 { color: #fff; margin-bottom: 20px; }
     .footer a { color: #ccc; text-decoration: none; display: block; margin-bottom: 8px; }
@@ -49,8 +68,8 @@
         </div>
         <div class="col-lg-5 col-md-6 col-12 order-lg-0 order-2 mt-3 mt-lg-0">
           <div class="position-relative">
-            <input type="text" class="form-control rounded-pill ps-4" placeholder="What are you looking for?">
-            <button class="btn position-absolute end-0 top-50 translate-middle-y me-3"><i class="fas fa-search"></i></button>
+            <input type="text" class="form-control rounded-pill ps-4" placeholder="What are you looking for?" aria-label="Search products">
+            <button class="btn position-absolute end-0 top-50 translate-middle-y me-3" aria-label="Search"><i class="fas fa-search"></i></button>
           </div>
         </div>
         <div class="col-lg-5 col-md-6 text-end">
@@ -93,22 +112,96 @@
 
   <!-- CONTENT -->
   <div class="content">
-    <p><strong>Midas Technical Solutions</strong> is a leading B2B wholesale distributor of premium cell phone repair parts, tools, and pre-owned devices. Founded in 2025, we've built a reputation for quality, reliability, and fast shipping.</p>
+    <p><strong>Midas Technical Solutions</strong> is a leading wholesale provider of premium mobile phone parts, repair tools, and technical solutions for professionals in the electronics repair industry worldwide.</p>
 
     <h2>Our Mission</h2>
-    <p>To empower repair shops, resellers, and technicians with the highest-quality parts at competitive wholesale prices — backed by lifetime warranties and expert support.</p>
+    <p>To empower repair professionals worldwide with access to the highest quality mobile phone parts, cutting-edge repair tools, and innovative technical solutions that enable them to deliver exceptional service to their customers.</p>
 
-    <h2>Why Choose Us?</h2>
-    <ul>
-      <li>Official distributor for Apple, Google, Samsung, Motorola, LG</li>
-      <li>100% tested, OEM-grade parts</li>
-      <li>Free shipping on orders over $750</li>
-      <li>Dedicated account managers</li>
-      <li>LCD buyback & refurbishing programs</li>
-    </ul>
+    <p>We believe that by providing premium wholesale solutions at competitive prices, we contribute to a sustainable repair industry that reduces electronic waste and extends the lifecycle of mobile devices.</p>
 
-    <h2>Our Warehouse</h2>
-    <p>Located in the USA with over 50,000 sq ft of inventory, we ship same-day on orders placed before 8 PM EST.</p>
+    <h2>Why Choose Midas?</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <ul>
+          <li>Lifetime warranty on all core components</li>
+          <li>MidasGold 7.0 Technology certification</li>
+          <li>Dedicated account management</li>
+          <li>Fast, reliable shipping worldwide</li>
+          <li>Official distributor partnerships</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <ul>
+          <li>100% tested, OEM-grade parts</li>
+          <li>Free shipping on orders over $750</li>
+          <li>LCD buyback & refurbishing programs</li>
+          <li>Expert technical support</li>
+          <li>Competitive wholesale pricing</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Our Core Values</h2>
+    <div class="row">
+      <div class="col-md-3">
+        <h4>Quality First</h4>
+        <p>Every product undergoes rigorous testing and quality assurance to ensure professional-grade performance.</p>
+      </div>
+      <div class="col-md-3">
+        <h4>Expert Team</h4>
+        <p>Our team of technicians and engineers brings decades of experience in mobile device repair and parts.</p>
+      </div>
+      <div class="col-md-3">
+        <h4>Industry Leader</h4>
+        <p>Recognized as a premier wholesale supplier of mobile phone parts and repair tools worldwide.</p>
+      </div>
+      <div class="col-md-3">
+        <h4>Innovation Focus</h4>
+        <p>Continuously developing new technologies and solutions to meet evolving industry needs.</p>
+      </div>
+    </div>
+
+    <h2>Our Journey</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>2015 - Foundation</h4>
+        <p>Founded with a vision to revolutionize the mobile repair parts industry by providing wholesale access to premium quality components.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>2018 - Global Expansion</h4>
+        <p>Expanded operations to serve customers in over 30 countries, establishing partnerships with leading manufacturers worldwide.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>2021 - Innovation Leadership</h4>
+        <p>Launched MidasGold 7.0 Technology platform, setting new standards for quality assurance and performance in mobile repair parts.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>2025 - Industry Leadership</h4>
+        <p>Recognized as the premier wholesale provider of mobile phone parts and repair tools, serving thousands of professionals worldwide.</p>
+      </div>
+    </div>
+
+    <h2>Our Warehouse & Operations</h2>
+    <p>Located in the USA with over 50,000 sq ft of inventory, we ship same-day on orders placed before 8 PM EST. Our state-of-the-art facility ensures efficient order processing and reliable delivery worldwide.</p>
+
+    <div class="stats-row">
+      <div class="stat-item">
+        <div class="stat-number">50+</div>
+        <div class="stat-label">Countries Served</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">10,000+</div>
+        <div class="stat-label">Products Available</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">5,000+</div>
+        <div class="stat-label">Happy Customers</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">10+</div>
+        <div class="stat-label">Years in Business</div>
+      </div>
+    </div>
   </div>
 
   <!-- FOOTER -->

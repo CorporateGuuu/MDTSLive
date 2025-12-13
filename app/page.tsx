@@ -2,7 +2,10 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { Search, Flag, User, ShoppingCart, Award, ChevronLeft, ChevronRight, Shield, Smartphone, Package, Wrench, Star, Instagram, Youtube, ChevronDown, Menu, X, Globe, Linkedin, Mail, Phone, Lock, Truck } from 'lucide-react';
+import { Search, Flag, User, ShoppingCart, Award, ChevronLeft, ChevronRight, Shield, Smartphone, Package, Wrench, Star, Instagram, Youtube, ChevronDown, Menu, X, Globe, Linkedin, Mail, Phone, Lock, Truck, LogOut } from 'lucide-react';
+import { supabase } from '../utils/supabaseClient';
+import { addToCart, getCartItems, getCartTotal, syncCart } from '../utils/cart';
+import AuthModal from './components/AuthModal';
 
 interface CartItem {
   id: number;
@@ -24,6 +27,8 @@ export default function Home() {
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [showCartNotification, setShowCartNotification] = useState(false);
+  const [user, setUser] = useState<any>(null);
+  const [authModalOpen, setAuthModalOpen] = useState(false);
 
   const carouselRef = useRef<HTMLDivElement>(null);
   const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
@@ -35,23 +40,51 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Load cart from localStorage on mount
+  // Authentication state
   useEffect(() => {
-    const savedCart = localStorage.getItem('cartItems');
-    const savedTotal = localStorage.getItem('cartTotal');
-    if (savedCart) {
-      setCartItems(JSON.parse(savedCart));
-    }
-    if (savedTotal) {
-      setCartTotal(parseFloat(savedTotal));
-    }
+    const getInitialSession = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      setUser(session?.user ?? null);
+    };
+    getInitialSession();
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      async (event, session) => {
+        setUser(session?.user ?? null);
+      }
+    );
+
+    return () => subscription.unsubscribe();
   }, []);
 
-  // Save cart to localStorage whenever it changes
+  // Load cart items on mount and when user changes
   useEffect(() => {
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
-    localStorage.setItem('cartTotal', cartTotal.toString());
-  }, [cartItems, cartTotal]);
+    const loadCart = async () => {
+      try {
+        const items = await getCartItems();
+        setCartItems(items.map(item => ({
+          id: item.id,
+          name: item.products?.name || 'Unknown Product',
+          price: item.products?.price || 0,
+          image: item.products?.images?.[0] || '/placeholder.svg'
+        })));
+        const total = await getCartTotal();
+        setCartTotal(total);
+      } catch (error) {
+        console.error('Error loading cart:', error);
+      }
+    };
+
+    loadCart();
+
+    // Listen for cart updates
+    const handleCartUpdate = () => {
+      loadCart();
+    };
+
+    window.addEventListener('cartUpdated', handleCartUpdate);
+    return () => window.removeEventListener('cartUpdated', handleCartUpdate);
+  }, [user]);
 
   const toolkits = [
     {
@@ -161,28 +194,36 @@ export default function Home() {
     setCurrentSlide((prev) => (prev - 1 + toolkits.length) % toolkits.length);
   };
 
-  const addToCart = (item: typeof toolkits[0]) => {
-    const newItem: CartItem = {
-      id: Date.now(),
-      name: item.name,
-      price: item.salePrice,
-      image: item.image
-    };
-    setCartItems(prev => [...prev, newItem]);
-    setCartTotal(prev => prev + item.salePrice);
+  const handleAddToCart = async (toolkit: typeof toolkits[0]) => {
+    try {
+      // Use the cart utility to add item
+      await addToCart(toolkit.name, 1); // We'll need to map this to product IDs later
 
-    // Show notification
-    setShowCartNotification(true);
-    setTimeout(() => setShowCartNotification(false), 3000);
+      // Show notification
+      setShowCartNotification(true);
+      setTimeout(() => setShowCartNotification(false), 3000);
 
-    // Enhanced fly-to-cart animation
-    const cartIcon = document.querySelector('.cart-icon');
-    if (cartIcon) {
-      cartIcon.classList.add('animate-bounce', 'scale-110');
-      setTimeout(() => {
-        cartIcon.classList.remove('animate-bounce', 'scale-110');
-      }, 1000);
+      // Enhanced fly-to-cart animation
+      const cartIcon = document.querySelector('.cart-icon');
+      if (cartIcon) {
+        cartIcon.classList.add('animate-bounce', 'scale-110');
+        setTimeout(() => {
+          cartIcon.classList.remove('animate-bounce', 'scale-110');
+        }, 1000);
+      }
+    } catch (error) {
+      console.error('Error adding to cart:', error);
     }
+  };
+
+  const handleAuthSuccess = async (user: any) => {
+    console.log('User authenticated:', user);
+    // Sync guest cart to database after successful authentication
+    await syncCart();
+  };
+
+  const handleSignOut = async () => {
+    await supabase.auth.signOut();
   };
 
   const handleCountryChange = (country: string) => {
@@ -296,10 +337,39 @@ export default function Home() {
               </div>
 
               {/* My Account */}
-              <button className="flex items-center space-x-1 text-gray-700 hover:text-gold transition-colors" aria-label="My Account">
-                <User size={20} />
-                <span className="text-sm font-medium hidden xl:inline">My Account</span>
-              </button>
+              <div className="relative group">
+                <button className="flex items-center space-x-1 text-gray-700 hover:text-gold transition-colors">
+                  <User size={20} />
+                  <span className="text-sm font-medium hidden xl:inline">
+                    {user ? 'My Account' : 'Sign In'}
+                  </span>
+                </button>
+                {user && (
+                  <div className="absolute top-full mt-2 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 w-48">
+                    <div className="py-2">
+                      <button
+                        onClick={handleSignOut}
+                        className="w-full text-left px-4 py-2 text-sm hover:bg-gray-50 transition-colors flex items-center space-x-2"
+                      >
+                        <LogOut size={16} />
+                        <span>Sign Out</span>
+                      </button>
+                    </div>
+                  </div>
+                )}
+                {!user && (
+                  <div className="absolute top-full mt-2 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 w-48">
+                    <div className="py-2">
+                      <button
+                        onClick={() => setAuthModalOpen(true)}
+                        className="w-full text-left px-4 py-2 text-sm hover:bg-gray-50 transition-colors"
+                      >
+                        Sign In / Sign Up
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
 
               {/* Amazon Payout Badge */}
               <div className="flex items-center space-x-2 bg-orange-50 px-3 py-1 rounded-full border border-orange-200">
@@ -309,46 +379,17 @@ export default function Home() {
               </div>
 
               {/* Cart */}
-              <div className="relative group">
-                <button className="flex items-center space-x-2 text-gray-700 hover:text-gold transition-colors cart-icon">
-                  <div className="relative">
-                    <ShoppingCart size={20} />
-                    {cartItems.length > 0 && (
-                      <span className="absolute -top-2 -right-2 bg-gold text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold animate-pulse">
-                        {cartItems.length}
-                      </span>
-                    )}
-                  </div>
-                  <span className="text-sm font-medium">${cartTotal.toFixed(2)}</span>
-                </button>
-                {/* Cart Dropdown */}
-                <div className="absolute top-full right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 w-80">
-                  <div className="p-4">
-                    <h3 className="font-semibold mb-3">Cart ({cartItems.length} items)</h3>
-                    {cartItems.length === 0 ? (
-                      <p className="text-gray-500 text-sm">Your cart is empty</p>
-                    ) : (
-                      <div className="space-y-2 max-h-48 overflow-y-auto">
-                        {cartItems.slice(0, 3).map((item) => (
-                          <div key={item.id} className="flex items-center space-x-2">
-                            <img src={item.image} alt={item.name} className="w-8 h-8 object-cover rounded" />
-                            <div className="flex-1">
-                              <p className="text-sm font-medium truncate">{item.name}</p>
-                              <p className="text-xs text-gray-500">${item.price}</p>
-                            </div>
-                          </div>
-                        ))}
-                        {cartItems.length > 3 && (
-                          <p className="text-xs text-gray-500">And {cartItems.length - 3} more...</p>
-                        )}
-                      </div>
-                    )}
-                    <button className="w-full bg-gold text-white py-2 rounded-lg mt-3 hover:bg-opacity-90 transition-colors">
-                      View Cart
-                    </button>
-                  </div>
+              <Link href="/cart" className="flex items-center space-x-2 text-gray-700 hover:text-gold transition-colors cart-icon">
+                <div className="relative">
+                  <ShoppingCart size={20} />
+                  {cartItems.length > 0 && (
+                    <span className="absolute -top-2 -right-2 bg-gold text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold animate-pulse">
+                      {cartItems.length}
+                    </span>
+                  )}
                 </div>
-              </div>
+                <span className="text-sm font-medium">${cartTotal.toFixed(2)}</span>
+              </Link>
             </div>
 
             {/* Mobile Search Button */}
@@ -538,7 +579,7 @@ export default function Home() {
                           </span>
                         </div>
                         <button
-                          onClick={() => addToCart(toolkit)}
+                          onClick={() => handleAddToCart(toolkit)}
                           className="mt-4 bg-gold hover:bg-opacity-90 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
                         >
                           Add to Cart
@@ -634,6 +675,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Authentication Modal */}
+      <AuthModal
+        isOpen={authModalOpen}
+        onClose={() => setAuthModalOpen(false)}
+        onAuthSuccess={handleAuthSuccess}
+      />
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white">

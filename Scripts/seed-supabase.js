@@ -49,16 +49,17 @@ function parseCSV(csvContent) {
 }
 
 // Transform CSV data to Supabase format
-// Using only basic fields that are most likely to exist
 function transformProduct(csvProduct) {
   return {
     name: csvProduct.name,
     slug: csvProduct.slug,
+    sku: csvProduct.sku,
     description: csvProduct.description,
     price: parseFloat(csvProduct.price) || 0,
+    discount_percentage: parseFloat(csvProduct.discount_percentage) || 0,
     stock_quantity: parseInt(csvProduct.stock_quantity) || 0,
-    // Only include fields that are most basic and likely to exist
-    // We'll add more fields once we know the exact table structure
+    is_featured: csvProduct.is_featured === 'true'
+    // Note: Only using columns that exist in the database
   };
 }
 
@@ -96,8 +97,8 @@ async function seedDatabase() {
     const csvProducts = parseCSV(csvContent);
     console.log(`📝 Found ${csvProducts.length} products in CSV\n`);
 
-    // Transform products
-    const products = csvProducts.map(transformProduct);
+    // Transform products (simplified - without foreign keys for now)
+    const products = csvProducts.map(product => transformProduct(product));
 
     // Clear existing products
     console.log('🧹 Clearing existing products...');
@@ -111,11 +112,11 @@ async function seedDatabase() {
       console.warn(`⚠️  Primary delete method failed: ${deleteError.message}`);
       console.log('🔄 Trying alternative delete method...');
 
-      // Try deleting with a condition that should match all records
+      // Try deleting all products using a different condition
       const { error: altDeleteError } = await supabase
         .from('products')
         .delete()
-        .not('id', 'is', null); // Delete where id is not null
+        .gt('price', -1); // Delete where price is greater than -1 (should match all)
 
       if (altDeleteError) {
         console.warn(`⚠️  Alternative delete also failed: ${altDeleteError.message}`);

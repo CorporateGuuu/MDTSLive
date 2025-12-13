@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ArrowLeft, Shield, Award, CheckCircle, Star, Zap, Users, Globe, Target, Microscope } from 'lucide-react';
+import { ArrowLeft, Shield, Award, CheckCircle, Star, Zap, Microscope } from 'lucide-react';
 import Link from 'next/link';
 
 export default function QualityStandardsPage() {
