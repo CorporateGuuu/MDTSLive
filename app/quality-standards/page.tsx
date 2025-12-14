@@ -3,6 +3,7 @@
 import React from 'react';
 import { ArrowLeft, Shield, Award, CheckCircle, Star, Zap, Microscope } from 'lucide-react';
 import Link from 'next/link';
+import DynamicFAQ from '../components/DynamicFAQ';
 
 export default function QualityStandardsPage() {
   const qualityPillars = [
@@ -273,6 +274,21 @@ export default function QualityStandardsPage() {
         </div>
       </section>
 
+      {/* Quality & Warranty FAQs */}
+      <section className="py-20 bg-gray-50 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Quality & Warranty FAQs</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Get answers to common questions about our MidasGold 7.0 technology, lifetime warranty,
+              quality standards, and product reliability.
+            </p>
+          </div>
+
+          <DynamicFAQ category="quality" limit={6} />
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-navy text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -283,7 +299,7 @@ export default function QualityStandardsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/products"
+              href="/bulk-orders"
               className="bg-gold hover:bg-opacity-90 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Browse Quality Products

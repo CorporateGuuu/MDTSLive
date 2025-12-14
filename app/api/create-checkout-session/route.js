@@ -9,7 +9,7 @@ const supabase = createClient(
 
 export async function POST(req) {
   try {
-    const { user_id } = await req.json();
+    const { user_id, shipping_address } = await req.json();
 
     if (!user_id) {
       return Response.json({ error: 'User ID required' }, { status: 400 });

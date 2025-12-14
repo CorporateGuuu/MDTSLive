@@ -1,7 +1,7 @@
 # Midas Technical Solutions E-Commerce Wireframe
 
 ## Overview
-This wireframe designs a complete, responsive e-commerce platform for Midas Technical Solutions, a wholesale-only supplier of cell phone repair parts, screens, batteries, tools, and refurbished devices. The design mirrors the functionality of mobilesentrix.com while focusing exclusively on wholesale distribution.
+This wireframe designs a complete, responsive e-commerce platform for Midas Technical Solutions, a wholesale-only supplier of cell phone repair parts, screens, batteries, tools, and refurbished devices. The design mirrors the functionality of midastechnical.com while focusing exclusively on wholesale distribution.
 
 ## Design System
 - **Color Scheme**:

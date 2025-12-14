@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { CheckCircle, Package, Truck, Mail, Home } from 'lucide-react';
 import { supabase } from '../../utils/supabaseClient';
+import { Resend } from 'resend';
 
 export default function SuccessPage() {
   const [orderDetails, setOrderDetails] = useState<any>(null);

@@ -3,6 +3,7 @@
 import React from 'react';
 import { ArrowLeft, MessageCircle, Phone, Mail, Book, HelpCircle, FileText, Users } from 'lucide-react';
 import Link from 'next/link';
+import DynamicFAQ from '../components/DynamicFAQ';
 
 export default function SupportPage() {
   const supportOptions = [
@@ -82,7 +83,7 @@ export default function SupportPage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">How Can We Help?</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the support method that works best for your needs. We're here to ensure
+              Choose the support method that works best for your needs. We&#39;re here to ensure
               your success with our premium repair solutions.
             </p>
           </div>
@@ -146,6 +147,21 @@ export default function SupportPage() {
               <Link href="#" className="text-gold hover:text-opacity-80 font-semibold">View Guide →</Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Support & Ordering FAQs */}
+      <section className="py-20 bg-gray-50 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Support & Ordering FAQs</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Get answers to common questions about our shipping, ordering process, technical support,
+              and wholesale services.
+            </p>
+          </div>
+
+          <DynamicFAQ category="support" limit={8} />
         </div>
       </section>
 

@@ -8,12 +8,7 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_ROLE_KEY
 );
 
-// Disable Next.js body parsing for raw webhook data
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
+// Note: In Next.js 14+, route config is now handled via route.ts file naming or dynamic functions
 
 export async function POST(req) {
   try {
@@ -35,17 +30,42 @@ export async function POST(req) {
         const session = event.data.object;
 
         // Update order status to paid
-        const { error: updateError } = await supabase
+        const { data: orderData, error: updateError } = await supabase
           .from('orders')
           .update({
             status: 'paid',
             updated_at: new Date().toISOString()
           })
-          .eq('stripe_session_id', session.id);
+          .eq('stripe_session_id', session.id)
+          .select()
+          .single();
 
         if (updateError) {
           console.error('Failed to update order status:', updateError);
           return Response.json({ error: 'Failed to update order' }, { status: 500 });
+        }
+
+        // Get user email for confirmation
+        const { data: userData, error: userError } = await supabase.auth.admin.getUserById(session.metadata.user_id);
+
+        if (!userError && userData?.user?.email) {
+          // Send order confirmation email
+          try {
+            await fetch(`${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/api/send-order-confirmation`, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                order_id: orderData.id,
+                email: userData.user.email,
+                order_details: orderData
+              }),
+            });
+          } catch (emailError) {
+            console.error('Failed to send confirmation email:', emailError);
+            // Don't fail the webhook for email issues
+          }
         }
 
         // Clear user's cart after successful payment

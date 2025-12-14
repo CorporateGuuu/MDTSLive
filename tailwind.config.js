@@ -16,7 +16,7 @@ module.exports = {
           gold: "#D4AF37",
           navy: "#001F3F",
         },
-        mobilesentrix: {
+        midastechnical: {
           red: "#e30613",
         },
       },
