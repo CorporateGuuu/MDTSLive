@@ -1,16 +1,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import type { Metadata } from 'next';
-
-// Noindex metadata for private checkout page
-export const metadata: Metadata = {
-  robots: {
-    index: false,
-    follow: false,
-    nocache: true,
-  },
-};
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';

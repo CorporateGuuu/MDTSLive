@@ -5,51 +5,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { supabase } from '../../utils/supabaseClient';
 import { Search, Filter, Clock, Star, Package, ChevronDown, Grid, List } from 'lucide-react';
-import type { Metadata } from 'next';
-
-// Generate metadata for guides page
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: 'Free Phone Repair Guides | Midas Technical Solutions',
-    description: 'Complete step-by-step repair guides for iPhone, Samsung, and other devices. Professional repair instructions with videos and part recommendations.',
-    keywords: [
-      'phone repair guides',
-      'iPhone repair tutorial',
-      'Samsung repair guide',
-      'step by step repair',
-      'device repair instructions',
-      'free repair guides',
-      'professional repair tutorials',
-      'MidasGold repair guides'
-    ],
-    openGraph: {
-      title: 'Free Phone Repair Guides | Midas Technical Solutions',
-      description: 'Complete step-by-step repair guides for iPhone, Samsung, and other devices. Professional repair instructions with videos.',
-      url: 'https://midastechnicalsolutions.com/guides',
-      siteName: 'Midas Technical Solutions',
-      type: 'website',
-      images: [
-        {
-          url: '/logos/midas-logo-main.png',
-          width: 800,
-          height: 600,
-          alt: 'Midas Technical Solutions - Free Repair Guides',
-          type: 'image/png',
-        },
-      ],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: 'Free Phone Repair Guides | Midas Technical Solutions',
-      description: 'Complete step-by-step repair guides for iPhone, Samsung, and other devices.',
-      images: ['/logos/midas-logo-main.png'],
-      creator: '@MidasTechnical',
-    },
-  };
-}
-
-// ISR configuration
-export const revalidate = 3600; // Revalidate every hour
 
 interface RepairGuide {
   id: string;

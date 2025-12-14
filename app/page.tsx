@@ -151,22 +151,10 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-// ISR configuration for fresh Supabase data
-export const revalidate = 3600; // Revalidate every hour
-
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
-import StructuredData from './components/StructuredData';
-import DynamicFAQ from './components/DynamicFAQ';
-import { Search, Flag, User, ShoppingCart, Award, ChevronLeft, ChevronRight, Shield, Smartphone, Package, Wrench, Star, Instagram, Youtube, ChevronDown, Menu, X, Globe, Linkedin, Mail, Phone, Lock, Truck, LogOut, MonitorSpeaker, Battery, Zap, Hammer, Cog, Wrench as ToolIcon, Layers, Settings } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { supabase } from '../utils/supabaseClient';
-import { addToCart, getCartItems, getCartTotal, syncCart, removeFromCart, updateCartQuantity, clearCart } from '../utils/cart';
-import AuthModal from './components/AuthModal';
-import { useQuery } from '@tanstack/react-query';
-import { Drawer } from 'vaul';
+// ISR configuration for fresh Supabase data
+export const revalidate = 3600; // Revalidate every hour
 
 interface CartItem {
   id: number;
@@ -955,7 +943,8 @@ export default function Home() {
 
 
   return (
-    <main className="min-h-screen bg-white">
+    <>
+      <main className="min-h-screen bg-white">
       {/* Cart Notification */}
       {showCartNotification && (
         <div className="fixed top-20 right-4 z-50 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg animate-fade-in">
@@ -2102,5 +2091,6 @@ export default function Home() {
       {/* Homepage Structured Data with Featured Products */}
       <StructuredData type="homepage" products={featuredProductsWithReviews || []} />
     </main>
+    </>
   );
 }
